@@ -1,0 +1,14 @@
+{
+    "name": "cbws/php-cbws-grpc",
+    "description": "Generated gRPC client libraries for CBWS",
+    "type": "library",
+    "require": {
+        "grpc/grpc": "^1.27"
+    },
+    "authors": [
+        {
+            "name": "CBWS",
+            "email": "cbws@cbws.xyz"
+        }
+    ]
+}
