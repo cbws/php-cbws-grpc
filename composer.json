@@ -3,7 +3,12 @@
     "description": "Generated gRPC client libraries for CBWS",
     "type": "library",
     "require": {
-        "grpc/grpc": "^1.27"
+        "grpc/grpc": "^1.27",
+        "google/protobuf": "^3.12"
+    },
+    "suggest": {
+        "ext-protobuf": "For better performance, use the C implementation of Protobuf",
+        "google/protobuf": "In case the C implementation of Protobuf is not suitable, use the PHP one"
     },
     "authors": [
         {
