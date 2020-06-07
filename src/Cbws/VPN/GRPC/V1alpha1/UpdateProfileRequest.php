@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class UpdateProfileRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The [Profile][google.iam.admin.v1.Instance] resource to
+     * The [Profile][cbws.vpn.v1alpha1.Instance] resource to
      * create. Currently, only the following values are user assignable:
      * `display_name` and `description`.
      *
@@ -29,7 +29,7 @@ class UpdateProfileRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Cbws\VPN\GRPC\V1alpha1\Profile $profile
-     *           The [Profile][google.iam.admin.v1.Instance] resource to
+     *           The [Profile][cbws.vpn.v1alpha1.Instance] resource to
      *           create. Currently, only the following values are user assignable:
      *           `display_name` and `description`.
      * }
@@ -40,7 +40,7 @@ class UpdateProfileRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The [Profile][google.iam.admin.v1.Instance] resource to
+     * The [Profile][cbws.vpn.v1alpha1.Instance] resource to
      * create. Currently, only the following values are user assignable:
      * `display_name` and `description`.
      *
@@ -53,7 +53,7 @@ class UpdateProfileRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The [Profile][google.iam.admin.v1.Instance] resource to
+     * The [Profile][cbws.vpn.v1alpha1.Instance] resource to
      * create. Currently, only the following values are user assignable:
      * `display_name` and `description`.
      *

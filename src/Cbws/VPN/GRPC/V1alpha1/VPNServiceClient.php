@@ -69,7 +69,7 @@ class VPNServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Deletes a [Instance][google.iam.admin.v1.Instance].
+     * Deletes a VPN instance
      * @param \Cbws\VPN\GRPC\V1alpha1\DeleteInstanceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -135,7 +135,7 @@ class VPNServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Deletes a [Profile][google.iam.admin.v1.Profile].
+     * Deletes a VPN profile.
      * @param \Cbws\VPN\GRPC\V1alpha1\DeleteProfileRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

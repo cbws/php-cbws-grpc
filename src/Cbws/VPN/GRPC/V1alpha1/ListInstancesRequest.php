@@ -25,7 +25,7 @@ class ListInstancesRequest extends \Google\Protobuf\Internal\Message
     /**
      * Optional limit on the number of instances to include in the
      * response. Further accounts can subsequently be obtained by including the
-     * [ListInstancesResponse.next_page_token][google.iam.admin.v1.ListInstancesResponse.next_page_token]
+     * [ListInstancesResponse.next_page_token][cbws.vpn.v1alpha1.ListInstancesResponse.next_page_token]
      * in a subsequent request.
      *
      * Generated from protobuf field <code>int32 page_size = 2;</code>
@@ -33,7 +33,7 @@ class ListInstancesRequest extends \Google\Protobuf\Internal\Message
     protected $page_size = 0;
     /**
      * Optional pagination token returned in an earlier
-     * [ListInstancesResponse.next_page_token][google.iam.admin.v1.ListInstancesResponse.next_page_token].
+     * [ListInstancesResponse.next_page_token][cbws.vpn.v1alpha1.ListInstancesResponse.next_page_token].
      *
      * Generated from protobuf field <code>string page_token = 3;</code>
      */
@@ -51,11 +51,11 @@ class ListInstancesRequest extends \Google\Protobuf\Internal\Message
      *     @type int $page_size
      *           Optional limit on the number of instances to include in the
      *           response. Further accounts can subsequently be obtained by including the
-     *           [ListInstancesResponse.next_page_token][google.iam.admin.v1.ListInstancesResponse.next_page_token]
+     *           [ListInstancesResponse.next_page_token][cbws.vpn.v1alpha1.ListInstancesResponse.next_page_token]
      *           in a subsequent request.
      *     @type string $page_token
      *           Optional pagination token returned in an earlier
-     *           [ListInstancesResponse.next_page_token][google.iam.admin.v1.ListInstancesResponse.next_page_token].
+     *           [ListInstancesResponse.next_page_token][cbws.vpn.v1alpha1.ListInstancesResponse.next_page_token].
      * }
      */
     public function __construct($data = NULL) {
@@ -94,7 +94,7 @@ class ListInstancesRequest extends \Google\Protobuf\Internal\Message
     /**
      * Optional limit on the number of instances to include in the
      * response. Further accounts can subsequently be obtained by including the
-     * [ListInstancesResponse.next_page_token][google.iam.admin.v1.ListInstancesResponse.next_page_token]
+     * [ListInstancesResponse.next_page_token][cbws.vpn.v1alpha1.ListInstancesResponse.next_page_token]
      * in a subsequent request.
      *
      * Generated from protobuf field <code>int32 page_size = 2;</code>
@@ -108,7 +108,7 @@ class ListInstancesRequest extends \Google\Protobuf\Internal\Message
     /**
      * Optional limit on the number of instances to include in the
      * response. Further accounts can subsequently be obtained by including the
-     * [ListInstancesResponse.next_page_token][google.iam.admin.v1.ListInstancesResponse.next_page_token]
+     * [ListInstancesResponse.next_page_token][cbws.vpn.v1alpha1.ListInstancesResponse.next_page_token]
      * in a subsequent request.
      *
      * Generated from protobuf field <code>int32 page_size = 2;</code>
@@ -125,7 +125,7 @@ class ListInstancesRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Optional pagination token returned in an earlier
-     * [ListInstancesResponse.next_page_token][google.iam.admin.v1.ListInstancesResponse.next_page_token].
+     * [ListInstancesResponse.next_page_token][cbws.vpn.v1alpha1.ListInstancesResponse.next_page_token].
      *
      * Generated from protobuf field <code>string page_token = 3;</code>
      * @return string
@@ -137,7 +137,7 @@ class ListInstancesRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Optional pagination token returned in an earlier
-     * [ListInstancesResponse.next_page_token][google.iam.admin.v1.ListInstancesResponse.next_page_token].
+     * [ListInstancesResponse.next_page_token][cbws.vpn.v1alpha1.ListInstancesResponse.next_page_token].
      *
      * Generated from protobuf field <code>string page_token = 3;</code>
      * @param string $var

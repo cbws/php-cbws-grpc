@@ -23,7 +23,7 @@ class ListInstancesResponse extends \Google\Protobuf\Internal\Message
     private $instances;
     /**
      * To retrieve the next page of results, set
-     * [ListInstancesRequest.page_token][google.iam.admin.v1.ListInstancesRequest.page_token]
+     * [ListInstancesRequest.page_token][cbws.vpn.v1alpha1.ListInstancesRequest.page_token]
      * to this value.
      *
      * Generated from protobuf field <code>string next_page_token = 2;</code>
@@ -40,7 +40,7 @@ class ListInstancesResponse extends \Google\Protobuf\Internal\Message
      *           The list of matching instances.
      *     @type string $next_page_token
      *           To retrieve the next page of results, set
-     *           [ListInstancesRequest.page_token][google.iam.admin.v1.ListInstancesRequest.page_token]
+     *           [ListInstancesRequest.page_token][cbws.vpn.v1alpha1.ListInstancesRequest.page_token]
      *           to this value.
      * }
      */
@@ -77,7 +77,7 @@ class ListInstancesResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * To retrieve the next page of results, set
-     * [ListInstancesRequest.page_token][google.iam.admin.v1.ListInstancesRequest.page_token]
+     * [ListInstancesRequest.page_token][cbws.vpn.v1alpha1.ListInstancesRequest.page_token]
      * to this value.
      *
      * Generated from protobuf field <code>string next_page_token = 2;</code>
@@ -90,7 +90,7 @@ class ListInstancesResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * To retrieve the next page of results, set
-     * [ListInstancesRequest.page_token][google.iam.admin.v1.ListInstancesRequest.page_token]
+     * [ListInstancesRequest.page_token][cbws.vpn.v1alpha1.ListInstancesRequest.page_token]
      * to this value.
      *
      * Generated from protobuf field <code>string next_page_token = 2;</code>

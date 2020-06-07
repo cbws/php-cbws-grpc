@@ -27,7 +27,7 @@ class CreateProfileRequest extends \Google\Protobuf\Internal\Message
      */
     protected $name = '';
     /**
-     * The [Instance][google.iam.admin.v1.Instance] resource to
+     * The [Instance][cbws.vpn.v1alpha1.Instance] resource to
      * create. Currently, only the following values are user assignable:
      * `display_name` and `description`.
      *
@@ -47,7 +47,7 @@ class CreateProfileRequest extends \Google\Protobuf\Internal\Message
      *     @type string $name
      *           Required. The name of the instance, without the projects prefix
      *     @type \Cbws\VPN\GRPC\V1alpha1\Profile $profile
-     *           The [Instance][google.iam.admin.v1.Instance] resource to
+     *           The [Instance][cbws.vpn.v1alpha1.Instance] resource to
      *           create. Currently, only the following values are user assignable:
      *           `display_name` and `description`.
      * }
@@ -112,7 +112,7 @@ class CreateProfileRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The [Instance][google.iam.admin.v1.Instance] resource to
+     * The [Instance][cbws.vpn.v1alpha1.Instance] resource to
      * create. Currently, only the following values are user assignable:
      * `display_name` and `description`.
      *
@@ -125,7 +125,7 @@ class CreateProfileRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The [Instance][google.iam.admin.v1.Instance] resource to
+     * The [Instance][cbws.vpn.v1alpha1.Instance] resource to
      * create. Currently, only the following values are user assignable:
      * `display_name` and `description`.
      *
