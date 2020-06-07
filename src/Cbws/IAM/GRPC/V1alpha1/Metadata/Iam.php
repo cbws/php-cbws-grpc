@@ -15,8 +15,8 @@ class Iam
           return;
         }
         \Cbws\IAM\GRPC\V1alpha1\Metadata\ServiceAccount::initOnce();
-        \Cbws\Policy\IAM\GRPC\V1alpha1\Metadata\Policy::initOnce();
-        \Cbws\Policy\IAM\GRPC\V1alpha1\Metadata\RequestResponse::initOnce();
+        \Cbws\IAM\Policy\GRPC\V1alpha1\Metadata\Policy::initOnce();
+        \Cbws\IAM\Policy\GRPC\V1alpha1\Metadata\RequestResponse::initOnce();
         \GPBMetadata\Cbws\Iam\Options\V1Alpha1\Options::initOnce();
         \GPBMetadata\Google\Api\Annotations::initOnce();
         \GPBMetadata\Google\Api\Client::initOnce();

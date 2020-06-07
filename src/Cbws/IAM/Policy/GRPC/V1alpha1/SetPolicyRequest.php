@@ -47,7 +47,7 @@ class SetPolicyRequest extends \Google\Protobuf\Internal\Message
      * }
      */
     public function __construct($data = NULL) {
-        \Cbws\Policy\IAM\GRPC\V1alpha1\Metadata\RequestResponse::initOnce();
+        \Cbws\IAM\Policy\GRPC\V1alpha1\Metadata\RequestResponse::initOnce();
         parent::__construct($data);
     }
 
