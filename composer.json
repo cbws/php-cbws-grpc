@@ -4,7 +4,8 @@
     "type": "library",
     "require": {
         "grpc/grpc": "^1.27",
-        "google/protobuf": "^3.12"
+        "google/protobuf": "^3.12",
+        "google/common-protos": "^1.2"
     },
     "suggest": {
         "ext-protobuf": "For better performance, use the C implementation of Protobuf",
