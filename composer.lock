@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7840efec657e4f2720c7e1508d38e9e",
+    "content-hash": "38f6a170416ae6f8a3c6961ba4173f2e",
     "packages": [
         {
             "name": "google/common-protos",
@@ -134,7 +134,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-grpc": "^1.29"
+    },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
 }
