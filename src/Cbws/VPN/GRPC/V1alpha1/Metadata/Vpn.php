@@ -14,7 +14,7 @@ class Vpn
         if (static::$is_initialized == true) {
           return;
         }
-        \GPBMetadata\Cbws\Iam\Options\V1Alpha1\Options::initOnce();
+        \Cbws\IAM\Options\GRPC\V1alpha1\Metadata\Options::initOnce();
         \Cbws\VPN\GRPC\V1alpha1\Metadata\Instance::initOnce();
         \GPBMetadata\Google\Api\Annotations::initOnce();
         \GPBMetadata\Google\Api\Client::initOnce();

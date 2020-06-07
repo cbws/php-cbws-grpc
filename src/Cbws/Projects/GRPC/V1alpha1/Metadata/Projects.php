@@ -14,7 +14,7 @@ class Projects
         if (static::$is_initialized == true) {
           return;
         }
-        \GPBMetadata\Cbws\Iam\Options\V1Alpha1\Options::initOnce();
+        \Cbws\IAM\Options\GRPC\V1alpha1\Metadata\Options::initOnce();
         \Cbws\IAM\Policy\GRPC\V1alpha1\Metadata\Policy::initOnce();
         \Cbws\IAM\Policy\GRPC\V1alpha1\Metadata\RequestResponse::initOnce();
         \Cbws\Projects\GRPC\V1alpha1\Metadata\Project::initOnce();
