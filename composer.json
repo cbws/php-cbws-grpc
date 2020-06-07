@@ -15,5 +15,13 @@
             "name": "CBWS",
             "email": "cbws@cbws.xyz"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-0": {
+            "Cbws\\IAM\\GRPC": "src/",
+            "Cbws\\IAM\\Policy\\GRPC": "src/",
+            "Cbws\\Projects\\GRPC": "src/",
+            "Cbws\\VPN\\GRPC": "src/"
+        }
+    }
 }
