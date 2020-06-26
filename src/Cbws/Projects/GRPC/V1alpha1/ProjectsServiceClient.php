@@ -60,6 +60,19 @@ class ProjectsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Cbws\Projects\GRPC\V1alpha1\DeleteProjectRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function DeleteProject(\Cbws\Projects\GRPC\V1alpha1\DeleteProjectRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.projects.v1alpha1.ProjectsService/DeleteProject',
+        $argument,
+        ['\Google\LongRunning\Operation', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * Returns the IAM access control policy for a Project.
      * @param \Cbws\IAM\Policy\GRPC\V1alpha1\GetPolicyRequest $argument input argument
      * @param array $metadata metadata
