@@ -60,6 +60,22 @@ class ProjectsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Update a project
+     *
+     * Permission: projects.cbws.xyz/Project/update
+     * @param \Cbws\Projects\GRPC\V1alpha1\UpdateProjectRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function UpdateProject(\Cbws\Projects\GRPC\V1alpha1\UpdateProjectRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.projects.v1alpha1.ProjectsService/UpdateProject',
+        $argument,
+        ['\Cbws\Projects\GRPC\V1alpha1\Project', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Cbws\Projects\GRPC\V1alpha1\DeleteProjectRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
