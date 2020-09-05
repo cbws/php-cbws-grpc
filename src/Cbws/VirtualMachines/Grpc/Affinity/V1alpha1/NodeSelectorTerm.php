@@ -18,9 +18,9 @@ class NodeSelectorTerm extends \Google\Protobuf\Internal\Message
     /**
      * A list of node selector requirements by node's labels.
      *
-     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.LabelSelectorRequirement match_expressions = 1;</code>
+     * Generated from protobuf field <code>repeated .cbws.virtual_machines.affinity.v1alpha1.LabelSelectorRequirement match_expressions = 1;</code>
      */
-    protected $match_expressions = null;
+    private $match_expressions;
 
     /**
      * Constructor.
@@ -28,7 +28,7 @@ class NodeSelectorTerm extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement $match_expressions
+     *     @type \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement[]|\Google\Protobuf\Internal\RepeatedField $match_expressions
      *           A list of node selector requirements by node's labels.
      * }
      */
@@ -40,8 +40,8 @@ class NodeSelectorTerm extends \Google\Protobuf\Internal\Message
     /**
      * A list of node selector requirements by node's labels.
      *
-     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.LabelSelectorRequirement match_expressions = 1;</code>
-     * @return \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement
+     * Generated from protobuf field <code>repeated .cbws.virtual_machines.affinity.v1alpha1.LabelSelectorRequirement match_expressions = 1;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMatchExpressions()
     {
@@ -51,14 +51,14 @@ class NodeSelectorTerm extends \Google\Protobuf\Internal\Message
     /**
      * A list of node selector requirements by node's labels.
      *
-     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.LabelSelectorRequirement match_expressions = 1;</code>
-     * @param \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement $var
+     * Generated from protobuf field <code>repeated .cbws.virtual_machines.affinity.v1alpha1.LabelSelectorRequirement match_expressions = 1;</code>
+     * @param \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setMatchExpressions($var)
     {
-        GPBUtil::checkMessage($var, \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement::class);
-        $this->match_expressions = $var;
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement::class);
+        $this->match_expressions = $arr;
 
         return $this;
     }
