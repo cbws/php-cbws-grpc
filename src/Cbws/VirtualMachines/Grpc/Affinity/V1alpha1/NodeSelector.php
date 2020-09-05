@@ -18,9 +18,9 @@ class NodeSelector extends \Google\Protobuf\Internal\Message
     /**
      * A list of node selector terms. The terms are ORed.
      *
-     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.NodeSelectorTerm node_selector_terms = 1;</code>
+     * Generated from protobuf field <code>repeated .cbws.virtual_machines.affinity.v1alpha1.NodeSelectorTerm node_selector_terms = 1;</code>
      */
-    protected $node_selector_terms = null;
+    private $node_selector_terms;
 
     /**
      * Constructor.
@@ -28,7 +28,7 @@ class NodeSelector extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\NodeSelectorTerm $node_selector_terms
+     *     @type \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\NodeSelectorTerm[]|\Google\Protobuf\Internal\RepeatedField $node_selector_terms
      *           A list of node selector terms. The terms are ORed.
      * }
      */
@@ -40,8 +40,8 @@ class NodeSelector extends \Google\Protobuf\Internal\Message
     /**
      * A list of node selector terms. The terms are ORed.
      *
-     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.NodeSelectorTerm node_selector_terms = 1;</code>
-     * @return \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\NodeSelectorTerm
+     * Generated from protobuf field <code>repeated .cbws.virtual_machines.affinity.v1alpha1.NodeSelectorTerm node_selector_terms = 1;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getNodeSelectorTerms()
     {
@@ -51,14 +51,14 @@ class NodeSelector extends \Google\Protobuf\Internal\Message
     /**
      * A list of node selector terms. The terms are ORed.
      *
-     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.NodeSelectorTerm node_selector_terms = 1;</code>
-     * @param \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\NodeSelectorTerm $var
+     * Generated from protobuf field <code>repeated .cbws.virtual_machines.affinity.v1alpha1.NodeSelectorTerm node_selector_terms = 1;</code>
+     * @param \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\NodeSelectorTerm[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setNodeSelectorTerms($var)
     {
-        GPBUtil::checkMessage($var, \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\NodeSelectorTerm::class);
-        $this->node_selector_terms = $var;
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\NodeSelectorTerm::class);
+        $this->node_selector_terms = $arr;
 
         return $this;
     }
