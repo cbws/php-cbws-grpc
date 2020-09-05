@@ -51,6 +51,12 @@ class Instance extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.cbws.virtual_machines.v1alpha1.Instance.State state = 8;</code>
      */
     protected $state = 0;
+    /**
+     * If specified, the instance's scheduling constraints
+     *
+     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.Affinity affinity = 10;</code>
+     */
+    protected $affinity = null;
 
     /**
      * Constructor.
@@ -68,6 +74,8 @@ class Instance extends \Google\Protobuf\Internal\Message
      *           The IPv6 address of the instance
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $ssh_keys
      *     @type int $state
+     *     @type \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\Affinity $affinity
+     *           If specified, the instance's scheduling constraints
      * }
      */
     public function __construct($data = NULL) {
@@ -273,6 +281,32 @@ class Instance extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Cbws\VirtualMachines\Grpc\V1alpha1\Instance_State::class);
         $this->state = $var;
+
+        return $this;
+    }
+
+    /**
+     * If specified, the instance's scheduling constraints
+     *
+     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.Affinity affinity = 10;</code>
+     * @return \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\Affinity
+     */
+    public function getAffinity()
+    {
+        return $this->affinity;
+    }
+
+    /**
+     * If specified, the instance's scheduling constraints
+     *
+     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.Affinity affinity = 10;</code>
+     * @param \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\Affinity $var
+     * @return $this
+     */
+    public function setAffinity($var)
+    {
+        GPBUtil::checkMessage($var, \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\Affinity::class);
+        $this->affinity = $var;
 
         return $this;
     }
