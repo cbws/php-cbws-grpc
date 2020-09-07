@@ -18,9 +18,9 @@ class LabelSelector extends \Google\Protobuf\Internal\Message
     /**
      * matchExpressions is a list of label selector requirements. The requirements are ANDed.
      *
-     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.LabelSelectorRequirement match_expressions = 1;</code>
+     * Generated from protobuf field <code>repeated .cbws.virtual_machines.affinity.v1alpha1.LabelSelectorRequirement match_expressions = 1;</code>
      */
-    protected $match_expressions = null;
+    private $match_expressions;
     /**
      * matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.
      *
@@ -34,7 +34,7 @@ class LabelSelector extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement $match_expressions
+     *     @type \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement[]|\Google\Protobuf\Internal\RepeatedField $match_expressions
      *           matchExpressions is a list of label selector requirements. The requirements are ANDed.
      *     @type array|\Google\Protobuf\Internal\MapField $match_labels
      *           matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.
@@ -48,8 +48,8 @@ class LabelSelector extends \Google\Protobuf\Internal\Message
     /**
      * matchExpressions is a list of label selector requirements. The requirements are ANDed.
      *
-     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.LabelSelectorRequirement match_expressions = 1;</code>
-     * @return \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement
+     * Generated from protobuf field <code>repeated .cbws.virtual_machines.affinity.v1alpha1.LabelSelectorRequirement match_expressions = 1;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMatchExpressions()
     {
@@ -59,14 +59,14 @@ class LabelSelector extends \Google\Protobuf\Internal\Message
     /**
      * matchExpressions is a list of label selector requirements. The requirements are ANDed.
      *
-     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.LabelSelectorRequirement match_expressions = 1;</code>
-     * @param \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement $var
+     * Generated from protobuf field <code>repeated .cbws.virtual_machines.affinity.v1alpha1.LabelSelectorRequirement match_expressions = 1;</code>
+     * @param \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setMatchExpressions($var)
     {
-        GPBUtil::checkMessage($var, \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement::class);
-        $this->match_expressions = $var;
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\LabelSelectorRequirement::class);
+        $this->match_expressions = $arr;
 
         return $this;
     }

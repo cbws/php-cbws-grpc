@@ -16,29 +16,41 @@ class Operator
      */
     const OPERATOR_UNSPECIFIED = 0;
     /**
+     * If the operator is In or NotIn, the values array must be non-empty.
+     *
      * Generated from protobuf enum <code>OPERATOR_IN = 1;</code>
      */
     const OPERATOR_IN = 1;
     /**
+     * If the operator is In or NotIn, the values array must be non-empty.
+     *
      * Generated from protobuf enum <code>OPERATOR_NOT_IN = 2;</code>
      */
     const OPERATOR_NOT_IN = 2;
     /**
+     * If the operator is Exists or DoesNotExist, the values array must be empty.
+     *
      * Generated from protobuf enum <code>OPERATOR_EXISTS = 3;</code>
      */
     const OPERATOR_EXISTS = 3;
     /**
+     * If the operator is Exists or DoesNotExist, the values array must be empty.
+     *
      * Generated from protobuf enum <code>OPERATOR_DOES_NOT_EXIST = 4;</code>
      */
     const OPERATOR_DOES_NOT_EXIST = 4;
     /**
+     * If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
+     *
      * Generated from protobuf enum <code>OPERATOR_GREATER_THAN = 5;</code>
      */
     const OPERATOR_GREATER_THAN = 5;
     /**
-     * Generated from protobuf enum <code>OPERATOR_LOWER_THAN = 6;</code>
+     * If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
+     *
+     * Generated from protobuf enum <code>OPERATOR_LESS_THAN = 6;</code>
      */
-    const OPERATOR_LOWER_THAN = 6;
+    const OPERATOR_LESS_THAN = 6;
 
     private static $valueToName = [
         self::OPERATOR_UNSPECIFIED => 'OPERATOR_UNSPECIFIED',
@@ -47,7 +59,7 @@ class Operator
         self::OPERATOR_EXISTS => 'OPERATOR_EXISTS',
         self::OPERATOR_DOES_NOT_EXIST => 'OPERATOR_DOES_NOT_EXIST',
         self::OPERATOR_GREATER_THAN => 'OPERATOR_GREATER_THAN',
-        self::OPERATOR_LOWER_THAN => 'OPERATOR_LOWER_THAN',
+        self::OPERATOR_LESS_THAN => 'OPERATOR_LESS_THAN',
     ];
 
     public static function name($value)

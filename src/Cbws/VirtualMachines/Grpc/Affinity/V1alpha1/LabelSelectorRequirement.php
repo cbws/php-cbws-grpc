@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.
+ * A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.
  *
  * Generated from protobuf message <code>cbws.virtual_machines.affinity.v1alpha1.LabelSelectorRequirement</code>
  */
