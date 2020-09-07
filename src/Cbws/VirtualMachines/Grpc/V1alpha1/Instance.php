@@ -14,49 +14,55 @@ use Google\Protobuf\Internal\GPBUtil;
 class Instance extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string name = 1;</code>
+     * Generated from protobuf field <code>string name = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     protected $name = '';
     /**
-     * Generated from protobuf field <code>string parent = 2;</code>
+     * Generated from protobuf field <code>string parent = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     protected $parent = '';
     /**
-     * Generated from protobuf field <code>string hostname = 3;</code>
+     * Generated from protobuf field <code>string hostname = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $hostname = '';
     /**
-     * Generated from protobuf field <code>int64 cpu = 4;</code>
+     * Generated from protobuf field <code>int64 cpu = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $cpu = 0;
     /**
-     * Generated from protobuf field <code>int64 memory = 5;</code>
+     * Generated from protobuf field <code>int64 memory = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $memory = 0;
     /**
-     * Generated from protobuf field <code>int64 root_disk = 6;</code>
+     * Generated from protobuf field <code>int64 root_disk = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $root_disk = 0;
     /**
      * The IPv6 address of the instance
      *
-     * Generated from protobuf field <code>string address = 7;</code>
+     * Generated from protobuf field <code>string address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $address = '';
     /**
-     * Generated from protobuf field <code>repeated string ssh_keys = 9;</code>
+     * Generated from protobuf field <code>repeated string ssh_keys = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     private $ssh_keys;
     /**
-     * Generated from protobuf field <code>.cbws.virtual_machines.v1alpha1.Instance.State state = 8;</code>
+     * Generated from protobuf field <code>.cbws.virtual_machines.v1alpha1.Instance.State state = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $state = 0;
     /**
      * If specified, the instance's scheduling constraints
      *
-     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.Affinity affinity = 10;</code>
+     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.Affinity affinity = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $affinity = null;
+    /**
+     * A list of labels useful for filtering, affinities and load balancing.
+     *
+     * Generated from protobuf field <code>map<string, string> labels = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    private $labels;
 
     /**
      * Constructor.
@@ -76,6 +82,8 @@ class Instance extends \Google\Protobuf\Internal\Message
      *     @type int $state
      *     @type \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\Affinity $affinity
      *           If specified, the instance's scheduling constraints
+     *     @type array|\Google\Protobuf\Internal\MapField $labels
+     *           A list of labels useful for filtering, affinities and load balancing.
      * }
      */
     public function __construct($data = NULL) {
@@ -84,7 +92,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string name = 1;</code>
+     * Generated from protobuf field <code>string name = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return string
      */
     public function getName()
@@ -93,7 +101,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string name = 1;</code>
+     * Generated from protobuf field <code>string name = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param string $var
      * @return $this
      */
@@ -106,7 +114,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string parent = 2;</code>
+     * Generated from protobuf field <code>string parent = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return string
      */
     public function getParent()
@@ -115,7 +123,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string parent = 2;</code>
+     * Generated from protobuf field <code>string parent = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param string $var
      * @return $this
      */
@@ -128,7 +136,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string hostname = 3;</code>
+     * Generated from protobuf field <code>string hostname = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getHostname()
@@ -137,7 +145,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string hostname = 3;</code>
+     * Generated from protobuf field <code>string hostname = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -150,7 +158,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 cpu = 4;</code>
+     * Generated from protobuf field <code>int64 cpu = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int|string
      */
     public function getCpu()
@@ -159,7 +167,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 cpu = 4;</code>
+     * Generated from protobuf field <code>int64 cpu = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int|string $var
      * @return $this
      */
@@ -172,7 +180,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 memory = 5;</code>
+     * Generated from protobuf field <code>int64 memory = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int|string
      */
     public function getMemory()
@@ -181,7 +189,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 memory = 5;</code>
+     * Generated from protobuf field <code>int64 memory = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int|string $var
      * @return $this
      */
@@ -194,7 +202,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 root_disk = 6;</code>
+     * Generated from protobuf field <code>int64 root_disk = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int|string
      */
     public function getRootDisk()
@@ -203,7 +211,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 root_disk = 6;</code>
+     * Generated from protobuf field <code>int64 root_disk = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int|string $var
      * @return $this
      */
@@ -218,7 +226,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     /**
      * The IPv6 address of the instance
      *
-     * Generated from protobuf field <code>string address = 7;</code>
+     * Generated from protobuf field <code>string address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
      */
     public function getAddress()
@@ -229,7 +237,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     /**
      * The IPv6 address of the instance
      *
-     * Generated from protobuf field <code>string address = 7;</code>
+     * Generated from protobuf field <code>string address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
      * @return $this
      */
@@ -242,7 +250,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated string ssh_keys = 9;</code>
+     * Generated from protobuf field <code>repeated string ssh_keys = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getSshKeys()
@@ -251,7 +259,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated string ssh_keys = 9;</code>
+     * Generated from protobuf field <code>repeated string ssh_keys = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -264,7 +272,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.cbws.virtual_machines.v1alpha1.Instance.State state = 8;</code>
+     * Generated from protobuf field <code>.cbws.virtual_machines.v1alpha1.Instance.State state = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return int
      */
     public function getState()
@@ -273,7 +281,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.cbws.virtual_machines.v1alpha1.Instance.State state = 8;</code>
+     * Generated from protobuf field <code>.cbws.virtual_machines.v1alpha1.Instance.State state = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param int $var
      * @return $this
      */
@@ -288,7 +296,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     /**
      * If specified, the instance's scheduling constraints
      *
-     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.Affinity affinity = 10;</code>
+     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.Affinity affinity = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @return \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\Affinity
      */
     public function getAffinity()
@@ -299,7 +307,7 @@ class Instance extends \Google\Protobuf\Internal\Message
     /**
      * If specified, the instance's scheduling constraints
      *
-     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.Affinity affinity = 10;</code>
+     * Generated from protobuf field <code>.cbws.virtual_machines.affinity.v1alpha1.Affinity affinity = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @param \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\Affinity $var
      * @return $this
      */
@@ -307,6 +315,32 @@ class Instance extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\Affinity::class);
         $this->affinity = $var;
+
+        return $this;
+    }
+
+    /**
+     * A list of labels useful for filtering, affinities and load balancing.
+     *
+     * Generated from protobuf field <code>map<string, string> labels = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getLabels()
+    {
+        return $this->labels;
+    }
+
+    /**
+     * A list of labels useful for filtering, affinities and load balancing.
+     *
+     * Generated from protobuf field <code>map<string, string> labels = 11 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setLabels($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->labels = $arr;
 
         return $this;
     }
