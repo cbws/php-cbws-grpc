@@ -23,7 +23,7 @@
             "Cbws\\IAM\\GRPC": "src/",
             "Cbws\\IAM\\Options\\GRPC": "src/",
             "Cbws\\IAM\\Policy\\GRPC": "src/",
-            "Cbws\\LongRunning\\GRPC": "src/",
+            "Cbws\\LongRunning\\Grpc": "src/",
             "Cbws\\Projects\\GRPC": "src/",
             "Cbws\\VirtualMachines\\Grpc": "src/",
             "Cbws\\VPN\\GRPC": "src/"
