@@ -46,15 +46,15 @@ class OperationsClient extends \Grpc\BaseStub {
      *
      * NOTE: the `name` binding below allows API services to override the binding
      * to use different resource name schemes, such as `users/&#42;/operations`.
-     * @param \Cbws\LongRunning\Grpc\V1alpha1\ListOperationsRequest $argument input argument
+     * @param \Google\LongRunning\ListOperationsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      */
-    public function ListOperations(\Cbws\LongRunning\Grpc\V1alpha1\ListOperationsRequest $argument,
+    public function ListOperations(\Google\LongRunning\ListOperationsRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.longrunning.v1alpha1.Operations/ListOperations',
         $argument,
-        ['\Cbws\LongRunning\Grpc\V1alpha1\ListOperationsResponse', 'decode'],
+        ['\Google\LongRunning\ListOperationsResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -62,15 +62,15 @@ class OperationsClient extends \Grpc\BaseStub {
      * Gets the latest state of a long-running operation.  Clients can use this
      * method to poll the operation result at intervals as recommended by the API
      * service.
-     * @param \Cbws\LongRunning\Grpc\V1alpha1\GetOperationRequest $argument input argument
+     * @param \Google\LongRunning\GetOperationRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      */
-    public function GetOperation(\Cbws\LongRunning\Grpc\V1alpha1\GetOperationRequest $argument,
+    public function GetOperation(\Google\LongRunning\GetOperationRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.longrunning.v1alpha1.Operations/GetOperation',
         $argument,
-        ['\Cbws\LongRunning\Grpc\V1alpha1\Operation', 'decode'],
+        ['\Google\LongRunning\Operation', 'decode'],
         $metadata, $options);
     }
 
@@ -79,11 +79,11 @@ class OperationsClient extends \Grpc\BaseStub {
      * no longer interested in the operation result. It does not cancel the
      * operation. If the server doesn't support this method, it returns
      * `google.rpc.Code.UNIMPLEMENTED`.
-     * @param \Cbws\LongRunning\Grpc\V1alpha1\DeleteOperationRequest $argument input argument
+     * @param \Google\LongRunning\DeleteOperationRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      */
-    public function DeleteOperation(\Cbws\LongRunning\Grpc\V1alpha1\DeleteOperationRequest $argument,
+    public function DeleteOperation(\Google\LongRunning\DeleteOperationRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.longrunning.v1alpha1.Operations/DeleteOperation',
         $argument,
@@ -102,11 +102,11 @@ class OperationsClient extends \Grpc\BaseStub {
      * the operation is not deleted; instead, it becomes an operation with
      * an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
      * corresponding to `Code.CANCELLED`.
-     * @param \Cbws\LongRunning\Grpc\V1alpha1\CancelOperationRequest $argument input argument
+     * @param \Google\LongRunning\CancelOperationRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      */
-    public function CancelOperation(\Cbws\LongRunning\Grpc\V1alpha1\CancelOperationRequest $argument,
+    public function CancelOperation(\Google\LongRunning\CancelOperationRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.longrunning.v1alpha1.Operations/CancelOperation',
         $argument,
