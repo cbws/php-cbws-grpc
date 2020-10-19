@@ -44,9 +44,34 @@ class Instance extends \Google\Protobuf\Internal\Message
      */
     protected $address = '';
     /**
+     * Additional IPv6/IPv4 addresses
+     *
+     * Generated from protobuf field <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private $additional_address;
+    /**
      * Generated from protobuf field <code>repeated string ssh_keys = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     private $ssh_keys;
+    /**
+     * Generated from protobuf field <code>string ci_username = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    protected $ci_username = '';
+    /**
+     * Generated from protobuf field <code>string ci_password = 14 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     */
+    protected $ci_password = '';
+    /**
+     * Generated from protobuf field <code>string ci_userdata = 16 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     */
+    protected $ci_userdata = '';
+    /**
+     * Extra options for the virtual machine instance
+     * request_ipv4 - true/false
+     *
+     * Generated from protobuf field <code>map<string, string> options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     */
+    private $options;
     /**
      * Generated from protobuf field <code>.cbws.virtual_machines.v1alpha1.Instance.State state = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
@@ -78,7 +103,15 @@ class Instance extends \Google\Protobuf\Internal\Message
      *     @type int|string $root_disk
      *     @type string $address
      *           The IPv6 address of the instance
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $additional_address
+     *           Additional IPv6/IPv4 addresses
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $ssh_keys
+     *     @type string $ci_username
+     *     @type string $ci_password
+     *     @type string $ci_userdata
+     *     @type array|\Google\Protobuf\Internal\MapField $options
+     *           Extra options for the virtual machine instance
+     *           request_ipv4 - true/false
      *     @type int $state
      *     @type \Cbws\VirtualMachines\Grpc\Affinity\V1alpha1\Affinity $affinity
      *           If specified, the instance's scheduling constraints
@@ -250,6 +283,32 @@ class Instance extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Additional IPv6/IPv4 addresses
+     *
+     * Generated from protobuf field <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getAdditionalAddress()
+    {
+        return $this->additional_address;
+    }
+
+    /**
+     * Additional IPv6/IPv4 addresses
+     *
+     * Generated from protobuf field <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setAdditionalAddress($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->additional_address = $arr;
+
+        return $this;
+    }
+
+    /**
      * Generated from protobuf field <code>repeated string ssh_keys = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -267,6 +326,100 @@ class Instance extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->ssh_keys = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string ci_username = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return string
+     */
+    public function getCiUsername()
+    {
+        return $this->ci_username;
+    }
+
+    /**
+     * Generated from protobuf field <code>string ci_username = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCiUsername($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ci_username = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string ci_password = 14 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @return string
+     */
+    public function getCiPassword()
+    {
+        return $this->ci_password;
+    }
+
+    /**
+     * Generated from protobuf field <code>string ci_password = 14 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCiPassword($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ci_password = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string ci_userdata = 16 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @return string
+     */
+    public function getCiUserdata()
+    {
+        return $this->ci_userdata;
+    }
+
+    /**
+     * Generated from protobuf field <code>string ci_userdata = 16 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCiUserdata($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ci_userdata = $var;
+
+        return $this;
+    }
+
+    /**
+     * Extra options for the virtual machine instance
+     * request_ipv4 - true/false
+     *
+     * Generated from protobuf field <code>map<string, string> options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getOptions()
+    {
+        return $this->options;
+    }
+
+    /**
+     * Extra options for the virtual machine instance
+     * request_ipv4 - true/false
+     *
+     * Generated from protobuf field <code>map<string, string> options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setOptions($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->options = $arr;
 
         return $this;
     }
