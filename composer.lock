@@ -47,16 +47,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v3.14.0",
+            "version": "v3.15.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "03f132a66f09f96064309e81c5fac8d35b7474e1"
+                "reference": "f22e60e5deb972ded0115c620a99b3f1ac2f4824"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/03f132a66f09f96064309e81c5fac8d35b7474e1",
-                "reference": "03f132a66f09f96064309e81c5fac8d35b7474e1",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/f22e60e5deb972ded0115c620a99b3f1ac2f4824",
+                "reference": "f22e60e5deb972ded0115c620a99b3f1ac2f4824",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +84,7 @@
             "keywords": [
                 "proto"
             ],
-            "time": "2020-11-13T23:41:35+00:00"
+            "time": "2021-02-25T23:39:41+00:00"
         },
         {
             "name": "grpc/grpc",
