@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "google/common-protos",
-            "version": "1.3",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/common-protos-php.git",
-                "reference": "535f489ff1c3433c0ea64cd5aa0560f926949ac5"
+                "reference": "b1ee63636d94fe88f6cff600a0f23fae06b6fa2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/535f489ff1c3433c0ea64cd5aa0560f926949ac5",
-                "reference": "535f489ff1c3433c0ea64cd5aa0560f926949ac5",
+                "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/b1ee63636d94fe88f6cff600a0f23fae06b6fa2e",
+                "reference": "b1ee63636d94fe88f6cff600a0f23fae06b6fa2e",
                 "shasum": ""
             },
             "require": {
@@ -43,7 +43,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2020-08-26T16:05:09+00:00"
+            "time": "2021-11-18T21:49:24+00:00"
         },
         {
             "name": "google/protobuf",
