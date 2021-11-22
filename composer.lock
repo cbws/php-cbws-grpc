@@ -88,16 +88,16 @@
         },
         {
             "name": "grpc/grpc",
-            "version": "1.36.0",
+            "version": "1.42.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/grpc/grpc-php.git",
-                "reference": "6145dd917d340b579f0b663940b17cc93172b79a"
+                "reference": "9fa44f104cb92e924d4da547323a97f3d8aca6d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/grpc/grpc-php/zipball/6145dd917d340b579f0b663940b17cc93172b79a",
-                "reference": "6145dd917d340b579f0b663940b17cc93172b79a",
+                "url": "https://api.github.com/repos/grpc/grpc-php/zipball/9fa44f104cb92e924d4da547323a97f3d8aca6d4",
+                "reference": "9fa44f104cb92e924d4da547323a97f3d8aca6d4",
                 "shasum": ""
             },
             "require": {
@@ -125,7 +125,7 @@
             "keywords": [
                 "rpc"
             ],
-            "time": "2021-03-01T21:52:11+00:00"
+            "time": "2021-11-19T08:13:51+00:00"
         }
     ],
     "packages-dev": [],
