@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38f6a170416ae6f8a3c6961ba4173f2e",
+    "content-hash": "7cd979b1767f33284dc1d9703e0029e4",
     "packages": [
         {
             "name": "google/common-protos",
-            "version": "1.3",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/common-protos-php.git",
-                "reference": "535f489ff1c3433c0ea64cd5aa0560f926949ac5"
+                "reference": "a1bcb7b37f1fa1c92d65c3c6339fc701a65916ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/535f489ff1c3433c0ea64cd5aa0560f926949ac5",
-                "reference": "535f489ff1c3433c0ea64cd5aa0560f926949ac5",
+                "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/a1bcb7b37f1fa1c92d65c3c6339fc701a65916ee",
+                "reference": "a1bcb7b37f1fa1c92d65c3c6339fc701a65916ee",
                 "shasum": ""
             },
             "require": {
@@ -43,7 +43,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2020-08-26T16:05:09+00:00"
+            "time": "2022-01-13T20:17:53+00:00"
         },
         {
             "name": "google/protobuf",
