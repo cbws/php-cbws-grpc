@@ -5,7 +5,7 @@
     "require": {
         "grpc/grpc": "^1.27",
         "google/protobuf": "^3.12",
-        "google/common-protos": "^1.2",
+        "google/common-protos": "^1.2 || ^2.0",
         "ext-grpc": "^1.29"
     },
     "suggest": {
