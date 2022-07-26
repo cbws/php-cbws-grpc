@@ -47,23 +47,23 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v3.15.5",
+            "version": "v3.21.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "c4a8128a7df155fce4faba3087b27dcdfe3ece2e"
+                "reference": "f92a08364fbad1bb2ae7e4a52acf0c79c40ec0d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/c4a8128a7df155fce4faba3087b27dcdfe3ece2e",
-                "reference": "c4a8128a7df155fce4faba3087b27dcdfe3ece2e",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/f92a08364fbad1bb2ae7e4a52acf0c79c40ec0d5",
+                "reference": "f92a08364fbad1bb2ae7e4a52acf0c79c40ec0d5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.0"
+                "php": ">=7.0.0"
             },
             "require-dev": {
-                "phpunit/phpunit": ">=4.8.0"
+                "phpunit/phpunit": ">=5.0.0"
             },
             "suggest": {
                 "ext-bcmath": "Need to support JSON deserialization"
@@ -84,7 +84,7 @@
             "keywords": [
                 "proto"
             ],
-            "time": "2021-03-05T01:43:13+00:00"
+            "time": "2022-07-25T23:10:27+00:00"
         },
         {
             "name": "grpc/grpc",
