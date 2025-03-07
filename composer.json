@@ -3,10 +3,10 @@
     "description": "Generated gRPC client libraries for CBWS",
     "type": "library",
     "require": {
-        "grpc/grpc": "^1.27",
-        "google/protobuf": "^3.12",
-        "google/common-protos": "^1.2",
-        "ext-grpc": "^1.29"
+        "grpc/grpc": "^1.57",
+        "google/protobuf": "^3.3",
+        "google/common-protos": "^4.11",
+        "ext-grpc": "^1.56"
     },
     "suggest": {
         "ext-protobuf": "For better performance, use the C implementation of Protobuf",
@@ -20,13 +20,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Cbws\\IAM\\GRPC": "src/",
-            "Cbws\\IAM\\Options\\GRPC": "src/",
-            "Cbws\\IAM\\Policy\\GRPC": "src/",
-            "Cbws\\Projects\\GRPC": "src/",
-            "Cbws\\VirtualMachines\\Grpc": "src/",
-            "Cbws\\VPN\\GRPC": "src/",
-            "Google\\LongRunning\\OperationsClient": "src/"
+            "Cbws\\Grpc\\": "src/"
         }
     }
 }
