@@ -64,7 +64,7 @@ class MachineType extends \Google\Protobuf\Internal\Message
      * }
      */
     public function __construct($data = NULL) {
-        \Cbws\Grpc\Compute\V1alpha1\GPBMetadata\MachineType::initOnce();
+        \GPBMetadata\Cbws\Compute\MachineType::initOnce();
         parent::__construct($data);
     }
 

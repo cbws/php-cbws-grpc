@@ -48,7 +48,7 @@ class GetMachineTypeRequest extends \Google\Protobuf\Internal\Message
      * }
      */
     public function __construct($data = NULL) {
-        \Cbws\Grpc\Compute\V1alpha1\GPBMetadata\Compute::initOnce();
+        \GPBMetadata\Cbws\Compute\Compute::initOnce();
         parent::__construct($data);
     }
 

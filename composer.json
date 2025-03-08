@@ -20,7 +20,9 @@
     ],
     "autoload": {
         "psr-4": {
-            "Cbws\\Grpc\\": "src/"
+            "Cbws\\Grpc\\": "src/",
+            "GPBMetadata\\Cbws\\": "metadata/"
+
         }
     }
 }

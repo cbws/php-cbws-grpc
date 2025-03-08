@@ -69,7 +69,7 @@ class ComputeServiceClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/CreateMachine',
         $argument,
-        ['\Google\LongRunning\Operation', 'decode'],
+        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
         $metadata, $options);
     }
 
@@ -83,7 +83,7 @@ class ComputeServiceClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/StopMachine',
         $argument,
-        ['\Google\LongRunning\Operation', 'decode'],
+        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
         $metadata, $options);
     }
 
@@ -97,7 +97,7 @@ class ComputeServiceClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/StartMachine',
         $argument,
-        ['\Google\LongRunning\Operation', 'decode'],
+        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
         $metadata, $options);
     }
 
@@ -111,7 +111,7 @@ class ComputeServiceClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/ResetMachine',
         $argument,
-        ['\Google\LongRunning\Operation', 'decode'],
+        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
         $metadata, $options);
     }
 
@@ -126,7 +126,7 @@ class ComputeServiceClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/ReinstallMachine',
         $argument,
-        ['\Google\LongRunning\Operation', 'decode'],
+        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
         $metadata, $options);
     }
 
@@ -141,7 +141,7 @@ class ComputeServiceClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/ResizeMachine',
         $argument,
-        ['\Google\LongRunning\Operation', 'decode'],
+        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
         $metadata, $options);
     }
 
@@ -155,7 +155,7 @@ class ComputeServiceClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/UpdateMachine',
         $argument,
-        ['\Google\LongRunning\Operation', 'decode'],
+        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
         $metadata, $options);
     }
 
@@ -169,7 +169,7 @@ class ComputeServiceClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/DeleteMachine',
         $argument,
-        ['\Google\LongRunning\Operation', 'decode'],
+        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
         $metadata, $options);
     }
 
