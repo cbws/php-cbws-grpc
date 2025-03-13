@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "grpc/grpc": "^1.57",
-        "google/protobuf": "^3.3",
+        "google/protobuf": "^3.3 || ^4.0",
         "google/common-protos": "^4.11",
         "ext-grpc": "^1.56"
     },
