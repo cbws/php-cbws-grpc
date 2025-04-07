@@ -1,7 +1,7 @@
 <?php
 // GENERATED CODE -- DO NOT EDIT!
 
-namespace Cbws/Grpc/Projects/V1alpha1;
+namespace Cbws\Grpc\Projects\V1alpha1;
 
 /**
  */
@@ -19,46 +19,46 @@ class ProjectsServiceClient extends \Grpc\BaseStub {
     /**
      * Create a project, requires the projects.cbws.xyz/Project/create permission on the organization.
      * The principal creating a project will get the owner role on the project.
-     * @param \Cbws/Grpc/Projects/V1alpha1\CreateProjectRequest $argument input argument
+     * @param \Cbws\Grpc\Projects\V1alpha1\CreateProjectRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function CreateProject(\Cbws/Grpc/Projects/V1alpha1\CreateProjectRequest $argument,
+    public function CreateProject(\Cbws\Grpc\Projects\V1alpha1\CreateProjectRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.projects.v1alpha1.ProjectsService/CreateProject',
         $argument,
-        ['\Cbws/Grpc/Projects/V1alpha1\Project', 'decode'],
+        ['\Cbws\Grpc\Projects\V1alpha1\Project', 'decode'],
         $metadata, $options);
     }
 
     /**
      * List all projects you have access to
      * Requires the projects.cbws.xyz/Project/get permission on the project
-     * @param \Cbws/Grpc/Projects/V1alpha1\ListProjectsRequest $argument input argument
+     * @param \Cbws\Grpc\Projects\V1alpha1\ListProjectsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function ListProjects(\Cbws/Grpc/Projects/V1alpha1\ListProjectsRequest $argument,
+    public function ListProjects(\Cbws\Grpc\Projects\V1alpha1\ListProjectsRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.projects.v1alpha1.ProjectsService/ListProjects',
         $argument,
-        ['\Cbws/Grpc/Projects/V1alpha1\ListProjectsResponse', 'decode'],
+        ['\Cbws\Grpc\Projects\V1alpha1\ListProjectsResponse', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Cbws/Grpc/Projects/V1alpha1\GetProjectRequest $argument input argument
+     * @param \Cbws\Grpc\Projects\V1alpha1\GetProjectRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function GetProject(\Cbws/Grpc/Projects/V1alpha1\GetProjectRequest $argument,
+    public function GetProject(\Cbws\Grpc\Projects\V1alpha1\GetProjectRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.projects.v1alpha1.ProjectsService/GetProject',
         $argument,
-        ['\Cbws/Grpc/Projects/V1alpha1\Project', 'decode'],
+        ['\Cbws\Grpc\Projects\V1alpha1\Project', 'decode'],
         $metadata, $options);
     }
 
@@ -66,30 +66,30 @@ class ProjectsServiceClient extends \Grpc\BaseStub {
      * Update a project
      *
      * Permission: projects.cbws.xyz/Project/update
-     * @param \Cbws/Grpc/Projects/V1alpha1\UpdateProjectRequest $argument input argument
+     * @param \Cbws\Grpc\Projects\V1alpha1\UpdateProjectRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function UpdateProject(\Cbws/Grpc/Projects/V1alpha1\UpdateProjectRequest $argument,
+    public function UpdateProject(\Cbws\Grpc\Projects\V1alpha1\UpdateProjectRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.projects.v1alpha1.ProjectsService/UpdateProject',
         $argument,
-        ['\Cbws/Grpc/Projects/V1alpha1\Project', 'decode'],
+        ['\Cbws\Grpc\Projects\V1alpha1\Project', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Cbws/Grpc/Projects/V1alpha1\DeleteProjectRequest $argument input argument
+     * @param \Cbws\Grpc\Projects\V1alpha1\DeleteProjectRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function DeleteProject(\Cbws/Grpc/Projects/V1alpha1\DeleteProjectRequest $argument,
+    public function DeleteProject(\Cbws\Grpc\Projects\V1alpha1\DeleteProjectRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/cbws.projects.v1alpha1.ProjectsService/DeleteProject',
         $argument,
-        ['\Google\Longrunning\Operation', 'decode'],
+        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
         $metadata, $options);
     }
 

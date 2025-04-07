@@ -50,7 +50,7 @@ class ListProjectsRequest extends \Google\Protobuf\Internal\Message
      * }
      */
     public function __construct($data = NULL) {
-        \Cbws\Grpc\Projects\V1alpha1\GPBMetadata\Projects::initOnce();
+        \GPBMetadata\Cbws\Projects\Projects::initOnce();
         parent::__construct($data);
     }
 

@@ -35,7 +35,7 @@ class UpdateProjectRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Cbws/Grpc/Projects/V1alpha1\Project $project
+     *     @type \Cbws\Grpc\Projects\V1alpha1\Project $project
      *           The project to update.
      *           The project's `name` field is used to identify the project to be updated.
      *           Format: projects/{project}
@@ -44,7 +44,7 @@ class UpdateProjectRequest extends \Google\Protobuf\Internal\Message
      * }
      */
     public function __construct($data = NULL) {
-        \Cbws\Grpc\Projects\V1alpha1\GPBMetadata\Projects::initOnce();
+        \GPBMetadata\Cbws\Projects\Projects::initOnce();
         parent::__construct($data);
     }
 
@@ -54,7 +54,7 @@ class UpdateProjectRequest extends \Google\Protobuf\Internal\Message
      * Format: projects/{project}
      *
      * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 1 [json_name = "project", (.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Cbws/Grpc/Projects/V1alpha1\Project|null
+     * @return \Cbws\Grpc\Projects\V1alpha1\Project|null
      */
     public function getProject()
     {
@@ -77,12 +77,12 @@ class UpdateProjectRequest extends \Google\Protobuf\Internal\Message
      * Format: projects/{project}
      *
      * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 1 [json_name = "project", (.google.api.field_behavior) = REQUIRED];</code>
-     * @param \Cbws/Grpc/Projects/V1alpha1\Project $var
+     * @param \Cbws\Grpc\Projects\V1alpha1\Project $var
      * @return $this
      */
     public function setProject($var)
     {
-        GPBUtil::checkMessage($var, \Cbws/Grpc/Projects/V1alpha1\Project::class);
+        GPBUtil::checkMessage($var, \Cbws\Grpc\Projects\V1alpha1\Project::class);
         $this->project = $var;
 
         return $this;

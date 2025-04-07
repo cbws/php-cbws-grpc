@@ -33,7 +33,7 @@ class ListProjectsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Cbws/Grpc/Projects/V1alpha1\Project>|\Google\Protobuf\Internal\RepeatedField $projects
+     *     @type array<\Cbws\Grpc\Projects\V1alpha1\Project>|\Google\Protobuf\Internal\RepeatedField $projects
      *     @type string $next_page_token
      *           To retrieve the next page of results, set
      *           [ListServiceAccountsRequest.page_token][google.iam.admin.v1.ListServiceAccountsRequest.page_token]
@@ -41,7 +41,7 @@ class ListProjectsResponse extends \Google\Protobuf\Internal\Message
      * }
      */
     public function __construct($data = NULL) {
-        \Cbws\Grpc\Projects\V1alpha1\GPBMetadata\Projects::initOnce();
+        \GPBMetadata\Cbws\Projects\Projects::initOnce();
         parent::__construct($data);
     }
 
@@ -56,12 +56,12 @@ class ListProjectsResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .cbws.projects.v1alpha1.Project projects = 1 [json_name = "projects"];</code>
-     * @param array<\Cbws/Grpc/Projects/V1alpha1\Project>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Cbws\Grpc\Projects\V1alpha1\Project>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setProjects($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Cbws/Grpc/Projects/V1alpha1\Project::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Cbws\Grpc\Projects\V1alpha1\Project::class);
         $this->projects = $arr;
 
         return $this;
