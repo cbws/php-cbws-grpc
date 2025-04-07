@@ -15,9 +15,9 @@ class Projects
         if (static::$is_initialized == true) {
           return;
         }
-        \Cbws\Iam\Options\V1alpha1\GPBMetadata\Options::initOnce();
-        \Cbws\Iam\Policy\V1alpha1\GPBMetadata\Policy::initOnce();
-        \Cbws\Iam\Policy\V1alpha1\GPBMetadata\RequestResponse::initOnce();
+        \GPBMetadata\Cbws\Iam\Options\Options::initOnce();
+        \GPBMetadata\Cbws\Iam\Policy\Policy::initOnce();
+        \GPBMetadata\Cbws\Iam\Policy\RequestResponse::initOnce();
         \GPBMetadata\Cbws\Projects\Project::initOnce();
         \GPBMetadata\Google\Api\Annotations::initOnce();
         \GPBMetadata\Google\Api\Client::initOnce();
