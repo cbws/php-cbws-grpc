@@ -53,7 +53,7 @@ class Project extends \Google\Protobuf\Internal\Message
      * }
      */
     public function __construct($data = NULL) {
-        \Cbws\Grpc\Projects\V1alpha1\GPBMetadata\Project::initOnce();
+        \GPBMetadata\Cbws\Projects\Project::initOnce();
         parent::__construct($data);
     }
 

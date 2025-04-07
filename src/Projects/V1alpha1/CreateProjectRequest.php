@@ -46,14 +46,14 @@ class CreateProjectRequest extends \Google\Protobuf\Internal\Message
      *           Required. The name of the project, It is globally unique across CBWS,
      *           must be 6-30 characters long, and match the regular expression
      *           `[a-z]([-a-z0-9]*[a-z0-9])` to comply with RFC1035.
-     *     @type \Cbws/Grpc/Projects/V1alpha1\Project $project
+     *     @type \Cbws\Grpc\Projects\V1alpha1\Project $project
      *           The [Project][cbws.projects.v1alpha1.Project] resource to
      *           create. Currently, only the following values are user assignable:
      *           `display_name`.
      * }
      */
     public function __construct($data = NULL) {
-        \Cbws\Grpc\Projects\V1alpha1\GPBMetadata\Projects::initOnce();
+        \GPBMetadata\Cbws\Projects\Projects::initOnce();
         parent::__construct($data);
     }
 
@@ -115,7 +115,7 @@ class CreateProjectRequest extends \Google\Protobuf\Internal\Message
      * `display_name`.
      *
      * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];</code>
-     * @return \Cbws/Grpc/Projects/V1alpha1\Project|null
+     * @return \Cbws\Grpc\Projects\V1alpha1\Project|null
      */
     public function getProject()
     {
@@ -138,12 +138,12 @@ class CreateProjectRequest extends \Google\Protobuf\Internal\Message
      * `display_name`.
      *
      * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];</code>
-     * @param \Cbws/Grpc/Projects/V1alpha1\Project $var
+     * @param \Cbws\Grpc\Projects\V1alpha1\Project $var
      * @return $this
      */
     public function setProject($var)
     {
-        GPBUtil::checkMessage($var, \Cbws/Grpc/Projects/V1alpha1\Project::class);
+        GPBUtil::checkMessage($var, \Cbws\Grpc\Projects\V1alpha1\Project::class);
         $this->project = $var;
 
         return $this;
