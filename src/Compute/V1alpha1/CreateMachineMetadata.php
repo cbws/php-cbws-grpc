@@ -10,15 +10,21 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The metadata of a create machine operation.
+ *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.CreateMachineMetadata</code>
  */
 class CreateMachineMetadata extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The state of the machine as the operation last saw it.
+     *
      * Generated from protobuf field <code>.cbws.compute.v1alpha1.Machine.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $state = 0;
     /**
+     * The machine being created.
+     *
      * Generated from protobuf field <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $machine = null;
@@ -30,7 +36,9 @@ class CreateMachineMetadata extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $state
+     *           The state of the machine as the operation last saw it.
      *     @type \Cbws\Grpc\Compute\V1alpha1\Machine $machine
+     *           The machine being created.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,6 +47,8 @@ class CreateMachineMetadata extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The state of the machine as the operation last saw it.
+     *
      * Generated from protobuf field <code>.cbws.compute.v1alpha1.Machine.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return int
      */
@@ -48,6 +58,8 @@ class CreateMachineMetadata extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The state of the machine as the operation last saw it.
+     *
      * Generated from protobuf field <code>.cbws.compute.v1alpha1.Machine.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param int $var
      * @return $this
@@ -61,6 +73,8 @@ class CreateMachineMetadata extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The machine being created.
+     *
      * Generated from protobuf field <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return \Cbws\Grpc\Compute\V1alpha1\Machine|null
      */
@@ -80,6 +94,8 @@ class CreateMachineMetadata extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The machine being created.
+     *
      * Generated from protobuf field <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param \Cbws\Grpc\Compute\V1alpha1\Machine $var
      * @return $this

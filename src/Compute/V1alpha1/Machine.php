@@ -10,57 +10,79 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * A virtual machine.
+ *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.Machine</code>
  */
 class Machine extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The resource name of the machine, such as
+     * `projects/my-project-123/machines/web-1`. On create, it is made from the
+     * request's `parent` and `machine_id`.
+     *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = IMMUTABLE];</code>
      */
     protected $name = '';
     /**
+     * The project that holds the machine, such as `projects/my-project-123`.
+     *
      * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
      */
     protected $parent = '';
     /**
+     * The machine type, such as `zones/nl-ein-1/types/g4.2`. The zone of the
+     * type is the zone the machine runs in. On create, `machineTypes/g4.2` lets
+     * CBWS choose a zone that offers the type. Change it with ResizeMachine.
+     *
      * Generated from protobuf field <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
      */
     protected $type = '';
     /**
-     * Which image to use, can either be projects/project-name/families/ubuntu-2204-lts
-     * or projects/project-name/images/ubuntu-2204-lts-image-tag
+     * The image the machine is installed from. On create, give an image
+     * family, such as `projects/my-project-123/families/ubuntu-2404-lts`, to
+     * install the family's current image for the machine type, or a single
+     * image, such as `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
      *
      * Generated from protobuf field <code>string image = 10 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $image = '';
     /**
+     * The hostname the machine boots with. Defaults to the machine id.
+     *
      * Generated from protobuf field <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $hostname = '';
     /**
-     * The IPv6 address of the instance
+     * The IPv4 address the machine holds. Empty on a machine with no IPv4 address.
      *
      * Generated from protobuf field <code>string address = 7 [json_name = "address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $address = '';
     /**
+     * Public keys installed for the image's default user when the machine first boots.
+     * Accepted on create and never returned, so a machine read back always reports this
+     * empty. Keep your own record of the keys you sent.
+     *
      * Generated from protobuf field <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private $ssh_keys;
     /**
+     * The cloud-init userdata the machine first boots with, delivered to it unchanged.
+     * Accepted on create and never returned, by the machine or by any operation that reports it.
+     * Userdata commonly carries credentials, and anything returned is readable by everyone who can
+     * read the machine or its operations. Keep your own record of the userdata you sent.
+     *
      * Generated from protobuf field <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
      */
     protected $userdata = '';
     /**
+     * The current state of the machine. Unset when the request's read mask
+     * leaves out `status`.
+     *
      * Generated from protobuf field <code>.cbws.compute.v1alpha1.Machine.State state = 8 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $state = 0;
-    /**
-     * A list of labels useful for filtering, affinities and load balancing.
-     *
-     * Generated from protobuf field <code>map<string, string> labels = 11 [json_name = "labels", (.google.api.field_behavior) = OPTIONAL];</code>
-     */
-    private $labels;
 
     /**
      * Constructor.
@@ -69,19 +91,36 @@ class Machine extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $name
+     *           The resource name of the machine, such as
+     *           `projects/my-project-123/machines/web-1`. On create, it is made from the
+     *           request's `parent` and `machine_id`.
      *     @type string $parent
+     *           The project that holds the machine, such as `projects/my-project-123`.
      *     @type string $type
+     *           The machine type, such as `zones/nl-ein-1/types/g4.2`. The zone of the
+     *           type is the zone the machine runs in. On create, `machineTypes/g4.2` lets
+     *           CBWS choose a zone that offers the type. Change it with ResizeMachine.
      *     @type string $image
-     *           Which image to use, can either be projects/project-name/families/ubuntu-2204-lts
-     *           or projects/project-name/images/ubuntu-2204-lts-image-tag
+     *           The image the machine is installed from. On create, give an image
+     *           family, such as `projects/my-project-123/families/ubuntu-2404-lts`, to
+     *           install the family's current image for the machine type, or a single
+     *           image, such as `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
      *     @type string $hostname
+     *           The hostname the machine boots with. Defaults to the machine id.
      *     @type string $address
-     *           The IPv6 address of the instance
+     *           The IPv4 address the machine holds. Empty on a machine with no IPv4 address.
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $ssh_keys
+     *           Public keys installed for the image's default user when the machine first boots.
+     *           Accepted on create and never returned, so a machine read back always reports this
+     *           empty. Keep your own record of the keys you sent.
      *     @type string $userdata
+     *           The cloud-init userdata the machine first boots with, delivered to it unchanged.
+     *           Accepted on create and never returned, by the machine or by any operation that reports it.
+     *           Userdata commonly carries credentials, and anything returned is readable by everyone who can
+     *           read the machine or its operations. Keep your own record of the userdata you sent.
      *     @type int $state
-     *     @type array|\Google\Protobuf\Internal\MapField $labels
-     *           A list of labels useful for filtering, affinities and load balancing.
+     *           The current state of the machine. Unset when the request's read mask
+     *           leaves out `status`.
      * }
      */
     public function __construct($data = NULL) {
@@ -90,6 +129,10 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The resource name of the machine, such as
+     * `projects/my-project-123/machines/web-1`. On create, it is made from the
+     * request's `parent` and `machine_id`.
+     *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return string
      */
@@ -99,6 +142,10 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The resource name of the machine, such as
+     * `projects/my-project-123/machines/web-1`. On create, it is made from the
+     * request's `parent` and `machine_id`.
+     *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param string $var
      * @return $this
@@ -112,6 +159,8 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The project that holds the machine, such as `projects/my-project-123`.
+     *
      * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return string
      */
@@ -121,6 +170,8 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The project that holds the machine, such as `projects/my-project-123`.
+     *
      * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param string $var
      * @return $this
@@ -134,6 +185,10 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The machine type, such as `zones/nl-ein-1/types/g4.2`. The zone of the
+     * type is the zone the machine runs in. On create, `machineTypes/g4.2` lets
+     * CBWS choose a zone that offers the type. Change it with ResizeMachine.
+     *
      * Generated from protobuf field <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return string
      */
@@ -143,6 +198,10 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The machine type, such as `zones/nl-ein-1/types/g4.2`. The zone of the
+     * type is the zone the machine runs in. On create, `machineTypes/g4.2` lets
+     * CBWS choose a zone that offers the type. Change it with ResizeMachine.
+     *
      * Generated from protobuf field <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param string $var
      * @return $this
@@ -156,8 +215,10 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Which image to use, can either be projects/project-name/families/ubuntu-2204-lts
-     * or projects/project-name/images/ubuntu-2204-lts-image-tag
+     * The image the machine is installed from. On create, give an image
+     * family, such as `projects/my-project-123/families/ubuntu-2404-lts`, to
+     * install the family's current image for the machine type, or a single
+     * image, such as `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
      *
      * Generated from protobuf field <code>string image = 10 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -168,8 +229,10 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Which image to use, can either be projects/project-name/families/ubuntu-2204-lts
-     * or projects/project-name/images/ubuntu-2204-lts-image-tag
+     * The image the machine is installed from. On create, give an image
+     * family, such as `projects/my-project-123/families/ubuntu-2404-lts`, to
+     * install the family's current image for the machine type, or a single
+     * image, such as `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
      *
      * Generated from protobuf field <code>string image = 10 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -184,6 +247,8 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The hostname the machine boots with. Defaults to the machine id.
+     *
      * Generated from protobuf field <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
@@ -193,6 +258,8 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The hostname the machine boots with. Defaults to the machine id.
+     *
      * Generated from protobuf field <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
@@ -206,7 +273,7 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The IPv6 address of the instance
+     * The IPv4 address the machine holds. Empty on a machine with no IPv4 address.
      *
      * Generated from protobuf field <code>string address = 7 [json_name = "address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
@@ -217,7 +284,7 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The IPv6 address of the instance
+     * The IPv4 address the machine holds. Empty on a machine with no IPv4 address.
      *
      * Generated from protobuf field <code>string address = 7 [json_name = "address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
@@ -232,6 +299,10 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Public keys installed for the image's default user when the machine first boots.
+     * Accepted on create and never returned, so a machine read back always reports this
+     * empty. Keep your own record of the keys you sent.
+     *
      * Generated from protobuf field <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -241,6 +312,10 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Public keys installed for the image's default user when the machine first boots.
+     * Accepted on create and never returned, so a machine read back always reports this
+     * empty. Keep your own record of the keys you sent.
+     *
      * Generated from protobuf field <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
@@ -254,6 +329,11 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The cloud-init userdata the machine first boots with, delivered to it unchanged.
+     * Accepted on create and never returned, by the machine or by any operation that reports it.
+     * Userdata commonly carries credentials, and anything returned is readable by everyone who can
+     * read the machine or its operations. Keep your own record of the userdata you sent.
+     *
      * Generated from protobuf field <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return string
      */
@@ -263,6 +343,11 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The cloud-init userdata the machine first boots with, delivered to it unchanged.
+     * Accepted on create and never returned, by the machine or by any operation that reports it.
+     * Userdata commonly carries credentials, and anything returned is readable by everyone who can
+     * read the machine or its operations. Keep your own record of the userdata you sent.
+     *
      * Generated from protobuf field <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param string $var
      * @return $this
@@ -276,6 +361,9 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The current state of the machine. Unset when the request's read mask
+     * leaves out `status`.
+     *
      * Generated from protobuf field <code>.cbws.compute.v1alpha1.Machine.State state = 8 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return int
      */
@@ -285,6 +373,9 @@ class Machine extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The current state of the machine. Unset when the request's read mask
+     * leaves out `status`.
+     *
      * Generated from protobuf field <code>.cbws.compute.v1alpha1.Machine.State state = 8 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param int $var
      * @return $this
@@ -293,32 +384,6 @@ class Machine extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Cbws\Grpc\Compute\V1alpha1\Machine\State::class);
         $this->state = $var;
-
-        return $this;
-    }
-
-    /**
-     * A list of labels useful for filtering, affinities and load balancing.
-     *
-     * Generated from protobuf field <code>map<string, string> labels = 11 [json_name = "labels", (.google.api.field_behavior) = OPTIONAL];</code>
-     * @return \Google\Protobuf\Internal\MapField
-     */
-    public function getLabels()
-    {
-        return $this->labels;
-    }
-
-    /**
-     * A list of labels useful for filtering, affinities and load balancing.
-     *
-     * Generated from protobuf field <code>map<string, string> labels = 11 [json_name = "labels", (.google.api.field_behavior) = OPTIONAL];</code>
-     * @param array|\Google\Protobuf\Internal\MapField $var
-     * @return $this
-     */
-    public function setLabels($var)
-    {
-        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
-        $this->labels = $arr;
 
         return $this;
     }

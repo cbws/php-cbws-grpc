@@ -10,14 +10,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * The machine list response.
+ * The response to a request to list images.
  *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.ListImagesResponse</code>
  */
 class ListImagesResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The list of matching images.
+     * The images in the project.
      *
      * Generated from protobuf field <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
@@ -25,7 +25,7 @@ class ListImagesResponse extends \Google\Protobuf\Internal\Message
     /**
      * To retrieve the next page of results, set
      * [ListImagesRequest.page_token][cbws.compute.v1alpha1.ListImagesRequest.page_token]
-     * to this value.
+     * to this value. Empty on the last page.
      *
      * Generated from protobuf field <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
      */
@@ -38,11 +38,11 @@ class ListImagesResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array<\Cbws\Grpc\Compute\V1alpha1\Image>|\Google\Protobuf\Internal\RepeatedField $images
-     *           The list of matching images.
+     *           The images in the project.
      *     @type string $next_page_token
      *           To retrieve the next page of results, set
      *           [ListImagesRequest.page_token][cbws.compute.v1alpha1.ListImagesRequest.page_token]
-     *           to this value.
+     *           to this value. Empty on the last page.
      * }
      */
     public function __construct($data = NULL) {
@@ -51,7 +51,7 @@ class ListImagesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The list of matching images.
+     * The images in the project.
      *
      * Generated from protobuf field <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -62,7 +62,7 @@ class ListImagesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The list of matching images.
+     * The images in the project.
      *
      * Generated from protobuf field <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      * @param array<\Cbws\Grpc\Compute\V1alpha1\Image>|\Google\Protobuf\Internal\RepeatedField $var
@@ -79,7 +79,7 @@ class ListImagesResponse extends \Google\Protobuf\Internal\Message
     /**
      * To retrieve the next page of results, set
      * [ListImagesRequest.page_token][cbws.compute.v1alpha1.ListImagesRequest.page_token]
-     * to this value.
+     * to this value. Empty on the last page.
      *
      * Generated from protobuf field <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
      * @return string
@@ -92,7 +92,7 @@ class ListImagesResponse extends \Google\Protobuf\Internal\Message
     /**
      * To retrieve the next page of results, set
      * [ListImagesRequest.page_token][cbws.compute.v1alpha1.ListImagesRequest.page_token]
-     * to this value.
+     * to this value. Empty on the last page.
      *
      * Generated from protobuf field <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
      * @param string $var

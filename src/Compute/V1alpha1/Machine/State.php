@@ -8,43 +8,66 @@ namespace Cbws\Grpc\Compute\V1alpha1\Machine;
 use UnexpectedValueException;
 
 /**
+ * The state of a machine.
+ *
  * Protobuf type <code>cbws.compute.v1alpha1.Machine.State</code>
  */
 class State
 {
     /**
+     * The state was not read, or it is none of the states below, such as
+     * a machine in an error state.
+     *
      * Generated from protobuf enum <code>STATE_UNSPECIFIED = 0;</code>
      */
     const STATE_UNSPECIFIED = 0;
     /**
+     * The machine is being created.
+     *
      * Generated from protobuf enum <code>STATE_PROVISIONING = 1;</code>
      */
     const STATE_PROVISIONING = 1;
     /**
+     * The machine is being prepared to run, for example while it boots
+     * for the first time, is reinstalled or is resized.
+     *
      * Generated from protobuf enum <code>STATE_STAGING = 2;</code>
      */
     const STATE_STAGING = 2;
     /**
+     * The machine is running.
+     *
      * Generated from protobuf enum <code>STATE_RUNNING = 3;</code>
      */
     const STATE_RUNNING = 3;
     /**
+     * The machine is stopping.
+     *
      * Generated from protobuf enum <code>STATE_STOPPING = 4;</code>
      */
     const STATE_STOPPING = 4;
     /**
+     * The machine is being suspended.
+     *
      * Generated from protobuf enum <code>STATE_SUSPENDING = 5;</code>
      */
     const STATE_SUSPENDING = 5;
     /**
+     * The machine is suspended or paused, and does not run.
+     *
      * Generated from protobuf enum <code>STATE_SUSPENDED = 6;</code>
      */
     const STATE_SUSPENDED = 6;
     /**
+     * The machine is being repaired.
+     *
      * Generated from protobuf enum <code>STATE_REPAIRING = 7;</code>
      */
     const STATE_REPAIRING = 7;
     /**
+     * The machine is stopped. It still exists, keeps its disk and can be
+     * started again.
+     *
      * Generated from protobuf enum <code>STATE_TERMINATED = 8;</code>
      */
     const STATE_TERMINATED = 8;

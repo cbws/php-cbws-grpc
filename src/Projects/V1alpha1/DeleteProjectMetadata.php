@@ -10,6 +10,8 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The metadata of a project delete operation. It has no fields.
+ *
  * Generated from protobuf message <code>cbws.projects.v1alpha1.DeleteProjectMetadata</code>
  */
 class DeleteProjectMetadata extends \Google\Protobuf\Internal\Message

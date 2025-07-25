@@ -4,7 +4,8 @@
 namespace Cbws\Grpc\Compute\V1alpha1;
 
 /**
- * Service for managing virtual and bare metal machines
+ * Manages virtual machines, the machine types they run on and the images they
+ * boot from.
  */
 class ComputeServiceClient extends \Grpc\BaseStub {
 
@@ -18,10 +19,11 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists the machines in a project.
      * @param \Cbws\Grpc\Compute\V1alpha1\ListMachinesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ListMachinesResponse>
      */
     public function ListMachines(\Cbws\Grpc\Compute\V1alpha1\ListMachinesRequest $argument,
       $metadata = [], $options = []) {
@@ -32,10 +34,11 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Gets a machine.
      * @param \Cbws\Grpc\Compute\V1alpha1\GetMachineRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\Machine>
      */
     public function GetMachine(\Cbws\Grpc\Compute\V1alpha1\GetMachineRequest $argument,
       $metadata = [], $options = []) {
@@ -46,10 +49,12 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Returns a URL that opens the console of a running machine in a browser.
+     * A stopped machine has no console.
      * @param \Cbws\Grpc\Compute\V1alpha1\RequestMachineConsoleRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\RequestMachineConsoleResponse>
      */
     public function RequestMachineConsole(\Cbws\Grpc\Compute\V1alpha1\RequestMachineConsoleRequest $argument,
       $metadata = [], $options = []) {
@@ -60,10 +65,11 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a machine and starts it.
      * @param \Cbws\Grpc\Compute\V1alpha1\CreateMachineRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
     public function CreateMachine(\Cbws\Grpc\Compute\V1alpha1\CreateMachineRequest $argument,
       $metadata = [], $options = []) {
@@ -74,10 +80,11 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Stops a machine. The machine keeps its disk and can be started again.
      * @param \Cbws\Grpc\Compute\V1alpha1\StopMachineRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
     public function StopMachine(\Cbws\Grpc\Compute\V1alpha1\StopMachineRequest $argument,
       $metadata = [], $options = []) {
@@ -88,10 +95,11 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Starts a stopped machine.
      * @param \Cbws\Grpc\Compute\V1alpha1\StartMachineRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
     public function StartMachine(\Cbws\Grpc\Compute\V1alpha1\StartMachineRequest $argument,
       $metadata = [], $options = []) {
@@ -102,10 +110,12 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Power-cycles a machine, like pressing its reset button. The operating
+     * system is not shut down first.
      * @param \Cbws\Grpc\Compute\V1alpha1\ResetMachineRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
     public function ResetMachine(\Cbws\Grpc\Compute\V1alpha1\ResetMachineRequest $argument,
       $metadata = [], $options = []) {
@@ -116,11 +126,12 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Replace the operating system on the machine with a new image.
+     * Replaces the operating system on a machine with a new image. The data on
+     * the machine's disk is lost.
      * @param \Cbws\Grpc\Compute\V1alpha1\ReinstallMachineRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
     public function ReinstallMachine(\Cbws\Grpc\Compute\V1alpha1\ReinstallMachineRequest $argument,
       $metadata = [], $options = []) {
@@ -131,11 +142,12 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Resize the machine to a new machine type, note this till turn the machine off and on again
+     * Changes a machine to another machine type in the same zone. The machine
+     * is turned off and on again.
      * @param \Cbws\Grpc\Compute\V1alpha1\ResizeMachineRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
     public function ResizeMachine(\Cbws\Grpc\Compute\V1alpha1\ResizeMachineRequest $argument,
       $metadata = [], $options = []) {
@@ -146,24 +158,11 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Cbws\Grpc\Compute\V1alpha1\UpdateMachineRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function UpdateMachine(\Cbws\Grpc\Compute\V1alpha1\UpdateMachineRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/UpdateMachine',
-        $argument,
-        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
+     * Deletes a machine and its disk.
      * @param \Cbws\Grpc\Compute\V1alpha1\DeleteMachineRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
     public function DeleteMachine(\Cbws\Grpc\Compute\V1alpha1\DeleteMachineRequest $argument,
       $metadata = [], $options = []) {
@@ -174,10 +173,11 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists the machine types offered in a zone, or in every zone.
      * @param \Cbws\Grpc\Compute\V1alpha1\ListMachineTypesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ListMachineTypesResponse>
      */
     public function ListMachineTypes(\Cbws\Grpc\Compute\V1alpha1\ListMachineTypesRequest $argument,
       $metadata = [], $options = []) {
@@ -188,10 +188,11 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Gets a machine type.
      * @param \Cbws\Grpc\Compute\V1alpha1\GetMachineTypeRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\MachineType>
      */
     public function GetMachineType(\Cbws\Grpc\Compute\V1alpha1\GetMachineTypeRequest $argument,
       $metadata = [], $options = []) {
@@ -202,10 +203,11 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists the images in a project.
      * @param \Cbws\Grpc\Compute\V1alpha1\ListImagesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ListImagesResponse>
      */
     public function ListImages(\Cbws\Grpc\Compute\V1alpha1\ListImagesRequest $argument,
       $metadata = [], $options = []) {
@@ -216,10 +218,11 @@ class ComputeServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Gets an image.
      * @param \Cbws\Grpc\Compute\V1alpha1\GetImageRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\Image>
      */
     public function GetImage(\Cbws\Grpc\Compute\V1alpha1\GetImageRequest $argument,
       $metadata = [], $options = []) {

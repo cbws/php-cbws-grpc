@@ -10,24 +10,29 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * An operating system image that machines are installed from.
+ *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.Image</code>
  */
 class Image extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Resource name in format projects/project/images/image-name
+     * The resource name of the image, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = IMMUTABLE];</code>
      */
     protected $name = '';
     /**
-     * Project name in format projects/project
+     * The project that holds the image, such as `projects/my-project-123`.
      *
      * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
      */
     protected $parent = '';
     /**
-     * Family of the image, for example projects/project/families/ubuntu-2204-lts-amd64
+     * The family the image belongs to, such as
+     * `projects/my-project-123/families/ubuntu-2404-lts`. Empty for an image in
+     * no family.
      *
      * Generated from protobuf field <code>string family = 3 [json_name = "family", (.google.api.field_behavior) = IMMUTABLE];</code>
      */
@@ -40,11 +45,14 @@ class Image extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $name
-     *           Resource name in format projects/project/images/image-name
+     *           The resource name of the image, such as
+     *           `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
      *     @type string $parent
-     *           Project name in format projects/project
+     *           The project that holds the image, such as `projects/my-project-123`.
      *     @type string $family
-     *           Family of the image, for example projects/project/families/ubuntu-2204-lts-amd64
+     *           The family the image belongs to, such as
+     *           `projects/my-project-123/families/ubuntu-2404-lts`. Empty for an image in
+     *           no family.
      * }
      */
     public function __construct($data = NULL) {
@@ -53,7 +61,8 @@ class Image extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Resource name in format projects/project/images/image-name
+     * The resource name of the image, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return string
@@ -64,7 +73,8 @@ class Image extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Resource name in format projects/project/images/image-name
+     * The resource name of the image, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param string $var
@@ -79,7 +89,7 @@ class Image extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Project name in format projects/project
+     * The project that holds the image, such as `projects/my-project-123`.
      *
      * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return string
@@ -90,7 +100,7 @@ class Image extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Project name in format projects/project
+     * The project that holds the image, such as `projects/my-project-123`.
      *
      * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param string $var
@@ -105,7 +115,9 @@ class Image extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Family of the image, for example projects/project/families/ubuntu-2204-lts-amd64
+     * The family the image belongs to, such as
+     * `projects/my-project-123/families/ubuntu-2404-lts`. Empty for an image in
+     * no family.
      *
      * Generated from protobuf field <code>string family = 3 [json_name = "family", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return string
@@ -116,7 +128,9 @@ class Image extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Family of the image, for example projects/project/families/ubuntu-2204-lts-amd64
+     * The family the image belongs to, such as
+     * `projects/my-project-123/families/ubuntu-2404-lts`. Empty for an image in
+     * no family.
      *
      * Generated from protobuf field <code>string family = 3 [json_name = "family", (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param string $var

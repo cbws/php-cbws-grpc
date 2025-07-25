@@ -10,26 +10,30 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The request to create a machine.
+ *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.CreateMachineRequest</code>
  */
 class CreateMachineRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Required. The resource name of the project associated with the service
-     * accounts, such as `projects/my-project-123`.
+     * Required. The project to create the machine in, such as
+     * `projects/my-project-123`.
      *
      * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      */
     protected $parent = '';
     /**
-     * Required. The name of the machine, without the projects prefix
+     * Required. The id of the machine, which becomes the last segment of its
+     * name. It contains letters, digits and hyphens and ends with a letter or a
+     * digit. Some machine types also require a lowercase id of at most 63
+     * characters that starts with a letter or a digit.
      *
      * Generated from protobuf field <code>string machine_id = 2 [json_name = "machineId", (.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $machine_id = '';
     /**
-     * The [Machine][cbws.compute.v1alpha1.Machine] resource to
-     * create.
+     * Required. The machine to create.
      *
      * Generated from protobuf field <code>.cbws.compute.v1alpha1.Machine machine = 3 [json_name = "machine", (.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -42,13 +46,15 @@ class CreateMachineRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $parent
-     *           Required. The resource name of the project associated with the service
-     *           accounts, such as `projects/my-project-123`.
+     *           Required. The project to create the machine in, such as
+     *           `projects/my-project-123`.
      *     @type string $machine_id
-     *           Required. The name of the machine, without the projects prefix
+     *           Required. The id of the machine, which becomes the last segment of its
+     *           name. It contains letters, digits and hyphens and ends with a letter or a
+     *           digit. Some machine types also require a lowercase id of at most 63
+     *           characters that starts with a letter or a digit.
      *     @type \Cbws\Grpc\Compute\V1alpha1\Machine $machine
-     *           The [Machine][cbws.compute.v1alpha1.Machine] resource to
-     *           create.
+     *           Required. The machine to create.
      * }
      */
     public function __construct($data = NULL) {
@@ -57,8 +63,8 @@ class CreateMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the project associated with the service
-     * accounts, such as `projects/my-project-123`.
+     * Required. The project to create the machine in, such as
+     * `projects/my-project-123`.
      *
      * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @return string
@@ -69,8 +75,8 @@ class CreateMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the project associated with the service
-     * accounts, such as `projects/my-project-123`.
+     * Required. The project to create the machine in, such as
+     * `projects/my-project-123`.
      *
      * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @param string $var
@@ -85,7 +91,10 @@ class CreateMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The name of the machine, without the projects prefix
+     * Required. The id of the machine, which becomes the last segment of its
+     * name. It contains letters, digits and hyphens and ends with a letter or a
+     * digit. Some machine types also require a lowercase id of at most 63
+     * characters that starts with a letter or a digit.
      *
      * Generated from protobuf field <code>string machine_id = 2 [json_name = "machineId", (.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -96,7 +105,10 @@ class CreateMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The name of the machine, without the projects prefix
+     * Required. The id of the machine, which becomes the last segment of its
+     * name. It contains letters, digits and hyphens and ends with a letter or a
+     * digit. Some machine types also require a lowercase id of at most 63
+     * characters that starts with a letter or a digit.
      *
      * Generated from protobuf field <code>string machine_id = 2 [json_name = "machineId", (.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -111,8 +123,7 @@ class CreateMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The [Machine][cbws.compute.v1alpha1.Machine] resource to
-     * create.
+     * Required. The machine to create.
      *
      * Generated from protobuf field <code>.cbws.compute.v1alpha1.Machine machine = 3 [json_name = "machine", (.google.api.field_behavior) = REQUIRED];</code>
      * @return \Cbws\Grpc\Compute\V1alpha1\Machine|null
@@ -133,8 +144,7 @@ class CreateMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The [Machine][cbws.compute.v1alpha1.Machine] resource to
-     * create.
+     * Required. The machine to create.
      *
      * Generated from protobuf field <code>.cbws.compute.v1alpha1.Machine machine = 3 [json_name = "machine", (.google.api.field_behavior) = REQUIRED];</code>
      * @param \Cbws\Grpc\Compute\V1alpha1\Machine $var

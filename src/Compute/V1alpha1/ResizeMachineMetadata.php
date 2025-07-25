@@ -10,6 +10,8 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The metadata of a resize machine operation.
+ *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.ResizeMachineMetadata</code>
  */
 class ResizeMachineMetadata extends \Google\Protobuf\Internal\Message

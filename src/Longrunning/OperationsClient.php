@@ -46,7 +46,7 @@ class OperationsClient extends \Grpc\BaseStub {
      * @param \Cbws\Grpc\Longrunning\ListOperationsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\ListOperationsResponse>
      */
     public function ListOperations(\Cbws\Grpc\Longrunning\ListOperationsRequest $argument,
       $metadata = [], $options = []) {
@@ -63,7 +63,7 @@ class OperationsClient extends \Grpc\BaseStub {
      * @param \Cbws\Grpc\Longrunning\GetOperationRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
     public function GetOperation(\Cbws\Grpc\Longrunning\GetOperationRequest $argument,
       $metadata = [], $options = []) {
@@ -81,7 +81,7 @@ class OperationsClient extends \Grpc\BaseStub {
      * @param \Cbws\Grpc\Longrunning\DeleteOperationRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function DeleteOperation(\Cbws\Grpc\Longrunning\DeleteOperationRequest $argument,
       $metadata = [], $options = []) {
@@ -106,7 +106,7 @@ class OperationsClient extends \Grpc\BaseStub {
      * @param \Cbws\Grpc\Longrunning\CancelOperationRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function CancelOperation(\Cbws\Grpc\Longrunning\CancelOperationRequest $argument,
       $metadata = [], $options = []) {
@@ -129,7 +129,7 @@ class OperationsClient extends \Grpc\BaseStub {
      * @param \Cbws\Grpc\Longrunning\WaitOperationRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
     public function WaitOperation(\Cbws\Grpc\Longrunning\WaitOperationRequest $argument,
       $metadata = [], $options = []) {

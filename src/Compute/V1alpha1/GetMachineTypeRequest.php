@@ -10,23 +10,24 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * The machine type get request.
+ * The request to get a machine type.
  *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.GetMachineTypeRequest</code>
  */
 class GetMachineTypeRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Required. The resource name of the image in the following format:
-     * `zons/{ZONE}/types/{TYPE}`.
+     * Required. The resource name of the machine type, such as
+     * `zones/nl-ein-1/types/g4.2`. `machineTypes/g4.2` names the type across
+     * every zone that offers it.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      */
     protected $name = '';
     /**
-     * Optional list of fields that should be included in the response, the service may include fields that haven't
-     * been requested when they are available. This can be used to speed up requests as some fields can be more expensive
-     * to lookup.
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: only `stock_status`. Other fields are always returned. Without
+     * a mask, `stock_status` is read.
      *
      * Generated from protobuf field <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
      */
@@ -39,12 +40,13 @@ class GetMachineTypeRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $name
-     *           Required. The resource name of the image in the following format:
-     *           `zons/{ZONE}/types/{TYPE}`.
+     *           Required. The resource name of the machine type, such as
+     *           `zones/nl-ein-1/types/g4.2`. `machineTypes/g4.2` names the type across
+     *           every zone that offers it.
      *     @type \Google\Protobuf\FieldMask $read_mask
-     *           Optional list of fields that should be included in the response, the service may include fields that haven't
-     *           been requested when they are available. This can be used to speed up requests as some fields can be more expensive
-     *           to lookup.
+     *           Optional. The fields that take extra time to read and are wanted in the
+     *           response: only `stock_status`. Other fields are always returned. Without
+     *           a mask, `stock_status` is read.
      * }
      */
     public function __construct($data = NULL) {
@@ -53,8 +55,9 @@ class GetMachineTypeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the image in the following format:
-     * `zons/{ZONE}/types/{TYPE}`.
+     * Required. The resource name of the machine type, such as
+     * `zones/nl-ein-1/types/g4.2`. `machineTypes/g4.2` names the type across
+     * every zone that offers it.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @return string
@@ -65,8 +68,9 @@ class GetMachineTypeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the image in the following format:
-     * `zons/{ZONE}/types/{TYPE}`.
+     * Required. The resource name of the machine type, such as
+     * `zones/nl-ein-1/types/g4.2`. `machineTypes/g4.2` names the type across
+     * every zone that offers it.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @param string $var
@@ -81,9 +85,9 @@ class GetMachineTypeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional list of fields that should be included in the response, the service may include fields that haven't
-     * been requested when they are available. This can be used to speed up requests as some fields can be more expensive
-     * to lookup.
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: only `stock_status`. Other fields are always returned. Without
+     * a mask, `stock_status` is read.
      *
      * Generated from protobuf field <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return \Google\Protobuf\FieldMask|null
@@ -104,9 +108,9 @@ class GetMachineTypeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional list of fields that should be included in the response, the service may include fields that haven't
-     * been requested when they are available. This can be used to speed up requests as some fields can be more expensive
-     * to lookup.
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: only `stock_status`. Other fields are always returned. Without
+     * a mask, `stock_status` is read.
      *
      * Generated from protobuf field <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param \Google\Protobuf\FieldMask $var

@@ -10,6 +10,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * Not returned by any method: a create machine operation returns the
+ * [Machine][cbws.compute.v1alpha1.Machine] as its result.
+ *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.CreateMachineResponse</code>
  */
 class CreateMachineResponse extends \Google\Protobuf\Internal\Message

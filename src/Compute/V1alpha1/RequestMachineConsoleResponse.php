@@ -10,19 +10,28 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The console of a machine.
+ *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.RequestMachineConsoleResponse</code>
  */
 class RequestMachineConsoleResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The protocol of the console, such as `vnc`.
+     *
      * Generated from protobuf field <code>string protocol = 1 [json_name = "protocol"];</code>
      */
     protected $protocol = '';
     /**
+     * The kind of console client the URL opens, such as `novnc`.
+     *
      * Generated from protobuf field <code>string type = 2 [json_name = "type"];</code>
      */
     protected $type = '';
     /**
+     * The URL that opens the console in a browser. Treat it as a secret: it
+     * gives access to the console of the machine.
+     *
      * Generated from protobuf field <code>string url = 3 [json_name = "url"];</code>
      */
     protected $url = '';
@@ -34,8 +43,12 @@ class RequestMachineConsoleResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $protocol
+     *           The protocol of the console, such as `vnc`.
      *     @type string $type
+     *           The kind of console client the URL opens, such as `novnc`.
      *     @type string $url
+     *           The URL that opens the console in a browser. Treat it as a secret: it
+     *           gives access to the console of the machine.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,6 +57,8 @@ class RequestMachineConsoleResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The protocol of the console, such as `vnc`.
+     *
      * Generated from protobuf field <code>string protocol = 1 [json_name = "protocol"];</code>
      * @return string
      */
@@ -53,6 +68,8 @@ class RequestMachineConsoleResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The protocol of the console, such as `vnc`.
+     *
      * Generated from protobuf field <code>string protocol = 1 [json_name = "protocol"];</code>
      * @param string $var
      * @return $this
@@ -66,6 +83,8 @@ class RequestMachineConsoleResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The kind of console client the URL opens, such as `novnc`.
+     *
      * Generated from protobuf field <code>string type = 2 [json_name = "type"];</code>
      * @return string
      */
@@ -75,6 +94,8 @@ class RequestMachineConsoleResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The kind of console client the URL opens, such as `novnc`.
+     *
      * Generated from protobuf field <code>string type = 2 [json_name = "type"];</code>
      * @param string $var
      * @return $this
@@ -88,6 +109,9 @@ class RequestMachineConsoleResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The URL that opens the console in a browser. Treat it as a secret: it
+     * gives access to the console of the machine.
+     *
      * Generated from protobuf field <code>string url = 3 [json_name = "url"];</code>
      * @return string
      */
@@ -97,6 +121,9 @@ class RequestMachineConsoleResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The URL that opens the console in a browser. Treat it as a secret: it
+     * gives access to the console of the machine.
+     *
      * Generated from protobuf field <code>string url = 3 [json_name = "url"];</code>
      * @param string $var
      * @return $this

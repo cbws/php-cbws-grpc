@@ -10,18 +10,25 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The request to resize a machine.
+ *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.ResizeMachineRequest</code>
  */
 class ResizeMachineRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Required. The resource name of the machine in the following format:
-     * `projects/{PROJECT_ID}/machines/{ACCOUNT}`.
+     * Required. The resource name of the machine, such as
+     * `projects/my-project-123/machines/web-1`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      */
     protected $name = '';
     /**
+     * Required. The machine type to change to, such as
+     * `zones/nl-ein-1/types/g4.2`, or `machineTypes/g4.2` for that type in the
+     * machine's current zone. The type must be offered in the zone the machine
+     * runs in. A resize to the machine's current type finishes without change.
+     *
      * Generated from protobuf field <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
      */
     protected $type = '';
@@ -33,9 +40,13 @@ class ResizeMachineRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $name
-     *           Required. The resource name of the machine in the following format:
-     *           `projects/{PROJECT_ID}/machines/{ACCOUNT}`.
+     *           Required. The resource name of the machine, such as
+     *           `projects/my-project-123/machines/web-1`.
      *     @type string $type
+     *           Required. The machine type to change to, such as
+     *           `zones/nl-ein-1/types/g4.2`, or `machineTypes/g4.2` for that type in the
+     *           machine's current zone. The type must be offered in the zone the machine
+     *           runs in. A resize to the machine's current type finishes without change.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,8 +55,8 @@ class ResizeMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the machine in the following format:
-     * `projects/{PROJECT_ID}/machines/{ACCOUNT}`.
+     * Required. The resource name of the machine, such as
+     * `projects/my-project-123/machines/web-1`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @return string
@@ -56,8 +67,8 @@ class ResizeMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the machine in the following format:
-     * `projects/{PROJECT_ID}/machines/{ACCOUNT}`.
+     * Required. The resource name of the machine, such as
+     * `projects/my-project-123/machines/web-1`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @param string $var
@@ -72,6 +83,11 @@ class ResizeMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Required. The machine type to change to, such as
+     * `zones/nl-ein-1/types/g4.2`, or `machineTypes/g4.2` for that type in the
+     * machine's current zone. The type must be offered in the zone the machine
+     * runs in. A resize to the machine's current type finishes without change.
+     *
      * Generated from protobuf field <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
      * @return string
      */
@@ -81,6 +97,11 @@ class ResizeMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Required. The machine type to change to, such as
+     * `zones/nl-ein-1/types/g4.2`, or `machineTypes/g4.2` for that type in the
+     * machine's current zone. The type must be offered in the zone the machine
+     * runs in. A resize to the machine's current type finishes without change.
+     *
      * Generated from protobuf field <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
      * @param string $var
      * @return $this

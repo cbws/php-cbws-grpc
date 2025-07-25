@@ -10,22 +10,22 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * The machine types list request.
+ * The request to list machine types.
  *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.ListMachineTypesRequest</code>
  */
 class ListMachineTypesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Required. The resource name of the project associated with the service
-     * accounts, such as `projects/my-project-123`.
+     * Required. The zone to list the machine types of, such as `zones/nl-ein-1`.
+     * Use `zones/-` to list the machine types of every zone.
      *
      * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      */
     protected $parent = '';
     /**
-     * Optional limit on the number of machines to include in the
-     * response. Further accounts can subsequently be obtained by including the
+     * Optional. The maximum number of machine types to return. The service may
+     * return fewer. Get further machine types by passing
      * [ListMachineTypesResponse.next_page_token][cbws.compute.v1alpha1.ListMachineTypesResponse.next_page_token]
      * in a subsequent request.
      *
@@ -33,16 +33,16 @@ class ListMachineTypesRequest extends \Google\Protobuf\Internal\Message
      */
     protected $page_size = 0;
     /**
-     * Optional pagination token returned in an earlier
+     * Optional. The page token returned in an earlier
      * [ListMachineTypesResponse.next_page_token][cbws.compute.v1alpha1.ListMachineTypesResponse.next_page_token].
      *
      * Generated from protobuf field <code>string page_token = 3 [json_name = "pageToken", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $page_token = '';
     /**
-     * Optional list of fields that should be included in the response, the service may include fields that haven't
-     * been requested when they are available. This can be used to speed up requests as some fields can be more expensive
-     * to lookup.
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: only `machine_types.stock_status`. Other fields are always
+     * returned. Without a mask, `stock_status` is read.
      *
      * Generated from protobuf field <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
      */
@@ -55,20 +55,20 @@ class ListMachineTypesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $parent
-     *           Required. The resource name of the project associated with the service
-     *           accounts, such as `projects/my-project-123`.
+     *           Required. The zone to list the machine types of, such as `zones/nl-ein-1`.
+     *           Use `zones/-` to list the machine types of every zone.
      *     @type int $page_size
-     *           Optional limit on the number of machines to include in the
-     *           response. Further accounts can subsequently be obtained by including the
+     *           Optional. The maximum number of machine types to return. The service may
+     *           return fewer. Get further machine types by passing
      *           [ListMachineTypesResponse.next_page_token][cbws.compute.v1alpha1.ListMachineTypesResponse.next_page_token]
      *           in a subsequent request.
      *     @type string $page_token
-     *           Optional pagination token returned in an earlier
+     *           Optional. The page token returned in an earlier
      *           [ListMachineTypesResponse.next_page_token][cbws.compute.v1alpha1.ListMachineTypesResponse.next_page_token].
      *     @type \Google\Protobuf\FieldMask $read_mask
-     *           Optional list of fields that should be included in the response, the service may include fields that haven't
-     *           been requested when they are available. This can be used to speed up requests as some fields can be more expensive
-     *           to lookup.
+     *           Optional. The fields that take extra time to read and are wanted in the
+     *           response: only `machine_types.stock_status`. Other fields are always
+     *           returned. Without a mask, `stock_status` is read.
      * }
      */
     public function __construct($data = NULL) {
@@ -77,8 +77,8 @@ class ListMachineTypesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the project associated with the service
-     * accounts, such as `projects/my-project-123`.
+     * Required. The zone to list the machine types of, such as `zones/nl-ein-1`.
+     * Use `zones/-` to list the machine types of every zone.
      *
      * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @return string
@@ -89,8 +89,8 @@ class ListMachineTypesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the project associated with the service
-     * accounts, such as `projects/my-project-123`.
+     * Required. The zone to list the machine types of, such as `zones/nl-ein-1`.
+     * Use `zones/-` to list the machine types of every zone.
      *
      * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @param string $var
@@ -105,8 +105,8 @@ class ListMachineTypesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional limit on the number of machines to include in the
-     * response. Further accounts can subsequently be obtained by including the
+     * Optional. The maximum number of machine types to return. The service may
+     * return fewer. Get further machine types by passing
      * [ListMachineTypesResponse.next_page_token][cbws.compute.v1alpha1.ListMachineTypesResponse.next_page_token]
      * in a subsequent request.
      *
@@ -119,8 +119,8 @@ class ListMachineTypesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional limit on the number of machines to include in the
-     * response. Further accounts can subsequently be obtained by including the
+     * Optional. The maximum number of machine types to return. The service may
+     * return fewer. Get further machine types by passing
      * [ListMachineTypesResponse.next_page_token][cbws.compute.v1alpha1.ListMachineTypesResponse.next_page_token]
      * in a subsequent request.
      *
@@ -137,7 +137,7 @@ class ListMachineTypesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional pagination token returned in an earlier
+     * Optional. The page token returned in an earlier
      * [ListMachineTypesResponse.next_page_token][cbws.compute.v1alpha1.ListMachineTypesResponse.next_page_token].
      *
      * Generated from protobuf field <code>string page_token = 3 [json_name = "pageToken", (.google.api.field_behavior) = OPTIONAL];</code>
@@ -149,7 +149,7 @@ class ListMachineTypesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional pagination token returned in an earlier
+     * Optional. The page token returned in an earlier
      * [ListMachineTypesResponse.next_page_token][cbws.compute.v1alpha1.ListMachineTypesResponse.next_page_token].
      *
      * Generated from protobuf field <code>string page_token = 3 [json_name = "pageToken", (.google.api.field_behavior) = OPTIONAL];</code>
@@ -165,9 +165,9 @@ class ListMachineTypesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional list of fields that should be included in the response, the service may include fields that haven't
-     * been requested when they are available. This can be used to speed up requests as some fields can be more expensive
-     * to lookup.
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: only `machine_types.stock_status`. Other fields are always
+     * returned. Without a mask, `stock_status` is read.
      *
      * Generated from protobuf field <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return \Google\Protobuf\FieldMask|null
@@ -188,9 +188,9 @@ class ListMachineTypesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional list of fields that should be included in the response, the service may include fields that haven't
-     * been requested when they are available. This can be used to speed up requests as some fields can be more expensive
-     * to lookup.
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: only `machine_types.stock_status`. Other fields are always
+     * returned. Without a mask, `stock_status` is read.
      *
      * Generated from protobuf field <code>.google.protobuf.FieldMask read_mask = 4 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param \Google\Protobuf\FieldMask $var

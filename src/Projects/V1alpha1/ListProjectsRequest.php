@@ -10,24 +10,22 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * The service account list request.
+ * The project list request.
  *
  * Generated from protobuf message <code>cbws.projects.v1alpha1.ListProjectsRequest</code>
  */
 class ListProjectsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Optional limit on the number of service accounts to include in the
-     * response. Further accounts can subsequently be obtained by including the
-     * [ListServiceAccountsResponse.next_page_token][google.iam.admin.v1.ListServiceAccountsResponse.next_page_token]
-     * in a subsequent request.
+     * Optional. The maximum number of projects to return. The default is 10.
      *
      * Generated from protobuf field <code>int32 page_size = 2 [json_name = "pageSize"];</code>
      */
     protected $page_size = 0;
     /**
-     * Optional pagination token returned in an earlier
-     * [ListServiceAccountsResponse.next_page_token][google.iam.admin.v1.ListServiceAccountsResponse.next_page_token].
+     * Optional. The
+     * [next_page_token][cbws.projects.v1alpha1.ListProjectsResponse.next_page_token]
+     * of a previous response, to get the next page.
      *
      * Generated from protobuf field <code>string page_token = 3 [json_name = "pageToken"];</code>
      */
@@ -40,13 +38,11 @@ class ListProjectsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $page_size
-     *           Optional limit on the number of service accounts to include in the
-     *           response. Further accounts can subsequently be obtained by including the
-     *           [ListServiceAccountsResponse.next_page_token][google.iam.admin.v1.ListServiceAccountsResponse.next_page_token]
-     *           in a subsequent request.
+     *           Optional. The maximum number of projects to return. The default is 10.
      *     @type string $page_token
-     *           Optional pagination token returned in an earlier
-     *           [ListServiceAccountsResponse.next_page_token][google.iam.admin.v1.ListServiceAccountsResponse.next_page_token].
+     *           Optional. The
+     *           [next_page_token][cbws.projects.v1alpha1.ListProjectsResponse.next_page_token]
+     *           of a previous response, to get the next page.
      * }
      */
     public function __construct($data = NULL) {
@@ -55,10 +51,7 @@ class ListProjectsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional limit on the number of service accounts to include in the
-     * response. Further accounts can subsequently be obtained by including the
-     * [ListServiceAccountsResponse.next_page_token][google.iam.admin.v1.ListServiceAccountsResponse.next_page_token]
-     * in a subsequent request.
+     * Optional. The maximum number of projects to return. The default is 10.
      *
      * Generated from protobuf field <code>int32 page_size = 2 [json_name = "pageSize"];</code>
      * @return int
@@ -69,10 +62,7 @@ class ListProjectsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional limit on the number of service accounts to include in the
-     * response. Further accounts can subsequently be obtained by including the
-     * [ListServiceAccountsResponse.next_page_token][google.iam.admin.v1.ListServiceAccountsResponse.next_page_token]
-     * in a subsequent request.
+     * Optional. The maximum number of projects to return. The default is 10.
      *
      * Generated from protobuf field <code>int32 page_size = 2 [json_name = "pageSize"];</code>
      * @param int $var
@@ -87,8 +77,9 @@ class ListProjectsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional pagination token returned in an earlier
-     * [ListServiceAccountsResponse.next_page_token][google.iam.admin.v1.ListServiceAccountsResponse.next_page_token].
+     * Optional. The
+     * [next_page_token][cbws.projects.v1alpha1.ListProjectsResponse.next_page_token]
+     * of a previous response, to get the next page.
      *
      * Generated from protobuf field <code>string page_token = 3 [json_name = "pageToken"];</code>
      * @return string
@@ -99,8 +90,9 @@ class ListProjectsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional pagination token returned in an earlier
-     * [ListServiceAccountsResponse.next_page_token][google.iam.admin.v1.ListServiceAccountsResponse.next_page_token].
+     * Optional. The
+     * [next_page_token][cbws.projects.v1alpha1.ListProjectsResponse.next_page_token]
+     * of a previous response, to get the next page.
      *
      * Generated from protobuf field <code>string page_token = 3 [json_name = "pageToken"];</code>
      * @param string $var

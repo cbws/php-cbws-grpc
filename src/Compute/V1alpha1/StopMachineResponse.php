@@ -10,6 +10,8 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The result of a stop machine operation.
+ *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.StopMachineResponse</code>
  */
 class StopMachineResponse extends \Google\Protobuf\Internal\Message

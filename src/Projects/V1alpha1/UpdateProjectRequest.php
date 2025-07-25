@@ -10,20 +10,22 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The project update request.
+ *
  * Generated from protobuf message <code>cbws.projects.v1alpha1.UpdateProjectRequest</code>
  */
 class UpdateProjectRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The project to update.
-     * The project's `name` field is used to identify the project to be updated.
-     * Format: projects/{project}
+     * Required. The project to update. Its `name` says which project, such as
+     * `projects/my-project`.
      *
      * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 1 [json_name = "project", (.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $project = null;
     /**
-     * The list of fields to be updated.
+     * Required. The fields to update. The only accepted path is
+     * `display_name`. Any other path fails with INVALID_ARGUMENT.
      *
      * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
      */
@@ -36,11 +38,11 @@ class UpdateProjectRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Cbws\Grpc\Projects\V1alpha1\Project $project
-     *           The project to update.
-     *           The project's `name` field is used to identify the project to be updated.
-     *           Format: projects/{project}
+     *           Required. The project to update. Its `name` says which project, such as
+     *           `projects/my-project`.
      *     @type \Google\Protobuf\FieldMask $update_mask
-     *           The list of fields to be updated.
+     *           Required. The fields to update. The only accepted path is
+     *           `display_name`. Any other path fails with INVALID_ARGUMENT.
      * }
      */
     public function __construct($data = NULL) {
@@ -49,9 +51,8 @@ class UpdateProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The project to update.
-     * The project's `name` field is used to identify the project to be updated.
-     * Format: projects/{project}
+     * Required. The project to update. Its `name` says which project, such as
+     * `projects/my-project`.
      *
      * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 1 [json_name = "project", (.google.api.field_behavior) = REQUIRED];</code>
      * @return \Cbws\Grpc\Projects\V1alpha1\Project|null
@@ -72,9 +73,8 @@ class UpdateProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The project to update.
-     * The project's `name` field is used to identify the project to be updated.
-     * Format: projects/{project}
+     * Required. The project to update. Its `name` says which project, such as
+     * `projects/my-project`.
      *
      * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 1 [json_name = "project", (.google.api.field_behavior) = REQUIRED];</code>
      * @param \Cbws\Grpc\Projects\V1alpha1\Project $var
@@ -89,7 +89,8 @@ class UpdateProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The list of fields to be updated.
+     * Required. The fields to update. The only accepted path is
+     * `display_name`. Any other path fails with INVALID_ARGUMENT.
      *
      * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
      * @return \Google\Protobuf\FieldMask|null
@@ -110,7 +111,8 @@ class UpdateProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The list of fields to be updated.
+     * Required. The fields to update. The only accepted path is
+     * `display_name`. Any other path fails with INVALID_ARGUMENT.
      *
      * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
      * @param \Google\Protobuf\FieldMask $var

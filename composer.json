@@ -2,9 +2,10 @@
     "name": "cbws/php-cbws-grpc",
     "description": "Generated gRPC client libraries for CBWS",
     "type": "library",
+    "license": "Apache-2.0",
     "require": {
         "grpc/grpc": "^1.57",
-        "google/protobuf": "^3.3 || ^4.0 || ^5.0",
+        "google/protobuf": "^4.30 || ^5.0",
         "google/common-protos": "^4.11",
         "ext-grpc": "^1.56"
     },
@@ -22,7 +23,6 @@
         "psr-4": {
             "Cbws\\Grpc\\": "src/",
             "GPBMetadata\\Cbws\\": "metadata/"
-
         }
     }
 }

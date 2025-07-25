@@ -10,13 +10,15 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The request to open the console of a machine.
+ *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.RequestMachineConsoleRequest</code>
  */
 class RequestMachineConsoleRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Required. The resource name of the machine in the following format:
-     * `projects/{PROJECT_ID}/machines/{ACCOUNT}`.
+     * Required. The resource name of the machine, such as
+     * `projects/my-project-123/machines/web-1`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      */
@@ -29,8 +31,8 @@ class RequestMachineConsoleRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $name
-     *           Required. The resource name of the machine in the following format:
-     *           `projects/{PROJECT_ID}/machines/{ACCOUNT}`.
+     *           Required. The resource name of the machine, such as
+     *           `projects/my-project-123/machines/web-1`.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,8 +41,8 @@ class RequestMachineConsoleRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the machine in the following format:
-     * `projects/{PROJECT_ID}/machines/{ACCOUNT}`.
+     * Required. The resource name of the machine, such as
+     * `projects/my-project-123/machines/web-1`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @return string
@@ -51,8 +53,8 @@ class RequestMachineConsoleRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the machine in the following format:
-     * `projects/{PROJECT_ID}/machines/{ACCOUNT}`.
+     * Required. The resource name of the machine, such as
+     * `projects/my-project-123/machines/web-1`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @param string $var

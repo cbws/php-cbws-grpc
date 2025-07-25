@@ -10,40 +10,51 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * A size of machine, offered in one or more zones.
+ *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.MachineType</code>
  */
 class MachineType extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Name of the resource
+     * The resource name of the machine type, such as
+     * `zones/nl-ein-1/types/g4.2`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $name = '';
     /**
-     * Either nl-ein-1 or nl-ein-2.
+     * The zone the machine type is offered in, such as `nl-ein-1`.
      *
      * Generated from protobuf field <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $zone = '';
     /**
-     * Amount of (virtual) CPU cores available to the machine.
+     * The number of virtual CPU cores of the machine.
      *
      * Generated from protobuf field <code>int32 cpu = 4 [json_name = "cpu", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $cpu = 0;
     /**
-     * Amount of RAM available to the machine in MB.
+     * The memory of the machine, in MB.
      *
      * Generated from protobuf field <code>int32 memory_mb = 5 [json_name = "memoryMb", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $memory_mb = 0;
     /**
-     * Amount of ephemeral disk space available to the machine in GB, this is a non volume backed disk.
+     * The size of the machine's local disk, in GB. The disk is not a volume:
+     * it exists only as long as the machine does.
      *
      * Generated from protobuf field <code>int32 ephemeral_disk_gb = 6 [json_name = "ephemeralDiskGb", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $ephemeral_disk_gb = 0;
+    /**
+     * How many machines of this type can still be created. Unset when the
+     * request's read mask leaves out `stock_status`.
+     *
+     * Generated from protobuf field <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     */
+    protected $stock_status = 0;
 
     /**
      * Constructor.
@@ -52,15 +63,20 @@ class MachineType extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $name
-     *           Name of the resource
+     *           The resource name of the machine type, such as
+     *           `zones/nl-ein-1/types/g4.2`.
      *     @type string $zone
-     *           Either nl-ein-1 or nl-ein-2.
+     *           The zone the machine type is offered in, such as `nl-ein-1`.
      *     @type int $cpu
-     *           Amount of (virtual) CPU cores available to the machine.
+     *           The number of virtual CPU cores of the machine.
      *     @type int $memory_mb
-     *           Amount of RAM available to the machine in MB.
+     *           The memory of the machine, in MB.
      *     @type int $ephemeral_disk_gb
-     *           Amount of ephemeral disk space available to the machine in GB, this is a non volume backed disk.
+     *           The size of the machine's local disk, in GB. The disk is not a volume:
+     *           it exists only as long as the machine does.
+     *     @type int $stock_status
+     *           How many machines of this type can still be created. Unset when the
+     *           request's read mask leaves out `stock_status`.
      * }
      */
     public function __construct($data = NULL) {
@@ -69,7 +85,8 @@ class MachineType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Name of the resource
+     * The resource name of the machine type, such as
+     * `zones/nl-ein-1/types/g4.2`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
@@ -80,7 +97,8 @@ class MachineType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Name of the resource
+     * The resource name of the machine type, such as
+     * `zones/nl-ein-1/types/g4.2`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
@@ -95,7 +113,7 @@ class MachineType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Either nl-ein-1 or nl-ein-2.
+     * The zone the machine type is offered in, such as `nl-ein-1`.
      *
      * Generated from protobuf field <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
@@ -106,7 +124,7 @@ class MachineType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Either nl-ein-1 or nl-ein-2.
+     * The zone the machine type is offered in, such as `nl-ein-1`.
      *
      * Generated from protobuf field <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
@@ -121,7 +139,7 @@ class MachineType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Amount of (virtual) CPU cores available to the machine.
+     * The number of virtual CPU cores of the machine.
      *
      * Generated from protobuf field <code>int32 cpu = 4 [json_name = "cpu", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return int
@@ -132,7 +150,7 @@ class MachineType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Amount of (virtual) CPU cores available to the machine.
+     * The number of virtual CPU cores of the machine.
      *
      * Generated from protobuf field <code>int32 cpu = 4 [json_name = "cpu", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param int $var
@@ -147,7 +165,7 @@ class MachineType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Amount of RAM available to the machine in MB.
+     * The memory of the machine, in MB.
      *
      * Generated from protobuf field <code>int32 memory_mb = 5 [json_name = "memoryMb", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return int
@@ -158,7 +176,7 @@ class MachineType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Amount of RAM available to the machine in MB.
+     * The memory of the machine, in MB.
      *
      * Generated from protobuf field <code>int32 memory_mb = 5 [json_name = "memoryMb", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param int $var
@@ -173,7 +191,8 @@ class MachineType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Amount of ephemeral disk space available to the machine in GB, this is a non volume backed disk.
+     * The size of the machine's local disk, in GB. The disk is not a volume:
+     * it exists only as long as the machine does.
      *
      * Generated from protobuf field <code>int32 ephemeral_disk_gb = 6 [json_name = "ephemeralDiskGb", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return int
@@ -184,7 +203,8 @@ class MachineType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Amount of ephemeral disk space available to the machine in GB, this is a non volume backed disk.
+     * The size of the machine's local disk, in GB. The disk is not a volume:
+     * it exists only as long as the machine does.
      *
      * Generated from protobuf field <code>int32 ephemeral_disk_gb = 6 [json_name = "ephemeralDiskGb", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param int $var
@@ -194,6 +214,34 @@ class MachineType extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->ephemeral_disk_gb = $var;
+
+        return $this;
+    }
+
+    /**
+     * How many machines of this type can still be created. Unset when the
+     * request's read mask leaves out `stock_status`.
+     *
+     * Generated from protobuf field <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * @return int
+     */
+    public function getStockStatus()
+    {
+        return $this->stock_status;
+    }
+
+    /**
+     * How many machines of this type can still be created. Unset when the
+     * request's read mask leaves out `stock_status`.
+     *
+     * Generated from protobuf field <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setStockStatus($var)
+    {
+        GPBUtil::checkEnum($var, \Cbws\Grpc\Compute\V1alpha1\MachineType\StockStatus::class);
+        $this->stock_status = $var;
 
         return $this;
     }

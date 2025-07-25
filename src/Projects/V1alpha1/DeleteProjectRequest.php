@@ -17,7 +17,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class DeleteProjectRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The name of the project in format projects/project-name
+     * Required. The resource name of the project, such as
+     * `projects/my-project`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      */
@@ -30,7 +31,8 @@ class DeleteProjectRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $name
-     *           The name of the project in format projects/project-name
+     *           Required. The resource name of the project, such as
+     *           `projects/my-project`.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,7 +41,8 @@ class DeleteProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The name of the project in format projects/project-name
+     * Required. The resource name of the project, such as
+     * `projects/my-project`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @return string
@@ -50,7 +53,8 @@ class DeleteProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The name of the project in format projects/project-name
+     * Required. The resource name of the project, such as
+     * `projects/my-project`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @param string $var

@@ -10,28 +10,37 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * A project: the container that holds your CBWS resources, the services
+ * enabled for them, and the IAM policy that controls access to them. A
+ * project belongs to an organization.
+ *
  * Generated from protobuf message <code>cbws.projects.v1alpha1.Project</code>
  */
 class Project extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The name of the project in the format: projects/test-project
+     * The resource name of the project, such as `projects/my-project`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name"];</code>
      */
     protected $name = '';
     /**
+     * Optional. A human-readable name for the project, at most 255
+     * characters.
+     *
      * Generated from protobuf field <code>string display_name = 2 [json_name = "displayName"];</code>
      */
     protected $display_name = '';
     /**
-     * \@OutputOnly The id of the project that owns the service account.
+     * The organization the project belongs to, in the form
+     * `organizations/{organization}`, where `{organization}` is the
+     * organization's UUID.
      *
      * Generated from protobuf field <code>string organization = 3 [json_name = "organization"];</code>
      */
     protected $organization = '';
     /**
-     * \@OutputOnly The UUID of the project
+     * The unique and stable ID of the project, a UUID.
      *
      * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId"];</code>
      */
@@ -44,12 +53,16 @@ class Project extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $name
-     *           The name of the project in the format: projects/test-project
+     *           The resource name of the project, such as `projects/my-project`.
      *     @type string $display_name
+     *           Optional. A human-readable name for the project, at most 255
+     *           characters.
      *     @type string $organization
-     *           \@OutputOnly The id of the project that owns the service account.
+     *           The organization the project belongs to, in the form
+     *           `organizations/{organization}`, where `{organization}` is the
+     *           organization's UUID.
      *     @type string $unique_id
-     *           \@OutputOnly The UUID of the project
+     *           The unique and stable ID of the project, a UUID.
      * }
      */
     public function __construct($data = NULL) {
@@ -58,7 +71,7 @@ class Project extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The name of the project in the format: projects/test-project
+     * The resource name of the project, such as `projects/my-project`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name"];</code>
      * @return string
@@ -69,7 +82,7 @@ class Project extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The name of the project in the format: projects/test-project
+     * The resource name of the project, such as `projects/my-project`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name"];</code>
      * @param string $var
@@ -84,6 +97,9 @@ class Project extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional. A human-readable name for the project, at most 255
+     * characters.
+     *
      * Generated from protobuf field <code>string display_name = 2 [json_name = "displayName"];</code>
      * @return string
      */
@@ -93,6 +109,9 @@ class Project extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional. A human-readable name for the project, at most 255
+     * characters.
+     *
      * Generated from protobuf field <code>string display_name = 2 [json_name = "displayName"];</code>
      * @param string $var
      * @return $this
@@ -106,7 +125,9 @@ class Project extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * \@OutputOnly The id of the project that owns the service account.
+     * The organization the project belongs to, in the form
+     * `organizations/{organization}`, where `{organization}` is the
+     * organization's UUID.
      *
      * Generated from protobuf field <code>string organization = 3 [json_name = "organization"];</code>
      * @return string
@@ -117,7 +138,9 @@ class Project extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * \@OutputOnly The id of the project that owns the service account.
+     * The organization the project belongs to, in the form
+     * `organizations/{organization}`, where `{organization}` is the
+     * organization's UUID.
      *
      * Generated from protobuf field <code>string organization = 3 [json_name = "organization"];</code>
      * @param string $var
@@ -132,7 +155,7 @@ class Project extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * \@OutputOnly The UUID of the project
+     * The unique and stable ID of the project, a UUID.
      *
      * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId"];</code>
      * @return string
@@ -143,7 +166,7 @@ class Project extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * \@OutputOnly The UUID of the project
+     * The unique and stable ID of the project, a UUID.
      *
      * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId"];</code>
      * @param string $var

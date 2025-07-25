@@ -10,6 +10,8 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The result of a reinstall machine operation.
+ *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.ReinstallMachineResponse</code>
  */
 class ReinstallMachineResponse extends \Google\Protobuf\Internal\Message

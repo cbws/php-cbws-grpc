@@ -10,20 +10,24 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The request to reinstall a machine.
+ *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.ReinstallMachineRequest</code>
  */
 class ReinstallMachineRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Required. The resource name of the machine in the following format:
-     * `projects/{PROJECT_ID}/machines/{ACCOUNT}`.
+     * Required. The resource name of the machine, such as
+     * `projects/my-project-123/machines/web-1`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      */
     protected $name = '';
     /**
-     * Which image to use, can either be projects/project-name/families/ubuntu-2204-lts
-     * or projects/project-name/images/ubuntu-2204-lts-image-tag
+     * Required. The image to install: an image family, such as
+     * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+     * family's current image for the machine's type, or a single image, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
      *
      * Generated from protobuf field <code>string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -36,11 +40,13 @@ class ReinstallMachineRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $name
-     *           Required. The resource name of the machine in the following format:
-     *           `projects/{PROJECT_ID}/machines/{ACCOUNT}`.
+     *           Required. The resource name of the machine, such as
+     *           `projects/my-project-123/machines/web-1`.
      *     @type string $image
-     *           Which image to use, can either be projects/project-name/families/ubuntu-2204-lts
-     *           or projects/project-name/images/ubuntu-2204-lts-image-tag
+     *           Required. The image to install: an image family, such as
+     *           `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+     *           family's current image for the machine's type, or a single image, such as
+     *           `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
      * }
      */
     public function __construct($data = NULL) {
@@ -49,8 +55,8 @@ class ReinstallMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the machine in the following format:
-     * `projects/{PROJECT_ID}/machines/{ACCOUNT}`.
+     * Required. The resource name of the machine, such as
+     * `projects/my-project-123/machines/web-1`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @return string
@@ -61,8 +67,8 @@ class ReinstallMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the machine in the following format:
-     * `projects/{PROJECT_ID}/machines/{ACCOUNT}`.
+     * Required. The resource name of the machine, such as
+     * `projects/my-project-123/machines/web-1`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @param string $var
@@ -77,8 +83,10 @@ class ReinstallMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Which image to use, can either be projects/project-name/families/ubuntu-2204-lts
-     * or projects/project-name/images/ubuntu-2204-lts-image-tag
+     * Required. The image to install: an image family, such as
+     * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+     * family's current image for the machine's type, or a single image, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
      *
      * Generated from protobuf field <code>string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -89,8 +97,10 @@ class ReinstallMachineRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Which image to use, can either be projects/project-name/families/ubuntu-2204-lts
-     * or projects/project-name/images/ubuntu-2204-lts-image-tag
+     * Required. The image to install: an image family, such as
+     * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+     * family's current image for the machine's type, or a single image, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
      *
      * Generated from protobuf field <code>string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var

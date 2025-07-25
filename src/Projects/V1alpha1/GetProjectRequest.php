@@ -10,11 +10,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The project get request.
+ *
  * Generated from protobuf message <code>cbws.projects.v1alpha1.GetProjectRequest</code>
  */
 class GetProjectRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Required. The resource name of the project, such as
+     * `projects/my-project`.
+     *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      */
     protected $name = '';
@@ -26,6 +31,8 @@ class GetProjectRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $name
+     *           Required. The resource name of the project, such as
+     *           `projects/my-project`.
      * }
      */
     public function __construct($data = NULL) {
@@ -34,6 +41,9 @@ class GetProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Required. The resource name of the project, such as
+     * `projects/my-project`.
+     *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @return string
      */
@@ -43,6 +53,9 @@ class GetProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Required. The resource name of the project, such as
+     * `projects/my-project`.
+     *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @param string $var
      * @return $this

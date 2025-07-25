@@ -10,18 +10,22 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The project list response.
+ *
  * Generated from protobuf message <code>cbws.projects.v1alpha1.ListProjectsResponse</code>
  */
 class ListProjectsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The projects, in no particular order.
+     *
      * Generated from protobuf field <code>repeated .cbws.projects.v1alpha1.Project projects = 1 [json_name = "projects"];</code>
      */
     private $projects;
     /**
-     * To retrieve the next page of results, set
-     * [ListServiceAccountsRequest.page_token][google.iam.admin.v1.ListServiceAccountsRequest.page_token]
-     * to this value.
+     * The token to get the next page with, by setting it as
+     * [page_token][cbws.projects.v1alpha1.ListProjectsRequest.page_token].
+     * Empty on the last page.
      *
      * Generated from protobuf field <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
      */
@@ -34,10 +38,11 @@ class ListProjectsResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array<\Cbws\Grpc\Projects\V1alpha1\Project>|\Google\Protobuf\Internal\RepeatedField $projects
+     *           The projects, in no particular order.
      *     @type string $next_page_token
-     *           To retrieve the next page of results, set
-     *           [ListServiceAccountsRequest.page_token][google.iam.admin.v1.ListServiceAccountsRequest.page_token]
-     *           to this value.
+     *           The token to get the next page with, by setting it as
+     *           [page_token][cbws.projects.v1alpha1.ListProjectsRequest.page_token].
+     *           Empty on the last page.
      * }
      */
     public function __construct($data = NULL) {
@@ -46,6 +51,8 @@ class ListProjectsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The projects, in no particular order.
+     *
      * Generated from protobuf field <code>repeated .cbws.projects.v1alpha1.Project projects = 1 [json_name = "projects"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
@@ -55,6 +62,8 @@ class ListProjectsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The projects, in no particular order.
+     *
      * Generated from protobuf field <code>repeated .cbws.projects.v1alpha1.Project projects = 1 [json_name = "projects"];</code>
      * @param array<\Cbws\Grpc\Projects\V1alpha1\Project>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
@@ -68,9 +77,9 @@ class ListProjectsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * To retrieve the next page of results, set
-     * [ListServiceAccountsRequest.page_token][google.iam.admin.v1.ListServiceAccountsRequest.page_token]
-     * to this value.
+     * The token to get the next page with, by setting it as
+     * [page_token][cbws.projects.v1alpha1.ListProjectsRequest.page_token].
+     * Empty on the last page.
      *
      * Generated from protobuf field <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
      * @return string
@@ -81,9 +90,9 @@ class ListProjectsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * To retrieve the next page of results, set
-     * [ListServiceAccountsRequest.page_token][google.iam.admin.v1.ListServiceAccountsRequest.page_token]
-     * to this value.
+     * The token to get the next page with, by setting it as
+     * [page_token][cbws.projects.v1alpha1.ListProjectsRequest.page_token].
+     * Empty on the last page.
      *
      * Generated from protobuf field <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
      * @param string $var

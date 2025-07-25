@@ -10,26 +10,33 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * The project create request.
+ *
  * Generated from protobuf message <code>cbws.projects.v1alpha1.CreateProjectRequest</code>
  */
 class CreateProjectRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Required. The organization to create the project in, as a full resource
+     * name in the form
+     * `//organizations.cloudbear.nl/organizations/{organization}`.
+     *
      * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      */
     protected $parent = '';
     /**
-     * Required. The name of the project, It is globally unique across CBWS,
-     * must be 6-30 characters long, and match the regular expression
-     * `[a-z]([-a-z0-9]*[a-z0-9])` to comply with RFC1035.
+     * Required. The ID of the project, without the `projects/` prefix, such
+     * as `my-project`. It is unique across CBWS and cannot be changed. It is
+     * at most 32 characters long, and matches the regular expression
+     * `[a-z][a-zA-Z0-9-]*[a-zA-Z0-9]`. An ID that is already taken fails with
+     * FAILED_PRECONDITION.
      *
      * Generated from protobuf field <code>string name = 2 [json_name = "name", (.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $name = '';
     /**
-     * The [Project][cbws.projects.v1alpha1.Project] resource to
-     * create. Currently, only the following values are user assignable:
-     * `display_name`.
+     * Optional. The properties of the new project. Only `display_name` is
+     * read.
      *
      * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];</code>
      */
@@ -42,14 +49,18 @@ class CreateProjectRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $parent
+     *           Required. The organization to create the project in, as a full resource
+     *           name in the form
+     *           `//organizations.cloudbear.nl/organizations/{organization}`.
      *     @type string $name
-     *           Required. The name of the project, It is globally unique across CBWS,
-     *           must be 6-30 characters long, and match the regular expression
-     *           `[a-z]([-a-z0-9]*[a-z0-9])` to comply with RFC1035.
+     *           Required. The ID of the project, without the `projects/` prefix, such
+     *           as `my-project`. It is unique across CBWS and cannot be changed. It is
+     *           at most 32 characters long, and matches the regular expression
+     *           `[a-z][a-zA-Z0-9-]*[a-zA-Z0-9]`. An ID that is already taken fails with
+     *           FAILED_PRECONDITION.
      *     @type \Cbws\Grpc\Projects\V1alpha1\Project $project
-     *           The [Project][cbws.projects.v1alpha1.Project] resource to
-     *           create. Currently, only the following values are user assignable:
-     *           `display_name`.
+     *           Optional. The properties of the new project. Only `display_name` is
+     *           read.
      * }
      */
     public function __construct($data = NULL) {
@@ -58,6 +69,10 @@ class CreateProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Required. The organization to create the project in, as a full resource
+     * name in the form
+     * `//organizations.cloudbear.nl/organizations/{organization}`.
+     *
      * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @return string
      */
@@ -67,6 +82,10 @@ class CreateProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Required. The organization to create the project in, as a full resource
+     * name in the form
+     * `//organizations.cloudbear.nl/organizations/{organization}`.
+     *
      * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @param string $var
      * @return $this
@@ -80,9 +99,11 @@ class CreateProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The name of the project, It is globally unique across CBWS,
-     * must be 6-30 characters long, and match the regular expression
-     * `[a-z]([-a-z0-9]*[a-z0-9])` to comply with RFC1035.
+     * Required. The ID of the project, without the `projects/` prefix, such
+     * as `my-project`. It is unique across CBWS and cannot be changed. It is
+     * at most 32 characters long, and matches the regular expression
+     * `[a-z][a-zA-Z0-9-]*[a-zA-Z0-9]`. An ID that is already taken fails with
+     * FAILED_PRECONDITION.
      *
      * Generated from protobuf field <code>string name = 2 [json_name = "name", (.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -93,9 +114,11 @@ class CreateProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The name of the project, It is globally unique across CBWS,
-     * must be 6-30 characters long, and match the regular expression
-     * `[a-z]([-a-z0-9]*[a-z0-9])` to comply with RFC1035.
+     * Required. The ID of the project, without the `projects/` prefix, such
+     * as `my-project`. It is unique across CBWS and cannot be changed. It is
+     * at most 32 characters long, and matches the regular expression
+     * `[a-z][a-zA-Z0-9-]*[a-zA-Z0-9]`. An ID that is already taken fails with
+     * FAILED_PRECONDITION.
      *
      * Generated from protobuf field <code>string name = 2 [json_name = "name", (.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -110,9 +133,8 @@ class CreateProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The [Project][cbws.projects.v1alpha1.Project] resource to
-     * create. Currently, only the following values are user assignable:
-     * `display_name`.
+     * Optional. The properties of the new project. Only `display_name` is
+     * read.
      *
      * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];</code>
      * @return \Cbws\Grpc\Projects\V1alpha1\Project|null
@@ -133,9 +155,8 @@ class CreateProjectRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The [Project][cbws.projects.v1alpha1.Project] resource to
-     * create. Currently, only the following values are user assignable:
-     * `display_name`.
+     * Optional. The properties of the new project. Only `display_name` is
+     * read.
      *
      * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];</code>
      * @param \Cbws\Grpc\Projects\V1alpha1\Project $var

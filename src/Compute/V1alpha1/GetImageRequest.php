@@ -10,23 +10,21 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * The image get request.
+ * The request to get an image.
  *
  * Generated from protobuf message <code>cbws.compute.v1alpha1.GetImageRequest</code>
  */
 class GetImageRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Required. The resource name of the image in the following format:
-     * `projects/{PROJECT_ID}/images/{ACCOUNT}`.
+     * Required. The resource name of the image, such as
+     * `projects/my-project-123/images/my-image`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      */
     protected $name = '';
     /**
-     * Optional list of fields that should be included in the response, the service may include fields that haven't
-     * been requested when they are available. This can be used to speed up requests as some fields can be more expensive
-     * to lookup.
+     * Optional. Ignored: every image field is always returned.
      *
      * Generated from protobuf field <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
      */
@@ -39,12 +37,10 @@ class GetImageRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $name
-     *           Required. The resource name of the image in the following format:
-     *           `projects/{PROJECT_ID}/images/{ACCOUNT}`.
+     *           Required. The resource name of the image, such as
+     *           `projects/my-project-123/images/my-image`.
      *     @type \Google\Protobuf\FieldMask $read_mask
-     *           Optional list of fields that should be included in the response, the service may include fields that haven't
-     *           been requested when they are available. This can be used to speed up requests as some fields can be more expensive
-     *           to lookup.
+     *           Optional. Ignored: every image field is always returned.
      * }
      */
     public function __construct($data = NULL) {
@@ -53,8 +49,8 @@ class GetImageRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the image in the following format:
-     * `projects/{PROJECT_ID}/images/{ACCOUNT}`.
+     * Required. The resource name of the image, such as
+     * `projects/my-project-123/images/my-image`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @return string
@@ -65,8 +61,8 @@ class GetImageRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. The resource name of the image in the following format:
-     * `projects/{PROJECT_ID}/images/{ACCOUNT}`.
+     * Required. The resource name of the image, such as
+     * `projects/my-project-123/images/my-image`.
      *
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @param string $var
@@ -81,9 +77,7 @@ class GetImageRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional list of fields that should be included in the response, the service may include fields that haven't
-     * been requested when they are available. This can be used to speed up requests as some fields can be more expensive
-     * to lookup.
+     * Optional. Ignored: every image field is always returned.
      *
      * Generated from protobuf field <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return \Google\Protobuf\FieldMask|null
@@ -104,9 +98,7 @@ class GetImageRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional list of fields that should be included in the response, the service may include fields that haven't
-     * been requested when they are available. This can be used to speed up requests as some fields can be more expensive
-     * to lookup.
+     * Optional. Ignored: every image field is always returned.
      *
      * Generated from protobuf field <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param \Google\Protobuf\FieldMask $var
