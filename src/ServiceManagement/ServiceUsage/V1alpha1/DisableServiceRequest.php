@@ -24,6 +24,16 @@ class DisableServiceRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $name = '';
+    /**
+     * Optional. Whether to also disable the enabled services that depend on
+     * this one. They are disabled first.
+     * If false and such services exist, the call fails with
+     * FAILED_PRECONDITION. The error names each dependent service in a
+     * `PreconditionFailure` violation of type `DEPENDENT_SERVICE_ENABLED`.
+     *
+     * Generated from protobuf field <code>bool disable_dependent_services = 2 [json_name = "disableDependentServices", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    protected $disable_dependent_services = false;
 
     /**
      * Constructor.
@@ -35,6 +45,12 @@ class DisableServiceRequest extends \Google\Protobuf\Internal\Message
      *           Required. The resource name of the service in the project, in the form
      *           `projects/{project}/services/{service}`, such as
      *           `projects/my-project/services/logging.cbws.xyz`.
+     *     @type bool $disable_dependent_services
+     *           Optional. Whether to also disable the enabled services that depend on
+     *           this one. They are disabled first.
+     *           If false and such services exist, the call fails with
+     *           FAILED_PRECONDITION. The error names each dependent service in a
+     *           `PreconditionFailure` violation of type `DEPENDENT_SERVICE_ENABLED`.
      * }
      */
     public function __construct($data = NULL) {
@@ -68,6 +84,40 @@ class DisableServiceRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->name = $var;
+
+        return $this;
+    }
+
+    /**
+     * Optional. Whether to also disable the enabled services that depend on
+     * this one. They are disabled first.
+     * If false and such services exist, the call fails with
+     * FAILED_PRECONDITION. The error names each dependent service in a
+     * `PreconditionFailure` violation of type `DEPENDENT_SERVICE_ENABLED`.
+     *
+     * Generated from protobuf field <code>bool disable_dependent_services = 2 [json_name = "disableDependentServices", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return bool
+     */
+    public function getDisableDependentServices()
+    {
+        return $this->disable_dependent_services;
+    }
+
+    /**
+     * Optional. Whether to also disable the enabled services that depend on
+     * this one. They are disabled first.
+     * If false and such services exist, the call fails with
+     * FAILED_PRECONDITION. The error names each dependent service in a
+     * `PreconditionFailure` violation of type `DEPENDENT_SERVICE_ENABLED`.
+     *
+     * Generated from protobuf field <code>bool disable_dependent_services = 2 [json_name = "disableDependentServices", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setDisableDependentServices($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->disable_dependent_services = $var;
 
         return $this;
     }
