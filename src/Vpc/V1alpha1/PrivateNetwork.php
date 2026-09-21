@@ -31,6 +31,13 @@ class PrivateNetwork extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
      */
     protected $parent = '';
+    /**
+     * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+     * buf:lint:ignore FIELD_SAME_JSON_NAME
+     *
+     * Generated from protobuf field <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    protected $zone = '';
 
     /**
      * Constructor.
@@ -44,6 +51,9 @@ class PrivateNetwork extends \Google\Protobuf\Internal\Message
      *     @type string $parent
      *           The VPC the private network belongs to, such as
      *           `projects/my-project/vpcs/default`.
+     *     @type string $zone
+     *           The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+     *           buf:lint:ignore FIELD_SAME_JSON_NAME
      * }
      */
     public function __construct($data = NULL) {
@@ -103,6 +113,34 @@ class PrivateNetwork extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->parent = $var;
+
+        return $this;
+    }
+
+    /**
+     * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+     * buf:lint:ignore FIELD_SAME_JSON_NAME
+     *
+     * Generated from protobuf field <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return string
+     */
+    public function getZone()
+    {
+        return $this->zone;
+    }
+
+    /**
+     * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+     * buf:lint:ignore FIELD_SAME_JSON_NAME
+     *
+     * Generated from protobuf field <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setZone($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->zone = $var;
 
         return $this;
     }
