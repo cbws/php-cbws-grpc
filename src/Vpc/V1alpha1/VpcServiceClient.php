@@ -156,4 +156,37 @@ class VpcServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Creates a subnet in a private network, with a prefix you choose.
+     * Requires `vpc.cbws.cloud/Subnet/create` on the private network. The new
+     * subnet, with its gateway, is in the operation's metadata.
+     * @param \Cbws\Grpc\Vpc\V1alpha1\CreateSubnetRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
+     */
+    public function CreateSubnet(\Cbws\Grpc\Vpc\V1alpha1\CreateSubnetRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.vpc.v1alpha1.VpcService/CreateSubnet',
+        $argument,
+        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Deletes a subnet and frees its prefix. Requires
+     * `vpc.cbws.cloud/Subnet/delete` on the subnet.
+     * @param \Cbws\Grpc\Vpc\V1alpha1\DeleteSubnetRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
+     */
+    public function DeleteSubnet(\Cbws\Grpc\Vpc\V1alpha1\DeleteSubnetRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.vpc.v1alpha1.VpcService/DeleteSubnet',
+        $argument,
+        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
+        $metadata, $options);
+    }
+
 }
