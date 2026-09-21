@@ -125,4 +125,35 @@ class VpcServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Lists the subnets of a private network. Requires
+     * `vpc.cbws.cloud/Subnet/list` on the private network.
+     * @param \Cbws\Grpc\Vpc\V1alpha1\ListSubnetsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Vpc\V1alpha1\ListSubnetsResponse>
+     */
+    public function ListSubnets(\Cbws\Grpc\Vpc\V1alpha1\ListSubnetsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.vpc.v1alpha1.VpcService/ListSubnets',
+        $argument,
+        ['\Cbws\Grpc\Vpc\V1alpha1\ListSubnetsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Gets a subnet. Requires `vpc.cbws.cloud/Subnet/get` on the subnet.
+     * @param \Cbws\Grpc\Vpc\V1alpha1\GetSubnetRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Vpc\V1alpha1\Subnet>
+     */
+    public function GetSubnet(\Cbws\Grpc\Vpc\V1alpha1\GetSubnetRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.vpc.v1alpha1.VpcService/GetSubnet',
+        $argument,
+        ['\Cbws\Grpc\Vpc\V1alpha1\Subnet', 'decode'],
+        $metadata, $options);
+    }
+
 }
