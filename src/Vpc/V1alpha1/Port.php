@@ -44,7 +44,7 @@ class Port extends \Google\Protobuf\Internal\Message
      * Empty means that the port is reserved but not attached to anything. It
      * still holds its addresses and its MAC address.
      *
-     * Generated from protobuf field <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $owner = '';
     /**
@@ -192,7 +192,7 @@ class Port extends \Google\Protobuf\Internal\Message
      * Empty means that the port is reserved but not attached to anything. It
      * still holds its addresses and its MAC address.
      *
-     * Generated from protobuf field <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return string
      */
     public function getOwner()
@@ -206,7 +206,7 @@ class Port extends \Google\Protobuf\Internal\Message
      * Empty means that the port is reserved but not attached to anything. It
      * still holds its addresses and its MAC address.
      *
-     * Generated from protobuf field <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param string $var
      * @return $this
      */
