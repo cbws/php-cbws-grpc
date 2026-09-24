@@ -189,4 +189,37 @@ class VpcServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Lists ports, either the ports a project holds or the ports on a private
+     * network. See
+     * [ListPortsRequest.parent][cbws.vpc.v1alpha1.ListPortsRequest.parent].
+     * @param \Cbws\Grpc\Vpc\V1alpha1\ListPortsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Vpc\V1alpha1\ListPortsResponse>
+     */
+    public function ListPorts(\Cbws\Grpc\Vpc\V1alpha1\ListPortsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.vpc.v1alpha1.VpcService/ListPorts',
+        $argument,
+        ['\Cbws\Grpc\Vpc\V1alpha1\ListPortsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Gets a port. Requires `vpc.cbws.cloud/Port/get` on the port, or on the
+     * private network it is attached to.
+     * @param \Cbws\Grpc\Vpc\V1alpha1\GetPortRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Vpc\V1alpha1\Port>
+     */
+    public function GetPort(\Cbws\Grpc\Vpc\V1alpha1\GetPortRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.vpc.v1alpha1.VpcService/GetPort',
+        $argument,
+        ['\Cbws\Grpc\Vpc\V1alpha1\Port', 'decode'],
+        $metadata, $options);
+    }
+
 }
