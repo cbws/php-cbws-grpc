@@ -39,6 +39,14 @@ class Port extends \Google\Protobuf\Internal\Message
      */
     protected $parent = '';
     /**
+     * The private network the port is on, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+     * belong to another project.
+     *
+     * Generated from protobuf field <code>string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = {</code>
+     */
+    protected $private_network = '';
+    /**
      * The full resource name of what holds the port, such as
      * `//compute.cbws.cloud/projects/my-project/machines/vm-1`.
      * Empty means that the port is reserved but not attached to anything. It
@@ -99,6 +107,10 @@ class Port extends \Google\Protobuf\Internal\Message
      *     @type string $parent
      *           The project that holds the port, such as `projects/my-project`. It is
      *           not necessarily the project that owns the private network.
+     *     @type string $private_network
+     *           The private network the port is on, such as
+     *           `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+     *           belong to another project.
      *     @type string $owner
      *           The full resource name of what holds the port, such as
      *           `//compute.cbws.cloud/projects/my-project/machines/vm-1`.
@@ -182,6 +194,36 @@ class Port extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->parent = $var;
+
+        return $this;
+    }
+
+    /**
+     * The private network the port is on, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+     * belong to another project.
+     *
+     * Generated from protobuf field <code>string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = {</code>
+     * @return string
+     */
+    public function getPrivateNetwork()
+    {
+        return $this->private_network;
+    }
+
+    /**
+     * The private network the port is on, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+     * belong to another project.
+     *
+     * Generated from protobuf field <code>string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = {</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPrivateNetwork($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->private_network = $var;
 
         return $this;
     }

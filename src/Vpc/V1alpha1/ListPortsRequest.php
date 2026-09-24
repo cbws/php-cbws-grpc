@@ -29,7 +29,7 @@ class ListPortsRequest extends \Google\Protobuf\Internal\Message
      * The first form does not list ports of other projects on the project's
      * own networks. Use one of the network forms for those.
      *
-     * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
+     * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $parent = '';
     /**
@@ -93,7 +93,7 @@ class ListPortsRequest extends \Google\Protobuf\Internal\Message
      * The first form does not list ports of other projects on the project's
      * own networks. Use one of the network forms for those.
      *
-     * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
+     * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getParent()
@@ -114,7 +114,7 @@ class ListPortsRequest extends \Google\Protobuf\Internal\Message
      * The first form does not list ports of other projects on the project's
      * own networks. Use one of the network forms for those.
      *
-     * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
+     * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
