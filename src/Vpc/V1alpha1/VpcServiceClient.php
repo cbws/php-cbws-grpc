@@ -222,4 +222,64 @@ class VpcServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Gets the IAM policy of a VPC or a private network. Requires
+     * `vpc.cbws.cloud/Vpc/getIAMPolicy` on the VPC, or
+     * `vpc.cbws.cloud/PrivateNetwork/getIAMPolicy` on the private network.
+     *
+     * The `resource` is the resource name of a VPC, such as
+     * `projects/my-project/vpcs/default`, or of a private network, such as
+     * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`. A binding on
+     * a VPC applies to every private network in it. A binding on a private
+     * network applies to that network only, so a network can be shared with
+     * other projects without sharing the rest of its VPC.
+     * @param \Cbws\Grpc\Iam\Policy\V1alpha1\GetPolicyRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\Policy\V1alpha1\Policy>
+     */
+    public function GetPolicy(\Cbws\Grpc\Iam\Policy\V1alpha1\GetPolicyRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.vpc.v1alpha1.VpcService/GetPolicy',
+        $argument,
+        ['\Cbws\Grpc\Iam\Policy\V1alpha1\Policy', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Replaces the IAM policy of a VPC or a private network. Requires
+     * `vpc.cbws.cloud/Vpc/setIAMPolicy` on the VPC, or
+     * `vpc.cbws.cloud/PrivateNetwork/setIAMPolicy` on the private network. The
+     * accepted resources are the same as for
+     * [GetPolicy][cbws.vpc.v1alpha1.VpcService.GetPolicy].
+     * @param \Cbws\Grpc\Iam\Policy\V1alpha1\SetPolicyRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\Policy\V1alpha1\Policy>
+     */
+    public function SetPolicy(\Cbws\Grpc\Iam\Policy\V1alpha1\SetPolicyRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.vpc.v1alpha1.VpcService/SetPolicy',
+        $argument,
+        ['\Cbws\Grpc\Iam\Policy\V1alpha1\Policy', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Returns which of the given permissions the caller has on a VPC or a
+     * private network. The accepted resources are the same as for
+     * [GetPolicy][cbws.vpc.v1alpha1.VpcService.GetPolicy].
+     * @param \Cbws\Grpc\Iam\Policy\V1alpha1\TestPermissionsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\Policy\V1alpha1\TestPermissionsResponse>
+     */
+    public function TestPermissions(\Cbws\Grpc\Iam\Policy\V1alpha1\TestPermissionsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.vpc.v1alpha1.VpcService/TestPermissions',
+        $argument,
+        ['\Cbws\Grpc\Iam\Policy\V1alpha1\TestPermissionsResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }
