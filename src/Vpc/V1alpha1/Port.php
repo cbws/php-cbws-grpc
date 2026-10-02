@@ -81,6 +81,24 @@ class Port extends \Google\Protobuf\Internal\Message
      */
     protected $ipv6_address = '';
     /**
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     *
+     * Generated from protobuf field <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $ipv4_subnet = null;
+    /**
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     *
+     * Generated from protobuf field <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $ipv6_subnet = null;
+    /**
      * The MAC address of the port, in lowercase with colons, such as
      * `02:00:5e:10:00:01`. It does not change for the life of the port.
      *
@@ -129,6 +147,16 @@ class Port extends \Google\Protobuf\Internal\Message
      *           The IPv6 address of the port, on the same terms as
      *           [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address]. Empty when the port
      *           has no IPv6 address.
+     *     @type \Cbws\Grpc\Vpc\V1alpha1\Port\AddressSubnet $ipv4_subnet
+     *           The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     *           with what is needed to configure the address. Unset when the port has
+     *           no IPv4 address.
+     *           It is on the port so that the address can be configured from the port
+     *           alone, without access to the private network's subnets.
+     *     @type \Cbws\Grpc\Vpc\V1alpha1\Port\AddressSubnet $ipv6_subnet
+     *           The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     *           on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     *           Unset when the port has no IPv6 address.
      *     @type string $mac_address
      *           The MAC address of the port, in lowercase with colons, such as
      *           `02:00:5e:10:00:01`. It does not change for the life of the port.
@@ -348,6 +376,90 @@ class Port extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->ipv6_address = $var;
+
+        return $this;
+    }
+
+    /**
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     *
+     * Generated from protobuf field <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return \Cbws\Grpc\Vpc\V1alpha1\Port\AddressSubnet|null
+     */
+    public function getIpv4Subnet()
+    {
+        return $this->ipv4_subnet;
+    }
+
+    public function hasIpv4Subnet()
+    {
+        return isset($this->ipv4_subnet);
+    }
+
+    public function clearIpv4Subnet()
+    {
+        unset($this->ipv4_subnet);
+    }
+
+    /**
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     *
+     * Generated from protobuf field <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param \Cbws\Grpc\Vpc\V1alpha1\Port\AddressSubnet $var
+     * @return $this
+     */
+    public function setIpv4Subnet($var)
+    {
+        GPBUtil::checkMessage($var, \Cbws\Grpc\Vpc\V1alpha1\Port\AddressSubnet::class);
+        $this->ipv4_subnet = $var;
+
+        return $this;
+    }
+
+    /**
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     *
+     * Generated from protobuf field <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return \Cbws\Grpc\Vpc\V1alpha1\Port\AddressSubnet|null
+     */
+    public function getIpv6Subnet()
+    {
+        return $this->ipv6_subnet;
+    }
+
+    public function hasIpv6Subnet()
+    {
+        return isset($this->ipv6_subnet);
+    }
+
+    public function clearIpv6Subnet()
+    {
+        unset($this->ipv6_subnet);
+    }
+
+    /**
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     *
+     * Generated from protobuf field <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param \Cbws\Grpc\Vpc\V1alpha1\Port\AddressSubnet $var
+     * @return $this
+     */
+    public function setIpv6Subnet($var)
+    {
+        GPBUtil::checkMessage($var, \Cbws\Grpc\Vpc\V1alpha1\Port\AddressSubnet::class);
+        $this->ipv6_subnet = $var;
 
         return $this;
     }
