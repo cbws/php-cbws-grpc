@@ -64,7 +64,7 @@ class Machine extends \Google\Protobuf\Internal\Message
      * Accepted on create and never returned, so a machine read back always reports this
      * empty. Keep your own record of the keys you sent.
      *
-     * Generated from protobuf field <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private $ssh_keys;
     /**
@@ -73,7 +73,7 @@ class Machine extends \Google\Protobuf\Internal\Message
      * Userdata commonly carries credentials, and anything returned is readable by everyone who can
      * read the machine or its operations. Keep your own record of the userdata you sent.
      *
-     * Generated from protobuf field <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      */
     protected $userdata = '';
     /**
@@ -303,7 +303,7 @@ class Machine extends \Google\Protobuf\Internal\Message
      * Accepted on create and never returned, so a machine read back always reports this
      * empty. Keep your own record of the keys you sent.
      *
-     * Generated from protobuf field <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getSshKeys()
@@ -316,7 +316,7 @@ class Machine extends \Google\Protobuf\Internal\Message
      * Accepted on create and never returned, so a machine read back always reports this
      * empty. Keep your own record of the keys you sent.
      *
-     * Generated from protobuf field <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -334,7 +334,7 @@ class Machine extends \Google\Protobuf\Internal\Message
      * Userdata commonly carries credentials, and anything returned is readable by everyone who can
      * read the machine or its operations. Keep your own record of the userdata you sent.
      *
-     * Generated from protobuf field <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return string
      */
     public function getUserdata()
@@ -348,7 +348,7 @@ class Machine extends \Google\Protobuf\Internal\Message
      * Userdata commonly carries credentials, and anything returned is readable by everyone who can
      * read the machine or its operations. Keep your own record of the userdata you sent.
      *
-     * Generated from protobuf field <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param string $var
      * @return $this
      */
