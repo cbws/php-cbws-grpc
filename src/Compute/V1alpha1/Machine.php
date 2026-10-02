@@ -60,6 +60,14 @@ class Machine extends \Google\Protobuf\Internal\Message
      */
     protected $address = '';
     /**
+     * The IPv6 address the machine holds, the counterpart of
+     * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+     * address, which is normal on a network with no IPv6 subnet.
+     *
+     * Generated from protobuf field <code>string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $ipv6_address = '';
+    /**
      * Public keys installed for the image's default user when the machine first boots.
      * Accepted on create and never returned, so a machine read back always reports this
      * empty. Keep your own record of the keys you sent.
@@ -109,6 +117,10 @@ class Machine extends \Google\Protobuf\Internal\Message
      *           The hostname the machine boots with. Defaults to the machine id.
      *     @type string $address
      *           The IPv4 address the machine holds. Empty on a machine with no IPv4 address.
+     *     @type string $ipv6_address
+     *           The IPv6 address the machine holds, the counterpart of
+     *           [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+     *           address, which is normal on a network with no IPv6 subnet.
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $ssh_keys
      *           Public keys installed for the image's default user when the machine first boots.
      *           Accepted on create and never returned, so a machine read back always reports this
@@ -294,6 +306,36 @@ class Machine extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->address = $var;
+
+        return $this;
+    }
+
+    /**
+     * The IPv6 address the machine holds, the counterpart of
+     * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+     * address, which is normal on a network with no IPv6 subnet.
+     *
+     * Generated from protobuf field <code>string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return string
+     */
+    public function getIpv6Address()
+    {
+        return $this->ipv6_address;
+    }
+
+    /**
+     * The IPv6 address the machine holds, the counterpart of
+     * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+     * address, which is normal on a network with no IPv6 subnet.
+     *
+     * Generated from protobuf field <code>string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setIpv6Address($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ipv6_address = $var;
 
         return $this;
     }
