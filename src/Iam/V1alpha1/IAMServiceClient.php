@@ -109,6 +109,46 @@ class IAMServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Signs a JWT with one of the service account's system-managed keys, so
+     * that it verifies against the account's published key set. Requires
+     * `iam.cbws.xyz/ServiceAccount/signJwt` on the service account.
+     *
+     * The JWT header is `{"alg":"RS256","kid":"<key_id>","typ":"JWT"}`. The
+     * call fails with FAILED_PRECONDITION when the account has no
+     * system-managed key that stays valid for at least another hour.
+     * @param \Cbws\Grpc\Iam\V1alpha1\SignJwtRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\V1alpha1\SignJwtResponse>
+     */
+    public function SignJwt(\Cbws\Grpc\Iam\V1alpha1\SignJwtRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/SignJwt',
+        $argument,
+        ['\Cbws\Grpc\Iam\V1alpha1\SignJwtResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Signs a blob with one of the service account's system-managed keys.
+     * Requires `iam.cbws.xyz/ServiceAccount/signBlob` on the service account.
+     *
+     * The call fails with FAILED_PRECONDITION when the account has no
+     * system-managed key that stays valid for at least another hour.
+     * @param \Cbws\Grpc\Iam\V1alpha1\SignBlobRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\V1alpha1\SignBlobResponse>
+     */
+    public function SignBlob(\Cbws\Grpc\Iam\V1alpha1\SignBlobRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/SignBlob',
+        $argument,
+        ['\Cbws\Grpc\Iam\V1alpha1\SignBlobResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * Lists the keys of a service account, newest first. Requires
      * `iam.cbws.xyz/ServiceAccountKey/list` on the service account.
      *
