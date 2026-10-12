@@ -232,4 +232,50 @@ class ComputeServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Lists the image families in a project.
+     * @param \Cbws\Grpc\Compute\V1alpha1\ListImageFamiliesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ListImageFamiliesResponse>
+     */
+    public function ListImageFamilies(\Cbws\Grpc\Compute\V1alpha1\ListImageFamiliesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/ListImageFamilies',
+        $argument,
+        ['\Cbws\Grpc\Compute\V1alpha1\ListImageFamiliesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Gets an image family.
+     * @param \Cbws\Grpc\Compute\V1alpha1\GetImageFamilyRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ImageFamily>
+     */
+    public function GetImageFamily(\Cbws\Grpc\Compute\V1alpha1\GetImageFamilyRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/GetImageFamily',
+        $argument,
+        ['\Cbws\Grpc\Compute\V1alpha1\ImageFamily', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Returns the image a machine of the given type would boot from the family
+     * right now.
+     * @param \Cbws\Grpc\Compute\V1alpha1\GetImageFromFamilyRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\Image>
+     */
+    public function GetImageFromFamily(\Cbws\Grpc\Compute\V1alpha1\GetImageFromFamilyRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/GetImageFromFamily',
+        $argument,
+        ['\Cbws\Grpc\Compute\V1alpha1\Image', 'decode'],
+        $metadata, $options);
+    }
+
 }
