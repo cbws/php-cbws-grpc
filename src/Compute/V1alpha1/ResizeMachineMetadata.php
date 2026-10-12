@@ -16,6 +16,18 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class ResizeMachineMetadata extends \Google\Protobuf\Internal\Message
 {
+    /**
+     * When the operation was created. Unset where the time is not known.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp create_time = 1 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $create_time = null;
+    /**
+     * When the operation finished, successfully or not. Unset while it runs.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $end_time = null;
 
     /**
      * Constructor.
@@ -23,11 +35,87 @@ class ResizeMachineMetadata extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type \Google\Protobuf\Timestamp $create_time
+     *           When the operation was created. Unset where the time is not known.
+     *     @type \Google\Protobuf\Timestamp $end_time
+     *           When the operation finished, successfully or not. Unset while it runs.
      * }
      */
     public function __construct($data = NULL) {
         \GPBMetadata\Cbws\Compute\Compute::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     * When the operation was created. Unset where the time is not known.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp create_time = 1 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getCreateTime()
+    {
+        return $this->create_time;
+    }
+
+    public function hasCreateTime()
+    {
+        return isset($this->create_time);
+    }
+
+    public function clearCreateTime()
+    {
+        unset($this->create_time);
+    }
+
+    /**
+     * When the operation was created. Unset where the time is not known.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp create_time = 1 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setCreateTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->create_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * When the operation finished, successfully or not. Unset while it runs.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getEndTime()
+    {
+        return $this->end_time;
+    }
+
+    public function hasEndTime()
+    {
+        return isset($this->end_time);
+    }
+
+    public function clearEndTime()
+    {
+        unset($this->end_time);
+    }
+
+    /**
+     * When the operation finished, successfully or not. Unset while it runs.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setEndTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->end_time = $var;
+
+        return $this;
     }
 
 }
