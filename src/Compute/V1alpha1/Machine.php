@@ -107,6 +107,13 @@ class Machine extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.cbws.compute.v1alpha1.Machine.State state = 8 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $state = 0;
+    /**
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $create_time = null;
 
     /**
      * Constructor.
@@ -161,6 +168,9 @@ class Machine extends \Google\Protobuf\Internal\Message
      *     @type int $state
      *           The current state of the machine. Unset when the request's read mask
      *           leaves out `status`.
+     *     @type \Google\Protobuf\Timestamp $create_time
+     *           When the machine was created, which is when it was requested rather than when it first
+     *           booted. Unset where the time is not known.
      * }
      */
     public function __construct($data = NULL) {
@@ -500,6 +510,44 @@ class Machine extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Cbws\Grpc\Compute\V1alpha1\Machine\State::class);
         $this->state = $var;
+
+        return $this;
+    }
+
+    /**
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getCreateTime()
+    {
+        return $this->create_time;
+    }
+
+    public function hasCreateTime()
+    {
+        return isset($this->create_time);
+    }
+
+    public function clearCreateTime()
+    {
+        unset($this->create_time);
+    }
+
+    /**
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setCreateTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->create_time = $var;
 
         return $this;
     }
