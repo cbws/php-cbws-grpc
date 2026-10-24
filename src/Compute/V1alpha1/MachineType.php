@@ -52,7 +52,7 @@ class MachineType extends \Google\Protobuf\Internal\Message
      * How many machines of this type can still be created. Unset when the
      * request's read mask leaves out `stock_status`.
      *
-     * Generated from protobuf field <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * Generated from protobuf field <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $stock_status = 0;
 
@@ -222,7 +222,7 @@ class MachineType extends \Google\Protobuf\Internal\Message
      * How many machines of this type can still be created. Unset when the
      * request's read mask leaves out `stock_status`.
      *
-     * Generated from protobuf field <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * Generated from protobuf field <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return int
      */
     public function getStockStatus()
@@ -234,7 +234,7 @@ class MachineType extends \Google\Protobuf\Internal\Message
      * How many machines of this type can still be created. Unset when the
      * request's read mask leaves out `stock_status`.
      *
-     * Generated from protobuf field <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * Generated from protobuf field <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param int $var
      * @return $this
      */

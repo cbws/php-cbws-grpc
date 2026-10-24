@@ -27,7 +27,7 @@ class Machine extends \Google\Protobuf\Internal\Message
     /**
      * The project that holds the machine, such as `projects/my-project-123`.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $parent = '';
     /**
@@ -35,7 +35,7 @@ class Machine extends \Google\Protobuf\Internal\Message
      * type is the zone the machine runs in. On create, `machineTypes/g4.2` lets
      * CBWS choose a zone that offers the type. Change it with ResizeMachine.
      *
-     * Generated from protobuf field <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $type = '';
     /**
@@ -50,7 +50,7 @@ class Machine extends \Google\Protobuf\Internal\Message
     /**
      * The hostname the machine boots with. Defaults to the machine id.
      *
-     * Generated from protobuf field <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
+     * Generated from protobuf field <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $hostname = '';
     /**
@@ -211,7 +211,7 @@ class Machine extends \Google\Protobuf\Internal\Message
     /**
      * The project that holds the machine, such as `projects/my-project-123`.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
      */
     public function getParent()
@@ -222,7 +222,7 @@ class Machine extends \Google\Protobuf\Internal\Message
     /**
      * The project that holds the machine, such as `projects/my-project-123`.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
      * @return $this
      */
@@ -239,7 +239,7 @@ class Machine extends \Google\Protobuf\Internal\Message
      * type is the zone the machine runs in. On create, `machineTypes/g4.2` lets
      * CBWS choose a zone that offers the type. Change it with ResizeMachine.
      *
-     * Generated from protobuf field <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getType()
@@ -252,7 +252,7 @@ class Machine extends \Google\Protobuf\Internal\Message
      * type is the zone the machine runs in. On create, `machineTypes/g4.2` lets
      * CBWS choose a zone that offers the type. Change it with ResizeMachine.
      *
-     * Generated from protobuf field <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -299,7 +299,7 @@ class Machine extends \Google\Protobuf\Internal\Message
     /**
      * The hostname the machine boots with. Defaults to the machine id.
      *
-     * Generated from protobuf field <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
+     * Generated from protobuf field <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return string
      */
     public function getHostname()
@@ -310,7 +310,7 @@ class Machine extends \Google\Protobuf\Internal\Message
     /**
      * The hostname the machine boots with. Defaults to the machine id.
      *
-     * Generated from protobuf field <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
+     * Generated from protobuf field <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param string $var
      * @return $this
      */

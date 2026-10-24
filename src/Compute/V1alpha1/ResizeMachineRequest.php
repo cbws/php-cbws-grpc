@@ -29,7 +29,7 @@ class ResizeMachineRequest extends \Google\Protobuf\Internal\Message
      * machine's current zone. The type must be offered in the zone the machine
      * runs in. A resize to the machine's current type finishes without change.
      *
-     * Generated from protobuf field <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     * Generated from protobuf field <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $type = '';
 
@@ -88,7 +88,7 @@ class ResizeMachineRequest extends \Google\Protobuf\Internal\Message
      * machine's current zone. The type must be offered in the zone the machine
      * runs in. A resize to the machine's current type finishes without change.
      *
-     * Generated from protobuf field <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     * Generated from protobuf field <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getType()
@@ -102,7 +102,7 @@ class ResizeMachineRequest extends \Google\Protobuf\Internal\Message
      * machine's current zone. The type must be offered in the zone the machine
      * runs in. A resize to the machine's current type finishes without change.
      *
-     * Generated from protobuf field <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     * Generated from protobuf field <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
