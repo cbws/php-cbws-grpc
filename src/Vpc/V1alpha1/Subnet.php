@@ -28,7 +28,7 @@ class Subnet extends \Google\Protobuf\Internal\Message
      * The private network the subnet belongs to, such as
      * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $parent = '';
     /**
@@ -47,7 +47,7 @@ class Subnet extends \Google\Protobuf\Internal\Message
      * network address, so `10.0.0.0/24` gives `10.0.0.1` and `2001:db8::/64`
      * gives `2001:db8::1`. It is set by the service.
      *
-     * Generated from protobuf field <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $gateway = '';
 
@@ -113,7 +113,7 @@ class Subnet extends \Google\Protobuf\Internal\Message
      * The private network the subnet belongs to, such as
      * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
      */
     public function getParent()
@@ -125,7 +125,7 @@ class Subnet extends \Google\Protobuf\Internal\Message
      * The private network the subnet belongs to, such as
      * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
      * @return $this
      */
@@ -178,7 +178,7 @@ class Subnet extends \Google\Protobuf\Internal\Message
      * network address, so `10.0.0.0/24` gives `10.0.0.1` and `2001:db8::/64`
      * gives `2001:db8::1`. It is set by the service.
      *
-     * Generated from protobuf field <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
      */
     public function getGateway()
@@ -191,7 +191,7 @@ class Subnet extends \Google\Protobuf\Internal\Message
      * network address, so `10.0.0.0/24` gives `10.0.0.1` and `2001:db8::/64`
      * gives `2001:db8::1`. It is set by the service.
      *
-     * Generated from protobuf field <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
      * @return $this
      */

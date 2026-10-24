@@ -21,7 +21,7 @@ class EnableServiceRequest extends \Google\Protobuf\Internal\Message
      * `projects/{project}/services/{service}`, such as
      * `projects/my-project/services/logging.cbws.xyz`.
      *
-     * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED];</code>
+     * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      */
     protected $name = '';
 
@@ -47,7 +47,7 @@ class EnableServiceRequest extends \Google\Protobuf\Internal\Message
      * `projects/{project}/services/{service}`, such as
      * `projects/my-project/services/logging.cbws.xyz`.
      *
-     * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED];</code>
+     * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @return string
      */
     public function getName()
@@ -60,7 +60,7 @@ class EnableServiceRequest extends \Google\Protobuf\Internal\Message
      * `projects/{project}/services/{service}`, such as
      * `projects/my-project/services/logging.cbws.xyz`.
      *
-     * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED];</code>
+     * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @param string $var
      * @return $this
      */

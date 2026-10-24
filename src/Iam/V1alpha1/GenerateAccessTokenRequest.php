@@ -33,7 +33,7 @@ class GenerateAccessTokenRequest extends \Google\Protobuf\Internal\Message
      * Optional. The lifetime of the token. The only accepted value is one
      * hour, which is also the default.
      *
-     * Generated from protobuf field <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * Generated from protobuf field <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $lifetime = null;
 
@@ -116,7 +116,7 @@ class GenerateAccessTokenRequest extends \Google\Protobuf\Internal\Message
      * Optional. The lifetime of the token. The only accepted value is one
      * hour, which is also the default.
      *
-     * Generated from protobuf field <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * Generated from protobuf field <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return \Google\Protobuf\Duration|null
      */
     public function getLifetime()
@@ -138,7 +138,7 @@ class GenerateAccessTokenRequest extends \Google\Protobuf\Internal\Message
      * Optional. The lifetime of the token. The only accepted value is one
      * hour, which is also the default.
      *
-     * Generated from protobuf field <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * Generated from protobuf field <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param \Google\Protobuf\Duration $var
      * @return $this
      */

@@ -27,14 +27,14 @@ class CreateServiceAccountKeyRequest extends \Google\Protobuf\Internal\Message
      * Optional. The format of the returned private key. Only the credentials
      * file format is supported, which is also the default.
      *
-     * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];</code>
+     * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $private_key_type = 0;
     /**
      * Optional. The algorithm and size of the key. The default is a 2048-bit
      * RSA key.
      *
-     * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];</code>
+     * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $key_algorithm = 0;
 
@@ -92,7 +92,7 @@ class CreateServiceAccountKeyRequest extends \Google\Protobuf\Internal\Message
      * Optional. The format of the returned private key. Only the credentials
      * file format is supported, which is also the default.
      *
-     * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];</code>
+     * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return int
      */
     public function getPrivateKeyType()
@@ -104,7 +104,7 @@ class CreateServiceAccountKeyRequest extends \Google\Protobuf\Internal\Message
      * Optional. The format of the returned private key. Only the credentials
      * file format is supported, which is also the default.
      *
-     * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];</code>
+     * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param int $var
      * @return $this
      */
@@ -120,7 +120,7 @@ class CreateServiceAccountKeyRequest extends \Google\Protobuf\Internal\Message
      * Optional. The algorithm and size of the key. The default is a 2048-bit
      * RSA key.
      *
-     * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];</code>
+     * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return int
      */
     public function getKeyAlgorithm()
@@ -132,7 +132,7 @@ class CreateServiceAccountKeyRequest extends \Google\Protobuf\Internal\Message
      * Optional. The algorithm and size of the key. The default is a 2048-bit
      * RSA key.
      *
-     * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];</code>
+     * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param int $var
      * @return $this
      */

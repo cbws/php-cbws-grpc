@@ -28,13 +28,13 @@ class ServiceAccount extends \Google\Protobuf\Internal\Message
      * The ID of the project that owns the service account, such as
      * `my-project`.
      *
-     * Generated from protobuf field <code>string project_id = 2 [json_name = "projectId"];</code>
+     * Generated from protobuf field <code>string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $project_id = '';
     /**
      * The unique and stable ID of the service account, a UUID.
      *
-     * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $unique_id = '';
     /**
@@ -43,14 +43,14 @@ class ServiceAccount extends \Google\Protobuf\Internal\Message
      * resource names and in policy members such as
      * `serviceAccount:my-app\@my-project.iam-sa.cbws.xyz`.
      *
-     * Generated from protobuf field <code>string email = 5 [json_name = "email"];</code>
+     * Generated from protobuf field <code>string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $email = '';
     /**
      * Optional. A human-readable name for the service account, at most 128
      * characters.
      *
-     * Generated from protobuf field <code>string display_name = 6 [json_name = "displayName"];</code>
+     * Generated from protobuf field <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $display_name = '';
 
@@ -118,7 +118,7 @@ class ServiceAccount extends \Google\Protobuf\Internal\Message
      * The ID of the project that owns the service account, such as
      * `my-project`.
      *
-     * Generated from protobuf field <code>string project_id = 2 [json_name = "projectId"];</code>
+     * Generated from protobuf field <code>string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
      */
     public function getProjectId()
@@ -130,7 +130,7 @@ class ServiceAccount extends \Google\Protobuf\Internal\Message
      * The ID of the project that owns the service account, such as
      * `my-project`.
      *
-     * Generated from protobuf field <code>string project_id = 2 [json_name = "projectId"];</code>
+     * Generated from protobuf field <code>string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
      * @return $this
      */
@@ -145,7 +145,7 @@ class ServiceAccount extends \Google\Protobuf\Internal\Message
     /**
      * The unique and stable ID of the service account, a UUID.
      *
-     * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
      */
     public function getUniqueId()
@@ -156,7 +156,7 @@ class ServiceAccount extends \Google\Protobuf\Internal\Message
     /**
      * The unique and stable ID of the service account, a UUID.
      *
-     * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
      * @return $this
      */
@@ -174,7 +174,7 @@ class ServiceAccount extends \Google\Protobuf\Internal\Message
      * resource names and in policy members such as
      * `serviceAccount:my-app\@my-project.iam-sa.cbws.xyz`.
      *
-     * Generated from protobuf field <code>string email = 5 [json_name = "email"];</code>
+     * Generated from protobuf field <code>string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
      */
     public function getEmail()
@@ -188,7 +188,7 @@ class ServiceAccount extends \Google\Protobuf\Internal\Message
      * resource names and in policy members such as
      * `serviceAccount:my-app\@my-project.iam-sa.cbws.xyz`.
      *
-     * Generated from protobuf field <code>string email = 5 [json_name = "email"];</code>
+     * Generated from protobuf field <code>string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
      * @return $this
      */
@@ -204,7 +204,7 @@ class ServiceAccount extends \Google\Protobuf\Internal\Message
      * Optional. A human-readable name for the service account, at most 128
      * characters.
      *
-     * Generated from protobuf field <code>string display_name = 6 [json_name = "displayName"];</code>
+     * Generated from protobuf field <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return string
      */
     public function getDisplayName()
@@ -216,7 +216,7 @@ class ServiceAccount extends \Google\Protobuf\Internal\Message
      * Optional. A human-readable name for the service account, at most 128
      * characters.
      *
-     * Generated from protobuf field <code>string display_name = 6 [json_name = "displayName"];</code>
+     * Generated from protobuf field <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param string $var
      * @return $this
      */

@@ -38,7 +38,7 @@ class CreateProjectRequest extends \Google\Protobuf\Internal\Message
      * Optional. The properties of the new project. Only `display_name` is
      * read.
      *
-     * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];</code>
+     * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $project = null;
 
@@ -136,7 +136,7 @@ class CreateProjectRequest extends \Google\Protobuf\Internal\Message
      * Optional. The properties of the new project. Only `display_name` is
      * read.
      *
-     * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];</code>
+     * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return \Cbws\Grpc\Projects\V1alpha1\Project|null
      */
     public function getProject()
@@ -158,7 +158,7 @@ class CreateProjectRequest extends \Google\Protobuf\Internal\Message
      * Optional. The properties of the new project. Only `display_name` is
      * read.
      *
-     * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];</code>
+     * Generated from protobuf field <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param \Cbws\Grpc\Projects\V1alpha1\Project $var
      * @return $this
      */

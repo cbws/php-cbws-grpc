@@ -26,7 +26,7 @@ class ListServiceAccountKeysRequest extends \Google\Protobuf\Internal\Message
     /**
      * Optional. The key types to list. Empty lists keys of every type.
      *
-     * Generated from protobuf field <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * Generated from protobuf field <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     private $key_types;
 
@@ -79,7 +79,7 @@ class ListServiceAccountKeysRequest extends \Google\Protobuf\Internal\Message
     /**
      * Optional. The key types to list. Empty lists keys of every type.
      *
-     * Generated from protobuf field <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * Generated from protobuf field <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getKeyTypes()
@@ -90,7 +90,7 @@ class ListServiceAccountKeysRequest extends \Google\Protobuf\Internal\Message
     /**
      * Optional. The key types to list. Empty lists keys of every type.
      *
-     * Generated from protobuf field <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * Generated from protobuf field <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

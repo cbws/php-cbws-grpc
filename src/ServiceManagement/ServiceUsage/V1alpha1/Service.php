@@ -21,25 +21,25 @@ class Service extends \Google\Protobuf\Internal\Message
      * `projects/{project}/services/{service}`, such as
      * `projects/my-project/services/logging.cbws.xyz`.
      *
-     * Generated from protobuf field <code>string name = 1 [json_name = "name"];</code>
+     * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $name = '';
     /**
      * The project, such as `projects/my-project`.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent"];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $parent = '';
     /**
      * The name and title of the service.
      *
-     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $config = null;
     /**
      * Whether the service is enabled in the project.
      *
-     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];</code>
+     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $state = 0;
 
@@ -71,7 +71,7 @@ class Service extends \Google\Protobuf\Internal\Message
      * `projects/{project}/services/{service}`, such as
      * `projects/my-project/services/logging.cbws.xyz`.
      *
-     * Generated from protobuf field <code>string name = 1 [json_name = "name"];</code>
+     * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
      */
     public function getName()
@@ -84,7 +84,7 @@ class Service extends \Google\Protobuf\Internal\Message
      * `projects/{project}/services/{service}`, such as
      * `projects/my-project/services/logging.cbws.xyz`.
      *
-     * Generated from protobuf field <code>string name = 1 [json_name = "name"];</code>
+     * Generated from protobuf field <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
      * @return $this
      */
@@ -99,7 +99,7 @@ class Service extends \Google\Protobuf\Internal\Message
     /**
      * The project, such as `projects/my-project`.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent"];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
      */
     public function getParent()
@@ -110,7 +110,7 @@ class Service extends \Google\Protobuf\Internal\Message
     /**
      * The project, such as `projects/my-project`.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent"];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
      * @return $this
      */
@@ -125,7 +125,7 @@ class Service extends \Google\Protobuf\Internal\Message
     /**
      * The name and title of the service.
      *
-     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\ServiceConfig|null
      */
     public function getConfig()
@@ -146,7 +146,7 @@ class Service extends \Google\Protobuf\Internal\Message
     /**
      * The name and title of the service.
      *
-     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\ServiceConfig $var
      * @return $this
      */
@@ -161,7 +161,7 @@ class Service extends \Google\Protobuf\Internal\Message
     /**
      * Whether the service is enabled in the project.
      *
-     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];</code>
+     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return int
      */
     public function getState()
@@ -172,7 +172,7 @@ class Service extends \Google\Protobuf\Internal\Message
     /**
      * Whether the service is enabled in the project.
      *
-     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];</code>
+     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param int $var
      * @return $this
      */

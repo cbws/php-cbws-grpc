@@ -27,7 +27,7 @@ class UpdateProjectRequest extends \Google\Protobuf\Internal\Message
      * Required. The fields to update. The only accepted path is
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      *
-     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $update_mask = null;
 
@@ -92,7 +92,7 @@ class UpdateProjectRequest extends \Google\Protobuf\Internal\Message
      * Required. The fields to update. The only accepted path is
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      *
-     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\FieldMask|null
      */
     public function getUpdateMask()
@@ -114,7 +114,7 @@ class UpdateProjectRequest extends \Google\Protobuf\Internal\Message
      * Required. The fields to update. The only accepted path is
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      *
-     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\FieldMask $var
      * @return $this
      */

@@ -35,7 +35,7 @@ class Port extends \Google\Protobuf\Internal\Message
      * The project that holds the port, such as `projects/my-project`. It is
      * not necessarily the project that owns the private network.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $parent = '';
     /**
@@ -202,7 +202,7 @@ class Port extends \Google\Protobuf\Internal\Message
      * The project that holds the port, such as `projects/my-project`. It is
      * not necessarily the project that owns the private network.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
      */
     public function getParent()
@@ -214,7 +214,7 @@ class Port extends \Google\Protobuf\Internal\Message
      * The project that holds the port, such as `projects/my-project`. It is
      * not necessarily the project that owns the private network.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
      * @return $this
      */

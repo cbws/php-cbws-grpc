@@ -19,7 +19,7 @@ class ListProjectsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Optional. The maximum number of projects to return. The default is 10.
      *
-     * Generated from protobuf field <code>int32 page_size = 2 [json_name = "pageSize"];</code>
+     * Generated from protobuf field <code>int32 page_size = 2 [json_name = "pageSize", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $page_size = 0;
     /**
@@ -27,7 +27,7 @@ class ListProjectsRequest extends \Google\Protobuf\Internal\Message
      * [next_page_token][cbws.projects.v1alpha1.ListProjectsResponse.next_page_token]
      * of a previous response, to get the next page.
      *
-     * Generated from protobuf field <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * Generated from protobuf field <code>string page_token = 3 [json_name = "pageToken", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $page_token = '';
 
@@ -53,7 +53,7 @@ class ListProjectsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Optional. The maximum number of projects to return. The default is 10.
      *
-     * Generated from protobuf field <code>int32 page_size = 2 [json_name = "pageSize"];</code>
+     * Generated from protobuf field <code>int32 page_size = 2 [json_name = "pageSize", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return int
      */
     public function getPageSize()
@@ -64,7 +64,7 @@ class ListProjectsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Optional. The maximum number of projects to return. The default is 10.
      *
-     * Generated from protobuf field <code>int32 page_size = 2 [json_name = "pageSize"];</code>
+     * Generated from protobuf field <code>int32 page_size = 2 [json_name = "pageSize", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param int $var
      * @return $this
      */
@@ -81,7 +81,7 @@ class ListProjectsRequest extends \Google\Protobuf\Internal\Message
      * [next_page_token][cbws.projects.v1alpha1.ListProjectsResponse.next_page_token]
      * of a previous response, to get the next page.
      *
-     * Generated from protobuf field <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * Generated from protobuf field <code>string page_token = 3 [json_name = "pageToken", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return string
      */
     public function getPageToken()
@@ -94,7 +94,7 @@ class ListProjectsRequest extends \Google\Protobuf\Internal\Message
      * [next_page_token][cbws.projects.v1alpha1.ListProjectsResponse.next_page_token]
      * of a previous response, to get the next page.
      *
-     * Generated from protobuf field <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * Generated from protobuf field <code>string page_token = 3 [json_name = "pageToken", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param string $var
      * @return $this
      */

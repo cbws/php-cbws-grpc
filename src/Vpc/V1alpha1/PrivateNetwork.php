@@ -28,7 +28,7 @@ class PrivateNetwork extends \Google\Protobuf\Internal\Message
      * The VPC the private network belongs to, such as
      * `projects/my-project/vpcs/default`.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $parent = '';
     /**
@@ -93,7 +93,7 @@ class PrivateNetwork extends \Google\Protobuf\Internal\Message
      * The VPC the private network belongs to, such as
      * `projects/my-project/vpcs/default`.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
      */
     public function getParent()
@@ -105,7 +105,7 @@ class PrivateNetwork extends \Google\Protobuf\Internal\Message
      * The VPC the private network belongs to, such as
      * `projects/my-project/vpcs/default`.
      *
-     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
      * @return $this
      */

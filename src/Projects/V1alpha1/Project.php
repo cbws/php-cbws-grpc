@@ -28,7 +28,7 @@ class Project extends \Google\Protobuf\Internal\Message
      * Optional. A human-readable name for the project, at most 255
      * characters.
      *
-     * Generated from protobuf field <code>string display_name = 2 [json_name = "displayName"];</code>
+     * Generated from protobuf field <code>string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $display_name = '';
     /**
@@ -36,13 +36,13 @@ class Project extends \Google\Protobuf\Internal\Message
      * `organizations/{organization}`, where `{organization}` is the
      * organization's UUID.
      *
-     * Generated from protobuf field <code>string organization = 3 [json_name = "organization"];</code>
+     * Generated from protobuf field <code>string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $organization = '';
     /**
      * The unique and stable ID of the project, a UUID.
      *
-     * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $unique_id = '';
 
@@ -100,7 +100,7 @@ class Project extends \Google\Protobuf\Internal\Message
      * Optional. A human-readable name for the project, at most 255
      * characters.
      *
-     * Generated from protobuf field <code>string display_name = 2 [json_name = "displayName"];</code>
+     * Generated from protobuf field <code>string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return string
      */
     public function getDisplayName()
@@ -112,7 +112,7 @@ class Project extends \Google\Protobuf\Internal\Message
      * Optional. A human-readable name for the project, at most 255
      * characters.
      *
-     * Generated from protobuf field <code>string display_name = 2 [json_name = "displayName"];</code>
+     * Generated from protobuf field <code>string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param string $var
      * @return $this
      */
@@ -129,7 +129,7 @@ class Project extends \Google\Protobuf\Internal\Message
      * `organizations/{organization}`, where `{organization}` is the
      * organization's UUID.
      *
-     * Generated from protobuf field <code>string organization = 3 [json_name = "organization"];</code>
+     * Generated from protobuf field <code>string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
      */
     public function getOrganization()
@@ -142,7 +142,7 @@ class Project extends \Google\Protobuf\Internal\Message
      * `organizations/{organization}`, where `{organization}` is the
      * organization's UUID.
      *
-     * Generated from protobuf field <code>string organization = 3 [json_name = "organization"];</code>
+     * Generated from protobuf field <code>string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
      * @return $this
      */
@@ -157,7 +157,7 @@ class Project extends \Google\Protobuf\Internal\Message
     /**
      * The unique and stable ID of the project, a UUID.
      *
-     * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return string
      */
     public function getUniqueId()
@@ -168,7 +168,7 @@ class Project extends \Google\Protobuf\Internal\Message
     /**
      * The unique and stable ID of the project, a UUID.
      *
-     * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * Generated from protobuf field <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param string $var
      * @return $this
      */
