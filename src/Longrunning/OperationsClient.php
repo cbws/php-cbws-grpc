@@ -1,22 +1,12 @@
 <?php
 // GENERATED CODE -- DO NOT EDIT!
+// source: google/longrunning/operations.proto
 
-// Original file comments:
-// Copyright 2025 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-//
 namespace Cbws\Grpc\Longrunning;
+
+use Cbws\Grpc\Transport\ExtGrpcTransport;
+use Cbws\Grpc\Transport\Transport;
+use Cbws\Grpc\Transport\UnaryCall;
 
 /**
  * Manages long-running operations with an API service.
@@ -29,48 +19,52 @@ namespace Cbws\Grpc\Longrunning;
  * long-running operations should implement the `Operations` interface so
  * developers can have a consistent client experience.
  */
-class OperationsClient extends \Grpc\BaseStub {
+class OperationsClient
+{
+    private Transport $transport;
 
     /**
-     * @param string $hostname hostname
-     * @param array $opts channel options
-     * @param \Grpc\Channel $channel (optional) re-use channel object
+     * @param Transport|string     $transport a transport, or a hostname to dial over native gRPC
+     * @param array<string, mixed> $opts      options for ExtGrpcTransport when $transport is a hostname
      */
-    public function __construct($hostname, $opts, $channel = null) {
-        parent::__construct($hostname, $opts, $channel);
+    public function __construct(Transport|string $transport, array $opts = [])
+    {
+        $this->transport = $transport instanceof Transport
+            ? $transport
+            : new ExtGrpcTransport($transport, $opts);
+    }
+
+    public function getTransport(): Transport
+    {
+        return $this->transport;
+    }
+
+    public function close(): void
+    {
+        $this->transport->close();
     }
 
     /**
      * Lists operations that match the specified filter in the request. If the
      * server doesn't support this method, it returns `UNIMPLEMENTED`.
-     * @param \Cbws\Grpc\Longrunning\ListOperationsRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\ListOperationsResponse>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Longrunning\ListOperationsResponse>
      */
-    public function ListOperations(\Cbws\Grpc\Longrunning\ListOperationsRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/google.longrunning.Operations/ListOperations',
-        $argument,
-        ['\Cbws\Grpc\Longrunning\ListOperationsResponse', 'decode'],
-        $metadata, $options);
+    public function ListOperations(\Cbws\Grpc\Longrunning\ListOperationsRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/google.longrunning.Operations/ListOperations', $argument, \Cbws\Grpc\Longrunning\ListOperationsResponse::class, $metadata, $options);
     }
 
     /**
      * Gets the latest state of a long-running operation.  Clients can use this
      * method to poll the operation result at intervals as recommended by the API
      * service.
-     * @param \Cbws\Grpc\Longrunning\GetOperationRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
-    public function GetOperation(\Cbws\Grpc\Longrunning\GetOperationRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/google.longrunning.Operations/GetOperation',
-        $argument,
-        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
-        $metadata, $options);
+    public function GetOperation(\Cbws\Grpc\Longrunning\GetOperationRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/google.longrunning.Operations/GetOperation', $argument, \Cbws\Grpc\Longrunning\Operation::class, $metadata, $options);
     }
 
     /**
@@ -78,17 +72,12 @@ class OperationsClient extends \Grpc\BaseStub {
      * no longer interested in the operation result. It does not cancel the
      * operation. If the server doesn't support this method, it returns
      * `google.rpc.Code.UNIMPLEMENTED`.
-     * @param \Cbws\Grpc\Longrunning\DeleteOperationRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
+     *
+     * @return UnaryCall<\Google\Protobuf\GPBEmpty>
      */
-    public function DeleteOperation(\Cbws\Grpc\Longrunning\DeleteOperationRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/google.longrunning.Operations/DeleteOperation',
-        $argument,
-        ['\Google\Protobuf\GPBEmpty', 'decode'],
-        $metadata, $options);
+    public function DeleteOperation(\Cbws\Grpc\Longrunning\DeleteOperationRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/google.longrunning.Operations/DeleteOperation', $argument, \Google\Protobuf\GPBEmpty::class, $metadata, $options);
     }
 
     /**
@@ -103,17 +92,12 @@ class OperationsClient extends \Grpc\BaseStub {
      * an [Operation.error][google.longrunning.Operation.error] value with a
      * [google.rpc.Status.code][google.rpc.Status.code] of `1`, corresponding to
      * `Code.CANCELLED`.
-     * @param \Cbws\Grpc\Longrunning\CancelOperationRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
+     *
+     * @return UnaryCall<\Google\Protobuf\GPBEmpty>
      */
-    public function CancelOperation(\Cbws\Grpc\Longrunning\CancelOperationRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/google.longrunning.Operations/CancelOperation',
-        $argument,
-        ['\Google\Protobuf\GPBEmpty', 'decode'],
-        $metadata, $options);
+    public function CancelOperation(\Cbws\Grpc\Longrunning\CancelOperationRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/google.longrunning.Operations/CancelOperation', $argument, \Google\Protobuf\GPBEmpty::class, $metadata, $options);
     }
 
     /**
@@ -126,17 +110,11 @@ class OperationsClient extends \Grpc\BaseStub {
      * Note that this method is on a best-effort basis.  It may return the latest
      * state before the specified timeout (including immediately), meaning even an
      * immediate response is no guarantee that the operation is done.
-     * @param \Cbws\Grpc\Longrunning\WaitOperationRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
-    public function WaitOperation(\Cbws\Grpc\Longrunning\WaitOperationRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/google.longrunning.Operations/WaitOperation',
-        $argument,
-        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
-        $metadata, $options);
+    public function WaitOperation(\Cbws\Grpc\Longrunning\WaitOperationRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/google.longrunning.Operations/WaitOperation', $argument, \Cbws\Grpc\Longrunning\Operation::class, $metadata, $options);
     }
-
 }

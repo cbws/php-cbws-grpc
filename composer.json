@@ -7,9 +7,10 @@
         "grpc/grpc": "^1.57",
         "google/protobuf": "^4.30 || ^5.0",
         "google/common-protos": "^4.11",
-        "ext-grpc": "^1.56"
+        "guzzlehttp/guzzle": "^7.8 || ^8.0"
     },
     "suggest": {
+        "ext-grpc": "For native gRPC; without it, the clients use gRPC-Web",
         "ext-protobuf": "For better performance, use the C implementation of Protobuf",
         "google/protobuf": "In case the C implementation of Protobuf is not suitable, use the PHP one"
     },

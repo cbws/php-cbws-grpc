@@ -1,281 +1,214 @@
 <?php
 // GENERATED CODE -- DO NOT EDIT!
+// source: cbws/compute/v1alpha1/compute.proto
 
 namespace Cbws\Grpc\Compute\V1alpha1;
+
+use Cbws\Grpc\Transport\ExtGrpcTransport;
+use Cbws\Grpc\Transport\Transport;
+use Cbws\Grpc\Transport\UnaryCall;
 
 /**
  * Manages virtual machines, the machine types they run on and the images they
  * boot from.
  */
-class ComputeServiceClient extends \Grpc\BaseStub {
+class ComputeServiceClient
+{
+    private Transport $transport;
 
     /**
-     * @param string $hostname hostname
-     * @param array $opts channel options
-     * @param \Grpc\Channel $channel (optional) re-use channel object
+     * @param Transport|string     $transport a transport, or a hostname to dial over native gRPC
+     * @param array<string, mixed> $opts      options for ExtGrpcTransport when $transport is a hostname
      */
-    public function __construct($hostname, $opts, $channel = null) {
-        parent::__construct($hostname, $opts, $channel);
+    public function __construct(Transport|string $transport, array $opts = [])
+    {
+        $this->transport = $transport instanceof Transport
+            ? $transport
+            : new ExtGrpcTransport($transport, $opts);
+    }
+
+    public function getTransport(): Transport
+    {
+        return $this->transport;
+    }
+
+    public function close(): void
+    {
+        $this->transport->close();
     }
 
     /**
      * Lists the machines in a project.
-     * @param \Cbws\Grpc\Compute\V1alpha1\ListMachinesRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ListMachinesResponse>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ListMachinesResponse>
      */
-    public function ListMachines(\Cbws\Grpc\Compute\V1alpha1\ListMachinesRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/ListMachines',
-        $argument,
-        ['\Cbws\Grpc\Compute\V1alpha1\ListMachinesResponse', 'decode'],
-        $metadata, $options);
+    public function ListMachines(\Cbws\Grpc\Compute\V1alpha1\ListMachinesRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/ListMachines', $argument, \Cbws\Grpc\Compute\V1alpha1\ListMachinesResponse::class, $metadata, $options);
     }
 
     /**
      * Gets a machine.
-     * @param \Cbws\Grpc\Compute\V1alpha1\GetMachineRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\Machine>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Compute\V1alpha1\Machine>
      */
-    public function GetMachine(\Cbws\Grpc\Compute\V1alpha1\GetMachineRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/GetMachine',
-        $argument,
-        ['\Cbws\Grpc\Compute\V1alpha1\Machine', 'decode'],
-        $metadata, $options);
+    public function GetMachine(\Cbws\Grpc\Compute\V1alpha1\GetMachineRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/GetMachine', $argument, \Cbws\Grpc\Compute\V1alpha1\Machine::class, $metadata, $options);
     }
 
     /**
      * Returns a URL that opens the console of a running machine in a browser.
      * A stopped machine has no console.
-     * @param \Cbws\Grpc\Compute\V1alpha1\RequestMachineConsoleRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\RequestMachineConsoleResponse>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Compute\V1alpha1\RequestMachineConsoleResponse>
      */
-    public function RequestMachineConsole(\Cbws\Grpc\Compute\V1alpha1\RequestMachineConsoleRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/RequestMachineConsole',
-        $argument,
-        ['\Cbws\Grpc\Compute\V1alpha1\RequestMachineConsoleResponse', 'decode'],
-        $metadata, $options);
+    public function RequestMachineConsole(\Cbws\Grpc\Compute\V1alpha1\RequestMachineConsoleRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/RequestMachineConsole', $argument, \Cbws\Grpc\Compute\V1alpha1\RequestMachineConsoleResponse::class, $metadata, $options);
     }
 
     /**
      * Creates a machine and starts it.
-     * @param \Cbws\Grpc\Compute\V1alpha1\CreateMachineRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
-    public function CreateMachine(\Cbws\Grpc\Compute\V1alpha1\CreateMachineRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/CreateMachine',
-        $argument,
-        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
-        $metadata, $options);
+    public function CreateMachine(\Cbws\Grpc\Compute\V1alpha1\CreateMachineRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/CreateMachine', $argument, \Cbws\Grpc\Longrunning\Operation::class, $metadata, $options);
     }
 
     /**
      * Stops a machine. The machine keeps its disk and can be started again.
-     * @param \Cbws\Grpc\Compute\V1alpha1\StopMachineRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
-    public function StopMachine(\Cbws\Grpc\Compute\V1alpha1\StopMachineRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/StopMachine',
-        $argument,
-        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
-        $metadata, $options);
+    public function StopMachine(\Cbws\Grpc\Compute\V1alpha1\StopMachineRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/StopMachine', $argument, \Cbws\Grpc\Longrunning\Operation::class, $metadata, $options);
     }
 
     /**
      * Starts a stopped machine.
-     * @param \Cbws\Grpc\Compute\V1alpha1\StartMachineRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
-    public function StartMachine(\Cbws\Grpc\Compute\V1alpha1\StartMachineRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/StartMachine',
-        $argument,
-        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
-        $metadata, $options);
+    public function StartMachine(\Cbws\Grpc\Compute\V1alpha1\StartMachineRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/StartMachine', $argument, \Cbws\Grpc\Longrunning\Operation::class, $metadata, $options);
     }
 
     /**
      * Power-cycles a machine, like pressing its reset button. The operating
      * system is not shut down first.
-     * @param \Cbws\Grpc\Compute\V1alpha1\ResetMachineRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
-    public function ResetMachine(\Cbws\Grpc\Compute\V1alpha1\ResetMachineRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/ResetMachine',
-        $argument,
-        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
-        $metadata, $options);
+    public function ResetMachine(\Cbws\Grpc\Compute\V1alpha1\ResetMachineRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/ResetMachine', $argument, \Cbws\Grpc\Longrunning\Operation::class, $metadata, $options);
     }
 
     /**
      * Replaces the operating system on a machine with a new image. The data on
      * the machine's disk is lost.
-     * @param \Cbws\Grpc\Compute\V1alpha1\ReinstallMachineRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
-    public function ReinstallMachine(\Cbws\Grpc\Compute\V1alpha1\ReinstallMachineRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/ReinstallMachine',
-        $argument,
-        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
-        $metadata, $options);
+    public function ReinstallMachine(\Cbws\Grpc\Compute\V1alpha1\ReinstallMachineRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/ReinstallMachine', $argument, \Cbws\Grpc\Longrunning\Operation::class, $metadata, $options);
     }
 
     /**
      * Changes a machine to another machine type in the same zone. The machine
      * is turned off and on again.
-     * @param \Cbws\Grpc\Compute\V1alpha1\ResizeMachineRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
-    public function ResizeMachine(\Cbws\Grpc\Compute\V1alpha1\ResizeMachineRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/ResizeMachine',
-        $argument,
-        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
-        $metadata, $options);
+    public function ResizeMachine(\Cbws\Grpc\Compute\V1alpha1\ResizeMachineRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/ResizeMachine', $argument, \Cbws\Grpc\Longrunning\Operation::class, $metadata, $options);
     }
 
     /**
      * Deletes a machine and its disk.
-     * @param \Cbws\Grpc\Compute\V1alpha1\DeleteMachineRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Longrunning\Operation>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Longrunning\Operation>
      */
-    public function DeleteMachine(\Cbws\Grpc\Compute\V1alpha1\DeleteMachineRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/DeleteMachine',
-        $argument,
-        ['\Cbws\Grpc\Longrunning\Operation', 'decode'],
-        $metadata, $options);
+    public function DeleteMachine(\Cbws\Grpc\Compute\V1alpha1\DeleteMachineRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/DeleteMachine', $argument, \Cbws\Grpc\Longrunning\Operation::class, $metadata, $options);
     }
 
     /**
      * Lists the machine types offered in a zone, or in every zone.
-     * @param \Cbws\Grpc\Compute\V1alpha1\ListMachineTypesRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ListMachineTypesResponse>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ListMachineTypesResponse>
      */
-    public function ListMachineTypes(\Cbws\Grpc\Compute\V1alpha1\ListMachineTypesRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/ListMachineTypes',
-        $argument,
-        ['\Cbws\Grpc\Compute\V1alpha1\ListMachineTypesResponse', 'decode'],
-        $metadata, $options);
+    public function ListMachineTypes(\Cbws\Grpc\Compute\V1alpha1\ListMachineTypesRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/ListMachineTypes', $argument, \Cbws\Grpc\Compute\V1alpha1\ListMachineTypesResponse::class, $metadata, $options);
     }
 
     /**
      * Gets a machine type.
-     * @param \Cbws\Grpc\Compute\V1alpha1\GetMachineTypeRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\MachineType>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Compute\V1alpha1\MachineType>
      */
-    public function GetMachineType(\Cbws\Grpc\Compute\V1alpha1\GetMachineTypeRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/GetMachineType',
-        $argument,
-        ['\Cbws\Grpc\Compute\V1alpha1\MachineType', 'decode'],
-        $metadata, $options);
+    public function GetMachineType(\Cbws\Grpc\Compute\V1alpha1\GetMachineTypeRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/GetMachineType', $argument, \Cbws\Grpc\Compute\V1alpha1\MachineType::class, $metadata, $options);
     }
 
     /**
      * Lists the images in a project.
-     * @param \Cbws\Grpc\Compute\V1alpha1\ListImagesRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ListImagesResponse>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ListImagesResponse>
      */
-    public function ListImages(\Cbws\Grpc\Compute\V1alpha1\ListImagesRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/ListImages',
-        $argument,
-        ['\Cbws\Grpc\Compute\V1alpha1\ListImagesResponse', 'decode'],
-        $metadata, $options);
+    public function ListImages(\Cbws\Grpc\Compute\V1alpha1\ListImagesRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/ListImages', $argument, \Cbws\Grpc\Compute\V1alpha1\ListImagesResponse::class, $metadata, $options);
     }
 
     /**
      * Gets an image.
-     * @param \Cbws\Grpc\Compute\V1alpha1\GetImageRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\Image>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Compute\V1alpha1\Image>
      */
-    public function GetImage(\Cbws\Grpc\Compute\V1alpha1\GetImageRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/GetImage',
-        $argument,
-        ['\Cbws\Grpc\Compute\V1alpha1\Image', 'decode'],
-        $metadata, $options);
+    public function GetImage(\Cbws\Grpc\Compute\V1alpha1\GetImageRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/GetImage', $argument, \Cbws\Grpc\Compute\V1alpha1\Image::class, $metadata, $options);
     }
 
     /**
      * Lists the image families in a project.
-     * @param \Cbws\Grpc\Compute\V1alpha1\ListImageFamiliesRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ListImageFamiliesResponse>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ListImageFamiliesResponse>
      */
-    public function ListImageFamilies(\Cbws\Grpc\Compute\V1alpha1\ListImageFamiliesRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/ListImageFamilies',
-        $argument,
-        ['\Cbws\Grpc\Compute\V1alpha1\ListImageFamiliesResponse', 'decode'],
-        $metadata, $options);
+    public function ListImageFamilies(\Cbws\Grpc\Compute\V1alpha1\ListImageFamiliesRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/ListImageFamilies', $argument, \Cbws\Grpc\Compute\V1alpha1\ListImageFamiliesResponse::class, $metadata, $options);
     }
 
     /**
      * Gets an image family.
-     * @param \Cbws\Grpc\Compute\V1alpha1\GetImageFamilyRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ImageFamily>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ImageFamily>
      */
-    public function GetImageFamily(\Cbws\Grpc\Compute\V1alpha1\GetImageFamilyRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/GetImageFamily',
-        $argument,
-        ['\Cbws\Grpc\Compute\V1alpha1\ImageFamily', 'decode'],
-        $metadata, $options);
+    public function GetImageFamily(\Cbws\Grpc\Compute\V1alpha1\GetImageFamilyRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/GetImageFamily', $argument, \Cbws\Grpc\Compute\V1alpha1\ImageFamily::class, $metadata, $options);
     }
 
     /**
      * Returns the image a machine of the given type would boot from the family
      * right now.
-     * @param \Cbws\Grpc\Compute\V1alpha1\GetImageFromFamilyRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Compute\V1alpha1\Image>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Compute\V1alpha1\Image>
      */
-    public function GetImageFromFamily(\Cbws\Grpc\Compute\V1alpha1\GetImageFromFamilyRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.compute.v1alpha1.ComputeService/GetImageFromFamily',
-        $argument,
-        ['\Cbws\Grpc\Compute\V1alpha1\Image', 'decode'],
-        $metadata, $options);
+    public function GetImageFromFamily(\Cbws\Grpc\Compute\V1alpha1\GetImageFromFamilyRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/GetImageFromFamily', $argument, \Cbws\Grpc\Compute\V1alpha1\Image::class, $metadata, $options);
     }
-
 }

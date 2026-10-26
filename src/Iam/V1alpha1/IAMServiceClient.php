@@ -1,7 +1,12 @@
 <?php
 // GENERATED CODE -- DO NOT EDIT!
+// source: cbws/iam/v1alpha1/iam.proto
 
 namespace Cbws\Grpc\Iam\V1alpha1;
+
+use Cbws\Grpc\Transport\ExtGrpcTransport;
+use Cbws\Grpc\Transport\Transport;
+use Cbws\Grpc\Transport\UnaryCall;
 
 /**
  * Manages service accounts and their keys, and issues credentials for them.
@@ -10,47 +15,51 @@ namespace Cbws\Grpc\Iam\V1alpha1;
  * belongs to a project, and is named by its email address, such as
  * `projects/my-project/serviceAccounts/my-app@my-project.iam-sa.cbws.xyz`.
  */
-class IAMServiceClient extends \Grpc\BaseStub {
+class IAMServiceClient
+{
+    private Transport $transport;
 
     /**
-     * @param string $hostname hostname
-     * @param array $opts channel options
-     * @param \Grpc\Channel $channel (optional) re-use channel object
+     * @param Transport|string     $transport a transport, or a hostname to dial over native gRPC
+     * @param array<string, mixed> $opts      options for ExtGrpcTransport when $transport is a hostname
      */
-    public function __construct($hostname, $opts, $channel = null) {
-        parent::__construct($hostname, $opts, $channel);
+    public function __construct(Transport|string $transport, array $opts = [])
+    {
+        $this->transport = $transport instanceof Transport
+            ? $transport
+            : new ExtGrpcTransport($transport, $opts);
+    }
+
+    public function getTransport(): Transport
+    {
+        return $this->transport;
+    }
+
+    public function close(): void
+    {
+        $this->transport->close();
     }
 
     /**
      * Lists the service accounts of a project. Requires
      * `iam.cbws.xyz/ServiceAccount/list` on the project.
-     * @param \Cbws\Grpc\Iam\V1alpha1\ListServiceAccountsRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\V1alpha1\ListServiceAccountsResponse>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Iam\V1alpha1\ListServiceAccountsResponse>
      */
-    public function ListServiceAccounts(\Cbws\Grpc\Iam\V1alpha1\ListServiceAccountsRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/ListServiceAccounts',
-        $argument,
-        ['\Cbws\Grpc\Iam\V1alpha1\ListServiceAccountsResponse', 'decode'],
-        $metadata, $options);
+    public function ListServiceAccounts(\Cbws\Grpc\Iam\V1alpha1\ListServiceAccountsRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.iam.v1alpha1.IAMService/ListServiceAccounts', $argument, \Cbws\Grpc\Iam\V1alpha1\ListServiceAccountsResponse::class, $metadata, $options);
     }
 
     /**
      * Gets a service account. Requires `iam.cbws.xyz/ServiceAccount/get` on
      * the service account.
-     * @param \Cbws\Grpc\Iam\V1alpha1\GetServiceAccountRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\V1alpha1\ServiceAccount>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Iam\V1alpha1\ServiceAccount>
      */
-    public function GetServiceAccount(\Cbws\Grpc\Iam\V1alpha1\GetServiceAccountRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/GetServiceAccount',
-        $argument,
-        ['\Cbws\Grpc\Iam\V1alpha1\ServiceAccount', 'decode'],
-        $metadata, $options);
+    public function GetServiceAccount(\Cbws\Grpc\Iam\V1alpha1\GetServiceAccountRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.iam.v1alpha1.IAMService/GetServiceAccount', $argument, \Cbws\Grpc\Iam\V1alpha1\ServiceAccount::class, $metadata, $options);
     }
 
     /**
@@ -59,17 +68,12 @@ class IAMServiceClient extends \Grpc\BaseStub {
      *
      * The new account gets a system-managed key straight away, so it can
      * sign and get access tokens without a user-managed key.
-     * @param \Cbws\Grpc\Iam\V1alpha1\CreateServiceAccountRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\V1alpha1\ServiceAccount>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Iam\V1alpha1\ServiceAccount>
      */
-    public function CreateServiceAccount(\Cbws\Grpc\Iam\V1alpha1\CreateServiceAccountRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/CreateServiceAccount',
-        $argument,
-        ['\Cbws\Grpc\Iam\V1alpha1\ServiceAccount', 'decode'],
-        $metadata, $options);
+    public function CreateServiceAccount(\Cbws\Grpc\Iam\V1alpha1\CreateServiceAccountRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.iam.v1alpha1.IAMService/CreateServiceAccount', $argument, \Cbws\Grpc\Iam\V1alpha1\ServiceAccount::class, $metadata, $options);
     }
 
     /**
@@ -78,34 +82,24 @@ class IAMServiceClient extends \Grpc\BaseStub {
      *
      * Role bindings that name the account on other resources are not
      * removed. Remove them from those resources' policies.
-     * @param \Cbws\Grpc\Iam\V1alpha1\DeleteServiceAccountRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
+     *
+     * @return UnaryCall<\Google\Protobuf\GPBEmpty>
      */
-    public function DeleteServiceAccount(\Cbws\Grpc\Iam\V1alpha1\DeleteServiceAccountRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/DeleteServiceAccount',
-        $argument,
-        ['\Google\Protobuf\GPBEmpty', 'decode'],
-        $metadata, $options);
+    public function DeleteServiceAccount(\Cbws\Grpc\Iam\V1alpha1\DeleteServiceAccountRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.iam.v1alpha1.IAMService/DeleteServiceAccount', $argument, \Google\Protobuf\GPBEmpty::class, $metadata, $options);
     }
 
     /**
      * Generates an OAuth 2.0 access token for a service account, valid for
      * one hour. Requires `iam.cbws.xyz/ServiceAccount/generateAccessToken` on
      * the service account.
-     * @param \Cbws\Grpc\Iam\V1alpha1\GenerateAccessTokenRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\V1alpha1\GenerateAccessTokenResponse>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Iam\V1alpha1\GenerateAccessTokenResponse>
      */
-    public function GenerateAccessToken(\Cbws\Grpc\Iam\V1alpha1\GenerateAccessTokenRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/GenerateAccessToken',
-        $argument,
-        ['\Cbws\Grpc\Iam\V1alpha1\GenerateAccessTokenResponse', 'decode'],
-        $metadata, $options);
+    public function GenerateAccessToken(\Cbws\Grpc\Iam\V1alpha1\GenerateAccessTokenRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.iam.v1alpha1.IAMService/GenerateAccessToken', $argument, \Cbws\Grpc\Iam\V1alpha1\GenerateAccessTokenResponse::class, $metadata, $options);
     }
 
     /**
@@ -116,17 +110,12 @@ class IAMServiceClient extends \Grpc\BaseStub {
      * The JWT header is `{"alg":"RS256","kid":"<key_id>","typ":"JWT"}`. The
      * call fails with FAILED_PRECONDITION when the account has no
      * system-managed key that stays valid for at least another hour.
-     * @param \Cbws\Grpc\Iam\V1alpha1\SignJwtRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\V1alpha1\SignJwtResponse>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Iam\V1alpha1\SignJwtResponse>
      */
-    public function SignJwt(\Cbws\Grpc\Iam\V1alpha1\SignJwtRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/SignJwt',
-        $argument,
-        ['\Cbws\Grpc\Iam\V1alpha1\SignJwtResponse', 'decode'],
-        $metadata, $options);
+    public function SignJwt(\Cbws\Grpc\Iam\V1alpha1\SignJwtRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.iam.v1alpha1.IAMService/SignJwt', $argument, \Cbws\Grpc\Iam\V1alpha1\SignJwtResponse::class, $metadata, $options);
     }
 
     /**
@@ -135,17 +124,12 @@ class IAMServiceClient extends \Grpc\BaseStub {
      *
      * The call fails with FAILED_PRECONDITION when the account has no
      * system-managed key that stays valid for at least another hour.
-     * @param \Cbws\Grpc\Iam\V1alpha1\SignBlobRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\V1alpha1\SignBlobResponse>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Iam\V1alpha1\SignBlobResponse>
      */
-    public function SignBlob(\Cbws\Grpc\Iam\V1alpha1\SignBlobRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/SignBlob',
-        $argument,
-        ['\Cbws\Grpc\Iam\V1alpha1\SignBlobResponse', 'decode'],
-        $metadata, $options);
+    public function SignBlob(\Cbws\Grpc\Iam\V1alpha1\SignBlobRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.iam.v1alpha1.IAMService/SignBlob', $argument, \Cbws\Grpc\Iam\V1alpha1\SignBlobResponse::class, $metadata, $options);
     }
 
     /**
@@ -156,33 +140,23 @@ class IAMServiceClient extends \Grpc\BaseStub {
      * no key material. Use
      * [GetServiceAccountKey][cbws.iam.v1alpha1.IAMService.GetServiceAccountKey]
      * for a key's public key.
-     * @param \Cbws\Grpc\Iam\V1alpha1\ListServiceAccountKeysRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\V1alpha1\ListServiceAccountKeysResponse>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Iam\V1alpha1\ListServiceAccountKeysResponse>
      */
-    public function ListServiceAccountKeys(\Cbws\Grpc\Iam\V1alpha1\ListServiceAccountKeysRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/ListServiceAccountKeys',
-        $argument,
-        ['\Cbws\Grpc\Iam\V1alpha1\ListServiceAccountKeysResponse', 'decode'],
-        $metadata, $options);
+    public function ListServiceAccountKeys(\Cbws\Grpc\Iam\V1alpha1\ListServiceAccountKeysRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.iam.v1alpha1.IAMService/ListServiceAccountKeys', $argument, \Cbws\Grpc\Iam\V1alpha1\ListServiceAccountKeysResponse::class, $metadata, $options);
     }
 
     /**
      * Gets a service account key with its public key. Requires
      * `iam.cbws.xyz/ServiceAccountKey/get` on the key.
-     * @param \Cbws\Grpc\Iam\V1alpha1\GetServiceAccountKeyRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\V1alpha1\ServiceAccountKey>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Iam\V1alpha1\ServiceAccountKey>
      */
-    public function GetServiceAccountKey(\Cbws\Grpc\Iam\V1alpha1\GetServiceAccountKeyRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/GetServiceAccountKey',
-        $argument,
-        ['\Cbws\Grpc\Iam\V1alpha1\ServiceAccountKey', 'decode'],
-        $metadata, $options);
+    public function GetServiceAccountKey(\Cbws\Grpc\Iam\V1alpha1\GetServiceAccountKeyRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.iam.v1alpha1.IAMService/GetServiceAccountKey', $argument, \Cbws\Grpc\Iam\V1alpha1\ServiceAccountKey::class, $metadata, $options);
     }
 
     /**
@@ -193,34 +167,24 @@ class IAMServiceClient extends \Grpc\BaseStub {
      * The private key is returned only in this response. CBWS does not keep
      * it, so store it safely: it lets anyone who holds it act as the service
      * account.
-     * @param \Cbws\Grpc\Iam\V1alpha1\CreateServiceAccountKeyRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\V1alpha1\ServiceAccountKey>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Iam\V1alpha1\ServiceAccountKey>
      */
-    public function CreateServiceAccountKey(\Cbws\Grpc\Iam\V1alpha1\CreateServiceAccountKeyRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/CreateServiceAccountKey',
-        $argument,
-        ['\Cbws\Grpc\Iam\V1alpha1\ServiceAccountKey', 'decode'],
-        $metadata, $options);
+    public function CreateServiceAccountKey(\Cbws\Grpc\Iam\V1alpha1\CreateServiceAccountKeyRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.iam.v1alpha1.IAMService/CreateServiceAccountKey', $argument, \Cbws\Grpc\Iam\V1alpha1\ServiceAccountKey::class, $metadata, $options);
     }
 
     /**
      * Deletes a user-managed service account key. Requires
      * `iam.cbws.xyz/ServiceAccountKey/delete` on the key. System-managed keys
      * cannot be deleted.
-     * @param \Cbws\Grpc\Iam\V1alpha1\DeleteServiceAccountKeyRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
+     *
+     * @return UnaryCall<\Google\Protobuf\GPBEmpty>
      */
-    public function DeleteServiceAccountKey(\Cbws\Grpc\Iam\V1alpha1\DeleteServiceAccountKeyRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/DeleteServiceAccountKey',
-        $argument,
-        ['\Google\Protobuf\GPBEmpty', 'decode'],
-        $metadata, $options);
+    public function DeleteServiceAccountKey(\Cbws\Grpc\Iam\V1alpha1\DeleteServiceAccountKeyRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.iam.v1alpha1.IAMService/DeleteServiceAccountKey', $argument, \Google\Protobuf\GPBEmpty::class, $metadata, $options);
     }
 
     /**
@@ -234,17 +198,12 @@ class IAMServiceClient extends \Grpc\BaseStub {
      *
      * The `resource` is the service account's resource name,
      * `projects/{project}/serviceAccounts/{email}`.
-     * @param \Cbws\Grpc\Iam\Policy\V1alpha1\GetPolicyRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\Policy\V1alpha1\Policy>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Iam\Policy\V1alpha1\Policy>
      */
-    public function GetPolicy(\Cbws\Grpc\Iam\Policy\V1alpha1\GetPolicyRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/GetPolicy',
-        $argument,
-        ['\Cbws\Grpc\Iam\Policy\V1alpha1\Policy', 'decode'],
-        $metadata, $options);
+    public function GetPolicy(\Cbws\Grpc\Iam\Policy\V1alpha1\GetPolicyRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.iam.v1alpha1.IAMService/GetPolicy', $argument, \Cbws\Grpc\Iam\Policy\V1alpha1\Policy::class, $metadata, $options);
     }
 
     /**
@@ -257,17 +216,11 @@ class IAMServiceClient extends \Grpc\BaseStub {
      *
      * The `resource` is the service account's resource name,
      * `projects/{project}/serviceAccounts/{email}`.
-     * @param \Cbws\Grpc\Iam\Policy\V1alpha1\SetPolicyRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall<\Cbws\Grpc\Iam\Policy\V1alpha1\Policy>
+     *
+     * @return UnaryCall<\Cbws\Grpc\Iam\Policy\V1alpha1\Policy>
      */
-    public function SetPolicy(\Cbws\Grpc\Iam\Policy\V1alpha1\SetPolicyRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/cbws.iam.v1alpha1.IAMService/SetPolicy',
-        $argument,
-        ['\Cbws\Grpc\Iam\Policy\V1alpha1\Policy', 'decode'],
-        $metadata, $options);
+    public function SetPolicy(\Cbws\Grpc\Iam\Policy\V1alpha1\SetPolicyRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.iam.v1alpha1.IAMService/SetPolicy', $argument, \Cbws\Grpc\Iam\Policy\V1alpha1\Policy::class, $metadata, $options);
     }
-
 }
