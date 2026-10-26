@@ -33,7 +33,8 @@ use Psr\Http\Message\ResponseInterface;
  *  - 'grpc.max_receive_message_length': largest response message in bytes, -1 for no limit;
  *    4 MiB by default, as with the extension
  *  - 'http_client': a GuzzleHttp\ClientInterface to send with; one client is shared otherwise.
- *    With a client of its own, a server stream yields its messages only once it has ended.
+ *    With a client of its own, a server stream yields its messages only once it has ended, and
+ *    requests use HTTP/1.1 unless 'http_options' sets another 'version'.
  *  - 'http_options': Guzzle request options added to every request, for example 'verify'
  */
 final class GrpcWebTransport implements Transport
@@ -47,6 +48,14 @@ final class GrpcWebTransport implements Transport
         'content-type', 'content-length', 'date', 'server', 'transfer-encoding', 'connection',
         'grpc-status', 'grpc-message', 'grpc-status-details-bin', 'access-control-expose-headers',
     ];
+
+    /**
+     * The longest the shared curl multi handler blocks for network activity in one tick, in
+     * seconds. A tick can read a complete message and then block, so this bounds how long a server
+     * stream holds a message that has already arrived. Every waiting call wakes this often, so a
+     * shorter time costs CPU while the server is quiet. Guzzle's default is a full second.
+     */
+    private const SELECT_TIMEOUT = 0.05;
 
     /**
      * Shared by every instance that is not given a client, so a client created per request reuses
@@ -67,6 +76,9 @@ final class GrpcWebTransport implements Transport
 
     private ?CurlMultiHandler $multi;
 
+    /** The HTTP version a request uses when 'http_options' sets none. */
+    private string $httpVersion;
+
     /** @var array<string, mixed> */
     private array $httpOptions;
 
@@ -85,12 +97,13 @@ final class GrpcWebTransport implements Transport
         if (isset($opts['http_client'])) {
             $this->client = $opts['http_client'];
             $this->multi = null;
+            $this->httpVersion = '1.1';
 
             return;
         }
         if (self::$sharedClient === null) {
             if (extension_loaded('curl')) {
-                self::$sharedMulti = new CurlMultiHandler();
+                self::$sharedMulti = new CurlMultiHandler(['select_timeout' => self::SELECT_TIMEOUT]);
                 self::$sharedClient = new Client(['handler' => HandlerStack::create(self::$sharedMulti)]);
             } else {
                 self::$sharedClient = new Client();
@@ -98,6 +111,11 @@ final class GrpcWebTransport implements Transport
         }
         $this->client = self::$sharedClient;
         $this->multi = self::$sharedMulti;
+        // HTTP/2 only where it is known to work: on curl, and only with a libcurl built with it,
+        // since Guzzle fails a request that asks for a version its handler cannot speak. curl
+        // still falls back to HTTP/1.1 for a server that does not offer HTTP/2.
+        $this->httpVersion = $this->multi !== null && str_starts_with($this->baseUrl, 'https://')
+            && (curl_version()['features'] & CURL_VERSION_HTTP2) !== 0 ? '2.0' : '1.1';
     }
 
     public function unary(string $method, Message $argument, string $responseClass, array $metadata = [], array $options = []): UnaryCall
@@ -255,7 +273,7 @@ final class GrpcWebTransport implements Transport
             // metadata to another host.
             'allow_redirects' => false,
             'http_errors' => false,
-            'version' => str_starts_with($this->baseUrl, 'https://') ? '2.0' : '1.1',
+            'version' => $this->httpVersion,
         ];
         $httpOptions['sink'] = $sink;
         if ($timeout !== null) {
