@@ -10,7 +10,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * The name and title of a service.
+ * The name, title and launch stage of a service.
  *
  * Generated from protobuf message <code>cbws.service_management.service_usage.v1alpha1.ServiceConfig</code>
  */
@@ -29,6 +29,12 @@ class ServiceConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string title = 2 [json_name = "title"];</code>
      */
     protected $title = '';
+    /**
+     * The service's launch stage.
+     *
+     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
+     */
+    protected $launch_stage = 0;
 
     /**
      * Constructor.
@@ -41,6 +47,8 @@ class ServiceConfig extends \Google\Protobuf\Internal\Message
      *           segment of the service's resource name.
      *     @type string $title
      *           The human-readable title of the service.
+     *     @type int $launch_stage
+     *           The service's launch stage.
      * }
      */
     public function __construct($data = NULL) {
@@ -98,6 +106,32 @@ class ServiceConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->title = $var;
+
+        return $this;
+    }
+
+    /**
+     * The service's launch stage.
+     *
+     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
+     * @return int
+     */
+    public function getLaunchStage()
+    {
+        return $this->launch_stage;
+    }
+
+    /**
+     * The service's launch stage.
+     *
+     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setLaunchStage($var)
+    {
+        GPBUtil::checkEnum($var, \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\LaunchStage::class);
+        $this->launch_stage = $var;
 
         return $this;
     }
