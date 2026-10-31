@@ -47,8 +47,11 @@ final class ExtGrpcTransport implements Transport
         }
 
         // TLS unless told otherwise, so that one set of options from Transports::create() works on
-        // hosts with and without the extension.
-        $opts['credentials'] ??= \Grpc\ChannelCredentials::createSsl();
+        // hosts with and without the extension. A key that is present but null is not unset:
+        // \Grpc\ChannelCredentials::createInsecure() returns null, and means plaintext.
+        if (!array_key_exists('credentials', $opts)) {
+            $opts['credentials'] = \Grpc\ChannelCredentials::createSsl();
+        }
 
         $this->channel = new \Grpc\Channel($hostname, $opts);
     }
