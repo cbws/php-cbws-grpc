@@ -53,6 +53,13 @@ class ServiceAccount extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $display_name = '';
+    /**
+     * Optional. A description of the service account, at most 128
+     * characters.
+     *
+     * Generated from protobuf field <code>string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    protected $description = '';
 
     /**
      * Constructor.
@@ -76,6 +83,9 @@ class ServiceAccount extends \Google\Protobuf\Internal\Message
      *           `serviceAccount:my-app\@my-project.iam-sa.cbws.xyz`.
      *     @type string $display_name
      *           Optional. A human-readable name for the service account, at most 128
+     *           characters.
+     *     @type string $description
+     *           Optional. A description of the service account, at most 128
      *           characters.
      * }
      */
@@ -224,6 +234,34 @@ class ServiceAccount extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->display_name = $var;
+
+        return $this;
+    }
+
+    /**
+     * Optional. A description of the service account, at most 128
+     * characters.
+     *
+     * Generated from protobuf field <code>string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Optional. A description of the service account, at most 128
+     * characters.
+     *
+     * Generated from protobuf field <code>string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDescription($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->description = $var;
 
         return $this;
     }

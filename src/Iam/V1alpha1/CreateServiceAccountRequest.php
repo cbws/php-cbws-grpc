@@ -34,7 +34,7 @@ class CreateServiceAccountRequest extends \Google\Protobuf\Internal\Message
     protected $account_id = '';
     /**
      * Optional. The properties of the new service account. Only
-     * `display_name` is read.
+     * `display_name` and `description` are read.
      *
      * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
      */
@@ -56,7 +56,7 @@ class CreateServiceAccountRequest extends \Google\Protobuf\Internal\Message
      *           match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])`.
      *     @type \Cbws\Grpc\Iam\V1alpha1\ServiceAccount $service_account
      *           Optional. The properties of the new service account. Only
-     *           `display_name` is read.
+     *           `display_name` and `description` are read.
      * }
      */
     public function __construct($data = NULL) {
@@ -126,7 +126,7 @@ class CreateServiceAccountRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Optional. The properties of the new service account. Only
-     * `display_name` is read.
+     * `display_name` and `description` are read.
      *
      * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return \Cbws\Grpc\Iam\V1alpha1\ServiceAccount|null
@@ -148,7 +148,7 @@ class CreateServiceAccountRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Optional. The properties of the new service account. Only
-     * `display_name` is read.
+     * `display_name` and `description` are read.
      *
      * Generated from protobuf field <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param \Cbws\Grpc\Iam\V1alpha1\ServiceAccount $var
