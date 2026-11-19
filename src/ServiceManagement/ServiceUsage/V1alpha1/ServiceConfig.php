@@ -10,7 +10,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * The name, title and launch stage of a service.
+ * The name, title and launch stage of a service, and the metrics and quota
+ * that apply to its use. The metrics and quota are those of the service's
+ * current configuration, the same for every project.
  *
  * Generated from protobuf message <code>cbws.service_management.service_usage.v1alpha1.ServiceConfig</code>
  */
@@ -35,6 +37,30 @@ class ServiceConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
      */
     protected $launch_stage = 0;
+    /**
+     * What the service does, in one or two sentences, such as "Provision and
+     * manage scalable, high-performance machines for your workloads." At most
+     * 128 characters. Empty if the service has no description.
+     *
+     * Generated from protobuf field <code>string description = 6 [json_name = "description"];</code>
+     */
+    protected $description = '';
+    /**
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     *
+     * Generated from protobuf field <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    private $metrics;
+    /**
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     *
+     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     */
+    protected $quota = null;
 
     /**
      * Constructor.
@@ -49,6 +75,18 @@ class ServiceConfig extends \Google\Protobuf\Internal\Message
      *           The human-readable title of the service.
      *     @type int $launch_stage
      *           The service's launch stage.
+     *     @type string $description
+     *           What the service does, in one or two sentences, such as "Provision and
+     *           manage scalable, high-performance machines for your workloads." At most
+     *           128 characters. Empty if the service has no description.
+     *     @type array<\Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\Metric>|\Google\Protobuf\Internal\RepeatedField $metrics
+     *           The quantities the service measures for a project that uses it, such as
+     *           API requests or machine hours. Returned only when the request's read
+     *           mask asks for it, or has no read mask.
+     *     @type \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\Quota $quota
+     *           What each method of the service costs against the metrics, and how much
+     *           of each metric a project may use. Returned only when the request's read
+     *           mask asks for it, or has no read mask.
      * }
      */
     public function __construct($data = NULL) {
@@ -132,6 +170,106 @@ class ServiceConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\LaunchStage::class);
         $this->launch_stage = $var;
+
+        return $this;
+    }
+
+    /**
+     * What the service does, in one or two sentences, such as "Provision and
+     * manage scalable, high-performance machines for your workloads." At most
+     * 128 characters. Empty if the service has no description.
+     *
+     * Generated from protobuf field <code>string description = 6 [json_name = "description"];</code>
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * What the service does, in one or two sentences, such as "Provision and
+     * manage scalable, high-performance machines for your workloads." At most
+     * 128 characters. Empty if the service has no description.
+     *
+     * Generated from protobuf field <code>string description = 6 [json_name = "description"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDescription($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->description = $var;
+
+        return $this;
+    }
+
+    /**
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     *
+     * Generated from protobuf field <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getMetrics()
+    {
+        return $this->metrics;
+    }
+
+    /**
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     *
+     * Generated from protobuf field <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     * @param array<\Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\Metric>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setMetrics($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\Metric::class);
+        $this->metrics = $arr;
+
+        return $this;
+    }
+
+    /**
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     *
+     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     * @return \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\Quota|null
+     */
+    public function getQuota()
+    {
+        return $this->quota;
+    }
+
+    public function hasQuota()
+    {
+        return isset($this->quota);
+    }
+
+    public function clearQuota()
+    {
+        unset($this->quota);
+    }
+
+    /**
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     *
+     * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     * @param \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\Quota $var
+     * @return $this
+     */
+    public function setQuota($var)
+    {
+        GPBUtil::checkMessage($var, \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\Quota::class);
+        $this->quota = $var;
 
         return $this;
     }

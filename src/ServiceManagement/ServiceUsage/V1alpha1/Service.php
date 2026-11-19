@@ -31,7 +31,7 @@ class Service extends \Google\Protobuf\Internal\Message
      */
     protected $parent = '';
     /**
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      *
      * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
@@ -56,7 +56,7 @@ class Service extends \Google\Protobuf\Internal\Message
      *     @type string $parent
      *           The project, such as `projects/my-project`.
      *     @type \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\ServiceConfig $config
-     *           The name and title of the service.
+     *           The name and title of the service, and what it meters.
      *     @type int $state
      *           Whether the service is enabled in the project.
      * }
@@ -123,7 +123,7 @@ class Service extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      *
      * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\ServiceConfig|null
@@ -144,7 +144,7 @@ class Service extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      *
      * Generated from protobuf field <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\ServiceConfig $var

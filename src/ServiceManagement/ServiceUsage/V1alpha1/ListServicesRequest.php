@@ -23,6 +23,14 @@ class ListServicesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      */
     protected $parent = '';
+    /**
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     *
+     * Generated from protobuf field <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    protected $read_mask = null;
 
     /**
      * Constructor.
@@ -33,6 +41,10 @@ class ListServicesRequest extends \Google\Protobuf\Internal\Message
      *     @type string $parent
      *           Required. The project to list the services of, such as
      *           `projects/my-project`.
+     *     @type \Google\Protobuf\FieldMask $read_mask
+     *           Optional. The fields that take extra time to read and are wanted in the
+     *           response: `services.config.metrics` and `services.config.quota`. Other
+     *           fields are always returned. Without a mask, both are read.
      * }
      */
     public function __construct($data = NULL) {
@@ -64,6 +76,46 @@ class ListServicesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->parent = $var;
+
+        return $this;
+    }
+
+    /**
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     *
+     * Generated from protobuf field <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return \Google\Protobuf\FieldMask|null
+     */
+    public function getReadMask()
+    {
+        return $this->read_mask;
+    }
+
+    public function hasReadMask()
+    {
+        return isset($this->read_mask);
+    }
+
+    public function clearReadMask()
+    {
+        unset($this->read_mask);
+    }
+
+    /**
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     *
+     * Generated from protobuf field <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @param \Google\Protobuf\FieldMask $var
+     * @return $this
+     */
+    public function setReadMask($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\FieldMask::class);
+        $this->read_mask = $var;
 
         return $this;
     }

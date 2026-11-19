@@ -9,7 +9,7 @@ use Cbws\Grpc\Transport\Transport;
 use Cbws\Grpc\Transport\UnaryCall;
 
 /**
- * Lists, enables and disables the CBWS services of a project.
+ * Lists, describes, enables and disables the CBWS services of a project.
  *
  * A service must be enabled in a project before its API can be used for the
  * project's resources.
@@ -52,6 +52,22 @@ class ServiceUsageServiceClient
     public function ListServices(\Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\ListServicesRequest $argument, array $metadata = [], array $options = []): UnaryCall
     {
         return $this->transport->unary('/cbws.service_management.service_usage.v1alpha1.ServiceUsageService/ListServices', $argument, \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\ListServicesResponse::class, $metadata, $options);
+    }
+
+    /**
+     * Gets a service of a project. Requires `serviceusage.cbws.xyz/Service/get`
+     * on the project.
+     *
+     * The service must be enabled in the project, or the caller must have
+     * `servicemanagement.cbws.xyz/Service/bind` on it, the same as for
+     * [ListServices][cbws.service_management.service_usage.v1alpha1.ServiceUsageService.ListServices].
+     * Otherwise the call fails with NOT_FOUND, also when the service exists.
+     *
+     * @return UnaryCall<\Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\Service>
+     */
+    public function GetService(\Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\GetServiceRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.service_management.service_usage.v1alpha1.ServiceUsageService/GetService', $argument, \Cbws\Grpc\ServiceManagement\ServiceUsage\V1alpha1\Service::class, $metadata, $options);
     }
 
     /**
