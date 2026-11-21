@@ -28,6 +28,13 @@ class GenerateAccessTokenResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp expire_time = 3 [json_name = "expireTime"];</code>
      */
     protected $expire_time = null;
+    /**
+     * The unique identifier (`jti`) of the generated access token, for audit
+     * correlation.
+     *
+     * Generated from protobuf field <code>string token_id = 4 [json_name = "tokenId"];</code>
+     */
+    protected $token_id = '';
 
     /**
      * Constructor.
@@ -39,6 +46,9 @@ class GenerateAccessTokenResponse extends \Google\Protobuf\Internal\Message
      *           The OAuth 2.0 access token.
      *     @type \Google\Protobuf\Timestamp $expire_time
      *           When the token expires.
+     *     @type string $token_id
+     *           The unique identifier (`jti`) of the generated access token, for audit
+     *           correlation.
      * }
      */
     public function __construct($data = NULL) {
@@ -104,6 +114,34 @@ class GenerateAccessTokenResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->expire_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * The unique identifier (`jti`) of the generated access token, for audit
+     * correlation.
+     *
+     * Generated from protobuf field <code>string token_id = 4 [json_name = "tokenId"];</code>
+     * @return string
+     */
+    public function getTokenId()
+    {
+        return $this->token_id;
+    }
+
+    /**
+     * The unique identifier (`jti`) of the generated access token, for audit
+     * correlation.
+     *
+     * Generated from protobuf field <code>string token_id = 4 [json_name = "tokenId"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTokenId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->token_id = $var;
 
         return $this;
     }
