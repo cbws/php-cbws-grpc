@@ -17,6 +17,35 @@ use Google\Protobuf\Internal\GPBUtil;
 class ResizeMachineMetadata extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     *
+     * Generated from protobuf field <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = {</code>
+     */
+    protected $machine = '';
+    /**
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     *
+     * Generated from protobuf field <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $machine_uid = '';
+    /**
+     * The machine type the machine had before the resize, such as
+     * `zones/nl-ein-1/types/g4.1`.
+     *
+     * Generated from protobuf field <code>string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $previous_type = '';
+    /**
+     * The machine type the machine is resized to, such as
+     * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+     * gave `machineTypes/g4.2`.
+     *
+     * Generated from protobuf field <code>string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $type = '';
+    /**
      * When the operation was created. Unset where the time is not known.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp create_time = 1 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -35,6 +64,19 @@ class ResizeMachineMetadata extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type string $machine
+     *           The machine being resized, such as `projects/my-project-123/machines/web-1`.
+     *           It stays set after the machine is deleted.
+     *     @type string $machine_uid
+     *           The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     *           apart from a machine created later with the same name.
+     *     @type string $previous_type
+     *           The machine type the machine had before the resize, such as
+     *           `zones/nl-ein-1/types/g4.1`.
+     *     @type string $type
+     *           The machine type the machine is resized to, such as
+     *           `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+     *           gave `machineTypes/g4.2`.
      *     @type \Google\Protobuf\Timestamp $create_time
      *           When the operation was created. Unset where the time is not known.
      *     @type \Google\Protobuf\Timestamp $end_time
@@ -44,6 +86,120 @@ class ResizeMachineMetadata extends \Google\Protobuf\Internal\Message
     public function __construct($data = NULL) {
         \GPBMetadata\Cbws\Compute\Compute::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     *
+     * Generated from protobuf field <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = {</code>
+     * @return string
+     */
+    public function getMachine()
+    {
+        return $this->machine;
+    }
+
+    /**
+     * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     *
+     * Generated from protobuf field <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = {</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setMachine($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->machine = $var;
+
+        return $this;
+    }
+
+    /**
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     *
+     * Generated from protobuf field <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return string
+     */
+    public function getMachineUid()
+    {
+        return $this->machine_uid;
+    }
+
+    /**
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     *
+     * Generated from protobuf field <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setMachineUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->machine_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     * The machine type the machine had before the resize, such as
+     * `zones/nl-ein-1/types/g4.1`.
+     *
+     * Generated from protobuf field <code>string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return string
+     */
+    public function getPreviousType()
+    {
+        return $this->previous_type;
+    }
+
+    /**
+     * The machine type the machine had before the resize, such as
+     * `zones/nl-ein-1/types/g4.1`.
+     *
+     * Generated from protobuf field <code>string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPreviousType($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->previous_type = $var;
+
+        return $this;
+    }
+
+    /**
+     * The machine type the machine is resized to, such as
+     * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+     * gave `machineTypes/g4.2`.
+     *
+     * Generated from protobuf field <code>string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * The machine type the machine is resized to, such as
+     * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+     * gave `machineTypes/g4.2`.
+     *
+     * Generated from protobuf field <code>string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setType($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->type = $var;
+
+        return $this;
     }
 
     /**

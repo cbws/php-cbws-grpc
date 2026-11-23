@@ -25,6 +25,13 @@ class Machine extends \Google\Protobuf\Internal\Message
      */
     protected $name = '';
     /**
+     * A unique identifier for the machine, a UUID assigned by CBWS. A machine created later with
+     * the same name has a different uid, which is what tells the two and their operations apart.
+     *
+     * Generated from protobuf field <code>string uid = 20 [json_name = "uid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $uid = '';
+    /**
      * The project that holds the machine, such as `projects/my-project-123`.
      *
      * Generated from protobuf field <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -125,6 +132,9 @@ class Machine extends \Google\Protobuf\Internal\Message
      *           The resource name of the machine, such as
      *           `projects/my-project-123/machines/web-1`. On create, it is made from the
      *           request's `parent` and `machine_id`.
+     *     @type string $uid
+     *           A unique identifier for the machine, a UUID assigned by CBWS. A machine created later with
+     *           the same name has a different uid, which is what tells the two and their operations apart.
      *     @type string $parent
      *           The project that holds the machine, such as `projects/my-project-123`.
      *     @type string $type
@@ -204,6 +214,34 @@ class Machine extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->name = $var;
+
+        return $this;
+    }
+
+    /**
+     * A unique identifier for the machine, a UUID assigned by CBWS. A machine created later with
+     * the same name has a different uid, which is what tells the two and their operations apart.
+     *
+     * Generated from protobuf field <code>string uid = 20 [json_name = "uid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return string
+     */
+    public function getUid()
+    {
+        return $this->uid;
+    }
+
+    /**
+     * A unique identifier for the machine, a UUID assigned by CBWS. A machine created later with
+     * the same name has a different uid, which is what tells the two and their operations apart.
+     *
+     * Generated from protobuf field <code>string uid = 20 [json_name = "uid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->uid = $var;
 
         return $this;
     }
