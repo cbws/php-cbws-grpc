@@ -17,8 +17,9 @@ class MachineAgentService
         }
         \GPBMetadata\Google\Api\FieldBehavior::initOnce();
         \GPBMetadata\Google\Api\Resource::initOnce();
+        \GPBMetadata\Google\Protobuf\Timestamp::initOnce();
         $pool->internalAddGeneratedFile(
-            "\x0A\xEF\x02\x0A1cbws/compute/v1alpha1/machine_agent_service.proto\x12\x15cbws.compute.v1alpha1\x1A\x19google/api/resource.proto\"V\x0A\x16GetMachineAgentRequest\x12<\x0A\x04name\x18\x01 \x01(\x09B(\xE2A\x01\x02\xFAA!\x0A\x1Fcompute.cbws.cloud/MachineAgentR\x04nameB\xA7\x01\x0A\x19com.cbws.compute.v1alpha1B\x18MachineAgentServiceProtoP\x01\xA2\x02\x03CCX\xAA\x02\x15Cbws.Compute.V1alpha1\xCA\x02\x1ACbws\\Grpc\\Compute\\V1alpha1\xE2\x02\x18GPBMetadata\\Cbws\\Compute\xEA\x02\x17Cbws::Compute::V1alpha1b\x06proto3"
+            "\x0A\x82\x05\x0A1cbws/compute/v1alpha1/machine_agent_service.proto\x12\x15cbws.compute.v1alpha1\x1A\x19google/api/resource.proto\x1A\x1Fgoogle/protobuf/timestamp.proto\"V\x0A\x16GetMachineAgentRequest\x12<\x0A\x04name\x18\x01 \x01(\x09B(\xE2A\x01\x02\xFAA!\x0A\x1Fcompute.cbws.cloud/MachineAgentR\x04name\"{\x0A!RequestMachineAgentForwardRequest\x12<\x0A\x04name\x18\x01 \x01(\x09B(\xE2A\x01\x02\xFAA!\x0A\x1Fcompute.cbws.cloud/MachineAgentR\x04name\x12\x18\x0A\x04port\x18\x02 \x01(\x05B\x04\xE2A\x01\x02R\x04port\"s\x0A\"RequestMachineAgentForwardResponse\x12\x10\x0A\x03url\x18\x01 \x01(\x09R\x03url\x12;\x0A\x0Bexpire_time\x18\x02 \x01(\x0B2\x1A.google.protobuf.TimestampR\x0AexpireTimeB\xA7\x01\x0A\x19com.cbws.compute.v1alpha1B\x18MachineAgentServiceProtoP\x01\xA2\x02\x03CCX\xAA\x02\x15Cbws.Compute.V1alpha1\xCA\x02\x1ACbws\\Grpc\\Compute\\V1alpha1\xE2\x02\x18GPBMetadata\\Cbws\\Compute\xEA\x02\x17Cbws::Compute::V1alpha1b\x06proto3"
         , true);
 
         static::$is_initialized = true;
