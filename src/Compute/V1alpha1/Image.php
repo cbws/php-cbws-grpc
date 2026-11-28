@@ -37,6 +37,37 @@ class Image extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string family = 3 [json_name = "family", (.google.api.field_behavior) = IMMUTABLE];</code>
      */
     protected $family = '';
+    /**
+     * Whether the image can build machines. Only a `STATE_READY` image can be
+     * named on a machine or picked from its family.
+     *
+     * Generated from protobuf field <code>.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $state = 0;
+    /**
+     * When the image was created. Unset where the time is not known.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $create_time = null;
+    /**
+     * The machine the image was made from, such as
+     * `projects/my-project/machines/web-1`. Empty for an image that was not made
+     * from a machine. The name stays after the machine is deleted, and may then
+     * name a different machine created later under the same name;
+     * `source_machine_uid` tells the two apart.
+     *
+     * Generated from protobuf field <code>string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = {</code>
+     */
+    protected $source_machine = '';
+    /**
+     * The uid of the machine the image was made from. It matches the
+     * machine's `uid` only while `source_machine` still names that same machine.
+     * Empty for an image that was not made from a machine.
+     *
+     * Generated from protobuf field <code>string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $source_machine_uid = '';
 
     /**
      * Constructor.
@@ -53,6 +84,21 @@ class Image extends \Google\Protobuf\Internal\Message
      *           The family the image belongs to, such as
      *           `projects/my-project-123/families/ubuntu-2404-lts`. Empty for an image in
      *           no family.
+     *     @type int $state
+     *           Whether the image can build machines. Only a `STATE_READY` image can be
+     *           named on a machine or picked from its family.
+     *     @type \Google\Protobuf\Timestamp $create_time
+     *           When the image was created. Unset where the time is not known.
+     *     @type string $source_machine
+     *           The machine the image was made from, such as
+     *           `projects/my-project/machines/web-1`. Empty for an image that was not made
+     *           from a machine. The name stays after the machine is deleted, and may then
+     *           name a different machine created later under the same name;
+     *           `source_machine_uid` tells the two apart.
+     *     @type string $source_machine_uid
+     *           The uid of the machine the image was made from. It matches the
+     *           machine's `uid` only while `source_machine` still names that same machine.
+     *           Empty for an image that was not made from a machine.
      * }
      */
     public function __construct($data = NULL) {
@@ -140,6 +186,134 @@ class Image extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->family = $var;
+
+        return $this;
+    }
+
+    /**
+     * Whether the image can build machines. Only a `STATE_READY` image can be
+     * named on a machine or picked from its family.
+     *
+     * Generated from protobuf field <code>.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return int
+     */
+    public function getState()
+    {
+        return $this->state;
+    }
+
+    /**
+     * Whether the image can build machines. Only a `STATE_READY` image can be
+     * named on a machine or picked from its family.
+     *
+     * Generated from protobuf field <code>.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setState($var)
+    {
+        GPBUtil::checkEnum($var, \Cbws\Grpc\Compute\V1alpha1\Image\State::class);
+        $this->state = $var;
+
+        return $this;
+    }
+
+    /**
+     * When the image was created. Unset where the time is not known.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getCreateTime()
+    {
+        return $this->create_time;
+    }
+
+    public function hasCreateTime()
+    {
+        return isset($this->create_time);
+    }
+
+    public function clearCreateTime()
+    {
+        unset($this->create_time);
+    }
+
+    /**
+     * When the image was created. Unset where the time is not known.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setCreateTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->create_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * The machine the image was made from, such as
+     * `projects/my-project/machines/web-1`. Empty for an image that was not made
+     * from a machine. The name stays after the machine is deleted, and may then
+     * name a different machine created later under the same name;
+     * `source_machine_uid` tells the two apart.
+     *
+     * Generated from protobuf field <code>string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = {</code>
+     * @return string
+     */
+    public function getSourceMachine()
+    {
+        return $this->source_machine;
+    }
+
+    /**
+     * The machine the image was made from, such as
+     * `projects/my-project/machines/web-1`. Empty for an image that was not made
+     * from a machine. The name stays after the machine is deleted, and may then
+     * name a different machine created later under the same name;
+     * `source_machine_uid` tells the two apart.
+     *
+     * Generated from protobuf field <code>string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = {</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setSourceMachine($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->source_machine = $var;
+
+        return $this;
+    }
+
+    /**
+     * The uid of the machine the image was made from. It matches the
+     * machine's `uid` only while `source_machine` still names that same machine.
+     * Empty for an image that was not made from a machine.
+     *
+     * Generated from protobuf field <code>string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return string
+     */
+    public function getSourceMachineUid()
+    {
+        return $this->source_machine_uid;
+    }
+
+    /**
+     * The uid of the machine the image was made from. It matches the
+     * machine's `uid` only while `source_machine` still names that same machine.
+     * Empty for an image that was not made from a machine.
+     *
+     * Generated from protobuf field <code>string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setSourceMachineUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->source_machine_uid = $var;
 
         return $this;
     }

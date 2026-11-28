@@ -182,6 +182,34 @@ class ComputeServiceClient
     }
 
     /**
+     * Makes an image from the disk of a stopped machine. The image appears in
+     * `STATE_CREATING` as soon as the operation starts and becomes
+     * `STATE_READY` when it completes. Copying the disk takes minutes per GB.
+     * Only machines on machine types that support it can be imaged.
+     *
+     * Requires `compute.cbws.cloud/Image/create` on the project and
+     * `compute.cbws.cloud/Machine/createImage` on the source machine.
+     *
+     * @return UnaryCall<\Cbws\Grpc\Longrunning\Operation>
+     */
+    public function CreateImage(\Cbws\Grpc\Compute\V1alpha1\CreateImageRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/CreateImage', $argument, \Cbws\Grpc\Longrunning\Operation::class, $metadata, $options);
+    }
+
+    /**
+     * Deletes an image made from a machine. Machines built from it keep running,
+     * but cannot be reinstalled from it, and its name can be used again at once.
+     * An image still in `STATE_CREATING` cannot be deleted.
+     *
+     * @return UnaryCall<\Cbws\Grpc\Longrunning\Operation>
+     */
+    public function DeleteImage(\Cbws\Grpc\Compute\V1alpha1\DeleteImageRequest $argument, array $metadata = [], array $options = []): UnaryCall
+    {
+        return $this->transport->unary('/cbws.compute.v1alpha1.ComputeService/DeleteImage', $argument, \Cbws\Grpc\Longrunning\Operation::class, $metadata, $options);
+    }
+
+    /**
      * Lists the image families in a project.
      *
      * @return UnaryCall<\Cbws\Grpc\Compute\V1alpha1\ListImageFamiliesResponse>
